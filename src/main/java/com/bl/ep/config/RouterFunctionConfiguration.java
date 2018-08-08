@@ -1,4 +1,4 @@
-package com.bl.ep.EPApp.config;
+package com.bl.ep.config;
 
 import com.bl.ep.EPApp.domain.User;
 import com.bl.ep.EPApp.repository.UserRepository;

@@ -1,4 +1,4 @@
-package com.bl.ep.EPApp.domain;
+package com.bl.ep.domain;
 
 public class User {
 

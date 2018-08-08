@@ -6,7 +6,16 @@
 	<groupId>com.bl.ep</groupId>
 	<artifactId>EPApp</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>jar</packaging>
+	<modules>
+		<module>web</module>
+	</modules>
+
+	<!--
+		模型层：model
+		持久层：persisitence
+		表示层：web
+	-->
+	<packaging>pom</packaging>
 
 	<name>EPApp</name>
 	<description>Demo project for Spring Boot</description>

@@ -1,11 +1,11 @@
-package com.bl.ep.EPApp.Controller;
+package com.bl.ep.Controller;
 
 import com.bl.ep.EPApp.domain.User;
+import com.bl.ep.EPApp.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-import com.bl.ep.EPApp.repository.UserRepository;
 
 @RestController
 public class UserController {
