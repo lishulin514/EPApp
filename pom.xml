@@ -8,12 +8,16 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<modules>
 		<module>web</module>
+		<module>persistence</module>
+		<module>model</module>
 	</modules>
 
 	<!--
 		模型层：model
 		持久层：persisitence
 		表示层：web
+		web 依赖于 persistence, persistence依赖于model
+		web UserControlle -> persistence -> model
 	-->
 	<packaging>pom</packaging>
 
@@ -50,15 +54,4 @@
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
-
-	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-			</plugin>
-		</plugins>
-	</build>
-
-
 </project>

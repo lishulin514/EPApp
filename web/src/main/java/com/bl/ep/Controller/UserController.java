@@ -1,7 +1,8 @@
 package com.bl.ep.Controller;
 
-import com.bl.ep.EPApp.domain.User;
-import com.bl.ep.EPApp.repository.UserRepository;
+
+import com.bl.ep.domain.User;
+import com.bl.ep.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
