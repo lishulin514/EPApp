@@ -10,7 +10,8 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>web</artifactId>
-
+    <!-- 将 packaging 值（默认： jar）调整成war -->
+    <packaging>war</packaging>
     <dependencies>
         <dependency>
             <groupId>com.bl.ep</groupId>

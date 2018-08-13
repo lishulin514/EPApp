@@ -3,6 +3,7 @@ package com.bl.ep.Controller;
 
 import com.bl.ep.domain.User;
 import com.bl.ep.repository.UserRepository;
+import com.bl.ep.utils.ResultModel;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -19,14 +20,14 @@ public class UserController {
     }
 
     @PostMapping("/person/save")
-    public User save(@RequestParam String name){
+    public ResultModel save(@RequestParam String name){
 
         User user = new User();
 
         user.setName(name);
 
         System.out.println(userRepository.save(user)+"user:"+name);
-        return user;
+        return ResultModel.ok(user);
     }
 
 }
