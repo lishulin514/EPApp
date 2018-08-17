@@ -1,6 +1,7 @@
 package com.bl.ep.utils;
 
-import java.util.List;
+
+import java.io.Serializable;
 
 /**
  *  200:表示成功
@@ -9,7 +10,7 @@ import java.util.List;
  *  502：拦截器拦截到用户token出错
  *  555：异常抛出信息
  */
-public class ResultModel {
+public class ResultModel<T>{
 
     private int status = 200;
     private String msg = null;
@@ -21,8 +22,32 @@ public class ResultModel {
         this.data = data;
     }
 
-    public static ResultModel ok(Object data){
+    public static <T> ResultModel<T> ok(T data){
 
-        return new ResultModel(200, "OK", data);
+        return new ResultModel<T>(200, "OK", data);
+    }
+
+    public int getStatus() {
+        return status;
+    }
+
+    public void setStatus(int status) {
+        this.status = status;
+    }
+
+    public String getMsg() {
+        return msg;
+    }
+
+    public void setMsg(String msg) {
+        this.msg = msg;
+    }
+
+    public Object getData() {
+        return data;
+    }
+
+    public void setData(Object data) {
+        this.data = data;
     }
 }
