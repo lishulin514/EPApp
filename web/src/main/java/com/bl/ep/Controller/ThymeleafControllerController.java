@@ -1,4 +1,4 @@
-package com.bl.ep.Controller;
+package com.bl.ep.controller;
 
 import com.bl.ep.domain.Resource;
 import com.bl.ep.domain.User;
@@ -10,8 +10,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
-
-//import freemarker.ext.servlet.HttpSessionHashModel;
 
 @Controller
 @RequestMapping("th")
@@ -71,6 +69,12 @@ public class ThymeleafControllerController {
     public String postform(User user){
 
         System.out.println(user.getName());
+        return "redirect:/th/user";
+    }
+
+    @RequestMapping("/testErrorHandler")
+    public String testErrorHandler(){
+
         return "redirect:/th/user";
     }
 }

@@ -1,6 +1,8 @@
 package com.bl.ep.utils;
 
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+
 import java.io.Serializable;
 
 /**
@@ -13,7 +15,15 @@ import java.io.Serializable;
 public class ResultModel<T>{
 
     private int status = 200;
+    /**
+     * 在没有数据的时候不返回
+     */
+    @JsonInclude(JsonInclude.Include.NON_NULL)
     private String msg = null;
+    /**
+     * 在没有数据的时候不返回
+     */
+    @JsonInclude(JsonInclude.Include.NON_NULL)
     private Object data = null;
 
     public ResultModel(int status, String msg, Object data) {
@@ -25,6 +35,11 @@ public class ResultModel<T>{
     public static <T> ResultModel<T> ok(T data){
 
         return new ResultModel<T>(200, "OK", data);
+    }
+
+    public static <T> ResultModel<T> error(ResultEnum status){
+
+        return new ResultModel<T>(status.getKey(), status.getMsg(), null);
     }
 
     public int getStatus() {
