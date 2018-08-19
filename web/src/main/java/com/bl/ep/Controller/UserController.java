@@ -1,5 +1,4 @@
-package com.bl.ep.Controller;
-
+package com.bl.ep.controller;
 
 import com.bl.ep.domain.Resource;
 import com.bl.ep.domain.User;
@@ -39,6 +38,7 @@ public class UserController {
     @GetMapping("/getResource")
     public ResultModel getResource(){
 
+        int i = 1/0;
         Resource bean = new Resource();
         BeanUtils.copyProperties(resource, bean);
         ResultModel ok = ResultModel.ok(bean);

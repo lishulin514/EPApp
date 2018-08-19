@@ -1,12 +1,10 @@
-package com.bl.ep.Controller;
+package com.bl.ep.controller;
 
 import com.bl.ep.domain.Resource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
-
-//import freemarker.ext.servlet.HttpSessionHashModel;
 
 @Controller
 @RequestMapping("ftl")
