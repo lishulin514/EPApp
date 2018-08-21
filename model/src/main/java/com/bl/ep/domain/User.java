@@ -10,23 +10,33 @@ import java.util.Date;
 public class User implements Serializable{
 
     private int id;
-    private String name;
+    private String username;
     /**
      * 不打印
      */
     @JsonIgnore
     private String password;
-    private Integer age;
-    /**
-     * Data 打印格式
-     */
-    @JsonFormat(pattern="yyyy-MM-dd hh:mm:ss a", locale = "zh", timezone = "GMT+8")
-    private Date birthday;
     /**
      * 在没有数据的时候不返回
      */
     @JsonInclude(JsonInclude.Include.NON_NULL)
-    private String desc;
+    private String realname;
+    /**
+     * 在没有数据的时候不返回
+     */
+    @JsonInclude(JsonInclude.Include.NON_NULL)
+    private int age;
+    /**
+     * 在没有数据的时候不返回
+     */
+    @JsonInclude(JsonInclude.Include.NON_NULL)
+    private int sex;
+
+    /**
+     * Data 打印格式
+     */
+    @JsonFormat(pattern="yyyy-MM-dd hh:mm:ss a", locale = "zh", timezone = "GMT+8")
+    private Date createTime;
 
     public int getId() {
         return id;
@@ -36,12 +46,12 @@ public class User implements Serializable{
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getUsername() {
+        return username;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setUsername(String username) {
+        this.username = username;
     }
 
     public String getPassword() {
@@ -52,27 +62,35 @@ public class User implements Serializable{
         this.password = password;
     }
 
-    public Integer getAge() {
+    public String getRealname() {
+        return realname;
+    }
+
+    public void setRealname(String realname) {
+        this.realname = realname;
+    }
+
+    public int getAge() {
         return age;
     }
 
-    public void setAge(Integer age) {
+    public void setAge(int age) {
         this.age = age;
     }
 
-    public Date getBirthday() {
-        return birthday;
+    public int getSex() {
+        return sex;
     }
 
-    public void setBirthday(Date birthday) {
-        this.birthday = birthday;
+    public void setSex(int sex) {
+        this.sex = sex;
     }
 
-    public String getDesc() {
-        return desc;
+    public Date getCreateTime() {
+        return createTime;
     }
 
-    public void setDesc(String desc) {
-        this.desc = desc;
+    public void setCreateTime(Date createTime) {
+        this.createTime = createTime;
     }
 }

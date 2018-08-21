@@ -2,7 +2,7 @@ package com.bl.ep.controller;
 
 import com.bl.ep.domain.Resource;
 import com.bl.ep.domain.User;
-import com.bl.ep.repository.UserRepository;
+import com.bl.ep.service.UserService;
 import com.bl.ep.utils.ResultModel;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,28 +11,26 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 public class UserController {
 
-    private UserRepository userRepository;
+    private UserService userService;
 
     private Resource resource;
 
     @Autowired
-    public void setUserRepository(UserRepository userRepository) {
-        this.userRepository = userRepository;
+    public void setSserService(UserService userService) {
+        this.userService = userService;
     }
     @Autowired
     public void setResource(Resource resource) {
         this.resource = resource;
     }
 
-    @PostMapping("/person/save")
-    public ResultModel save(@RequestParam String name){
-
-        User user = new User();
-
-        user.setName(name);
-
-        System.out.println(userRepository.save(user)+"user:"+name);
-        return ResultModel.ok(user);
+    @PostMapping("/login")
+    public ResultModel login(@RequestParam String username, @RequestParam String password){
+        User userByUsername = userService.getUserByUsername(username);
+        if(userByUsername.getPassword().equals(password)){
+            return ResultModel.ok(1);
+        }
+        return ResultModel.ok(2);
     }
 
     @GetMapping("/getResource")
