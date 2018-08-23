@@ -1,6 +1,6 @@
 package com.bl.ep.repository;
 
-import com.bl.ep.domain.User;
+import com.bl.ep.pojo.User;
 import org.springframework.stereotype.Repository;
 
 import java.util.Collection;

@@ -13,7 +13,7 @@
 //
 //@Controller
 //@RequestMapping("th")
-//public class ThymeleafControllerController {
+//public class ThymeleafController {
 //
 //    @Autowired
 //    private Resource resource;

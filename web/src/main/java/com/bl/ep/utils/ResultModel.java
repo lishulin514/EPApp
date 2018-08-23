@@ -34,7 +34,7 @@ public class ResultModel<T>{
 
     public static <T> ResultModel<T> ok(T data){
 
-        return new ResultModel<T>(200, "OK", data);
+        return new ResultModel<T>(200, "success", data);
     }
 
     public static <T> ResultModel<T> error(ResultEnum status){

@@ -1,4 +1,4 @@
-package com.bl.ep.domain;
+package com.bl.ep.constant;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Configuration;

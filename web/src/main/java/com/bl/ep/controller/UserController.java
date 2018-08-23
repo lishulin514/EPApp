@@ -1,12 +1,15 @@
 package com.bl.ep.controller;
 
-import com.bl.ep.domain.Resource;
-import com.bl.ep.domain.User;
+import com.bl.ep.constant.Resource;
+import com.bl.ep.pojo.User;
 import com.bl.ep.service.UserService;
+import com.bl.ep.utils.ResultEnum;
 import com.bl.ep.utils.ResultModel;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.Date;
 
 @RestController
 public class UserController {
@@ -43,4 +46,39 @@ public class UserController {
         return ok;
     }
 
+    @PostMapping("/register")
+    public ResultModel register(){
+        try{
+            for (int i = 0 ; i < 10 ; i++){
+                User user = new User();
+                user.setUsername("lishulin"+i);
+                user.setPassword("lishulin"+i);
+                user.setRealname("lishulin"+i);
+                user.setIsDelete(0);
+                user.setAge(i);
+                user.setSex(1);
+                user.setCreateTime(new Date());
+                userService.createUser(user);
+            }
+            return ResultModel.ok(null);
+        }catch(Exception e){
+            e.printStackTrace();
+            return ResultModel.error(ResultEnum.ERROR_500);
+        }
+    }
+
+    @GetMapping("/testTransactional")
+    public ResultModel testTransactional(){
+        User user = new User();
+        user.setUsername("lishulinX");
+        user.setPassword("lishulinX");
+        user.setRealname("lishulinX");
+        user.setIsDelete(0);
+        user.setAge(111);
+        user.setSex(1);
+        user.setCreateTime(new Date());
+        userService.testTransactional(user);
+
+        return ResultModel.ok(null);
+    }
 }

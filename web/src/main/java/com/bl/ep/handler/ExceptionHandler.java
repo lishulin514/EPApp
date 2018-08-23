@@ -23,7 +23,7 @@ public class ExceptionHandler {
 
     @org.springframework.web.bind.annotation.ExceptionHandler(value = Exception.class)
     public Object errorHandler(HttpServletRequest request, HttpServletResponse respone, Exception e) throws Exception{
-//        e.printStackTrace();
+        e.printStackTrace();
         //如果是ajax请求
         if(isAjax(request)){
             return ResultModel.error(ResultEnum.ERROR_500);

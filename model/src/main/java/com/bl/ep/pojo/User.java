@@ -1,15 +1,20 @@
-package com.bl.ep.domain;
+package com.bl.ep.pojo;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude;
 
+import javax.persistence.Column;
+import javax.persistence.Id;
+import javax.persistence.Table;
 import java.io.Serializable;
 import java.util.Date;
 
-public class User implements Serializable{
+@Table(name="t_user")
+public class User/* implements Serializable*/{
+    @Id
+    private Integer id;
 
-    private int id;
     private String username;
     /**
      * 不打印
@@ -25,24 +30,30 @@ public class User implements Serializable{
      * 在没有数据的时候不返回
      */
     @JsonInclude(JsonInclude.Include.NON_NULL)
-    private int age;
+    private Integer age;
     /**
      * 在没有数据的时候不返回
      */
     @JsonInclude(JsonInclude.Include.NON_NULL)
-    private int sex;
+    private Integer sex;
 
+    /**
+     * 0未删除 1删除
+     */
+    @Column(name = "is_delete")
+    private Integer isDelete;
     /**
      * Data 打印格式
      */
+    @Column(name = "create_time")
     @JsonFormat(pattern="yyyy-MM-dd hh:mm:ss a", locale = "zh", timezone = "GMT+8")
     private Date createTime;
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -70,20 +81,28 @@ public class User implements Serializable{
         this.realname = realname;
     }
 
-    public int getAge() {
+    public Integer getAge() {
         return age;
     }
 
-    public void setAge(int age) {
+    public void setAge(Integer age) {
         this.age = age;
     }
 
-    public int getSex() {
+    public Integer getSex() {
         return sex;
     }
 
-    public void setSex(int sex) {
+    public void setSex(Integer sex) {
         this.sex = sex;
+    }
+
+    public Integer getIsDelete() {
+        return isDelete;
+    }
+
+    public void setIsDelete(Integer isDelete) {
+        this.isDelete = isDelete;
     }
 
     public Date getCreateTime() {

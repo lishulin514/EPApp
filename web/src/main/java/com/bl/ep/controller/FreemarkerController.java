@@ -1,6 +1,6 @@
 package com.bl.ep.controller;
 
-import com.bl.ep.domain.Resource;
+import com.bl.ep.constant.Resource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
