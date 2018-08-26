@@ -1,14 +1,14 @@
-package com.bl.ep.utils;
+package com.bl.ep.param;
 
 public class PageParam {
 	/**
 	 * 查询条数
 	 */
-	private int rows;
+	private int rows = 999;
 	/**
 	 * 查询页数
 	 */
-	private int page;
+	private int page = 1;
 	/**
 	 * 排序字段
 	 */

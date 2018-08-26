@@ -1,6 +1,7 @@
 package com.bl.ep;
 
 import com.bl.ep.dao.UserMapper;
+import com.bl.ep.param.UserParam;
 import com.bl.ep.pojo.User;
 import com.bl.ep.service.UserService;
 import org.junit.Test;
@@ -25,8 +26,10 @@ public class UserMapperTest {
 
     @Test
     public void getUsers() {
-        User users = userService.getUserByUsername("lishulin");
-        System.out.println(users);
+        UserParam param = new UserParam();
+        param.setUsername("lishulin");
+        User users = userService.getUserByUsername(param);
+        System.out.println(users.toString());
     }
 
 }

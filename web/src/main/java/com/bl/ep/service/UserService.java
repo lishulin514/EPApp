@@ -1,19 +1,18 @@
 package com.bl.ep.service;
 
+import com.bl.ep.param.HomeParam;
+import com.bl.ep.param.PageParam;
+import com.bl.ep.param.UserParam;
+import com.bl.ep.pojo.Home;
 import com.bl.ep.pojo.User;
-import com.bl.ep.utils.PageParam;
 
 import java.util.List;
 
 public interface UserService {
 
-    public User getUserByUsername(String username);
+    public User getUserByUsername(UserParam param);
 
-    List<User> getUserList(PageParam param, User user);
+    public List<Home> homeList(HomeParam param, PageParam pageParam);
 
-    void createUser(User user);
-
-    void getUserById(Integer userId);
-
-    void testTransactional(User user);
+    public int signIn(UserParam param);
 }

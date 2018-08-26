@@ -1,9 +1,7 @@
-package com.bl.ep.utils;
+package com.bl.ep.constant;
 
 
 import com.fasterxml.jackson.annotation.JsonInclude;
-
-import java.io.Serializable;
 
 /**
  *  200:表示成功
@@ -32,7 +30,7 @@ public class ResultModel<T>{
         this.data = data;
     }
 
-    public static <T> ResultModel<T> ok(T data){
+    public static <T> ResultModel<T> response(T data){
 
         return new ResultModel<T>(200, "success", data);
     }
