@@ -24,6 +24,8 @@ public class MerchandizeCategory {
     private Double nowPrice;
     @Column(name = "old_price")
     private Double oldPrice;
+    @Column(name = "default_opt")
+    private Byte defaultOpt;
     @Column(name = "create_time")
     @JsonFormat(pattern="yyyy-MM-dd hh:mm:ss a", locale = "zh", timezone = "GMT+8")
     private Date createTime;
@@ -80,8 +82,17 @@ public class MerchandizeCategory {
         return oldPrice;
     }
 
+
     public void setOldPrice(Double oldPrice) {
         this.oldPrice = oldPrice;
+    }
+
+    public Byte getDefaultOpt() {
+        return defaultOpt;
+    }
+
+    public void setDefaultOpt(Byte defaultOpt) {
+        this.defaultOpt = defaultOpt;
     }
 
     public Date getCreateTime() {

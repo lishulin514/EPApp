@@ -1,5 +1,6 @@
 package com.bl.ep.config;
 
+import com.bl.ep.interceptor.ParamInterceptor;
 import com.bl.ep.interceptor.TokenInterceptor;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
@@ -17,7 +18,8 @@ public class WebMvcConfigurer extends WebMvcConfigurerAdapter {
 		/**
 		 * 拦截器按照顺序执行
 		 */
-		registry.addInterceptor(new TokenInterceptor()).addPathPatterns("/**").excludePathPatterns("login","index");
+//		registry.addInterceptor(new ParamInterceptor()).addPathPatterns("/**");
+//		registry.addInterceptor(new TokenInterceptor()).addPathPatterns("/**").excludePathPatterns("login","index");
 
 		super.addInterceptors(registry);
 	}

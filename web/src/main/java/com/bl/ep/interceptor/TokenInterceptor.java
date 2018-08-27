@@ -15,7 +15,7 @@ public class TokenInterceptor implements HandlerInterceptor  {
 	public boolean preHandle(HttpServletRequest request, HttpServletResponse response, 
 			Object object) throws Exception {
 		
-		System.out.println("check token");
+		System.out.println(object.toString());
 		return true;
 	}
 	
@@ -25,7 +25,8 @@ public class TokenInterceptor implements HandlerInterceptor  {
 	@Override
 	public void postHandle(HttpServletRequest request, HttpServletResponse response, 
 			Object object, ModelAndView mv) throws Exception {
-
+		System.out.println(object.toString());
+		System.out.println(mv.toString());
 	}
 	
 	/**
@@ -35,6 +36,7 @@ public class TokenInterceptor implements HandlerInterceptor  {
 	@Override
 	public void afterCompletion(HttpServletRequest request, HttpServletResponse response, 
 			Object object, Exception ex) throws Exception {
-
+		System.out.println(object.toString());
+		System.out.println(ex.toString());
 	}
 }

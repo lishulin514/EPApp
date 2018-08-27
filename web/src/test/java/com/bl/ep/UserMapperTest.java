@@ -32,4 +32,9 @@ public class UserMapperTest {
         System.out.println(users.toString());
     }
 
+    @Test
+    public void TestCopyArray() {
+       userService.getUserCollects(null);
+    }
+
 }

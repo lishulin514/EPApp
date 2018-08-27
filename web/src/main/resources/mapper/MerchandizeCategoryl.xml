@@ -9,6 +9,7 @@
         <result property="url" column="url" jdbcType="VARCHAR"/>
         <result property="nowPrice" column="now_price" jdbcType="DOUBLE"/>
         <result property="oldPrice" column="old_price" jdbcType="DOUBLE"/>
+        <result property="defaultOpt" column="default_opt" jdbcType="TINYINT"/>
         <result property="createTime" column="carete_time" jdbcType="TIMESTAMP"/>
     </resultMap>
 </mapper>

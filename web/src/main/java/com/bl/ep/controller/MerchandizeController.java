@@ -25,14 +25,14 @@ public class MerchandizeController {
         List<Merchandize> merchandizes = merchandizeService.merchandizeList(param, pageParam);
         return ResultModel.response(merchandizes);
     }
-    @PostMapping("/merchandize/info/merchandizeId}")
+    @PostMapping(value = "/merchandize/info/{merchandizeId}")
     public ResultModel merchandizeInfo(@PathVariable Integer merchandizeId){
 
         Merchandize merchandize = merchandizeService.getMerchandizeInfoById(merchandizeId);
         return ResultModel.response(merchandize);
     }
 
-    @PostMapping("/merchandize/category/list/{merchandizeId}")
+    @PostMapping(value = "/merchandize/category/list/{merchandizeId}")
     public ResultModel merchandizeCategory(@PathVariable Integer merchandizeId){
 
         List<MerchandizeCategory> details = merchandizeService.getMerchandizeCategory(merchandizeId);
