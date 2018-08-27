@@ -8,6 +8,7 @@ import com.bl.ep.service.MerchandizeService;
 import com.bl.ep.utils.PageUtils;
 import com.github.pagehelper.PageHelper;
 import org.apache.commons.lang3.StringUtils;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import tk.mybatis.mapper.entity.Example;
 
@@ -16,6 +17,7 @@ import java.util.List;
 @Service
 public class MerchandizeServiceImpl implements MerchandizeService {
 
+    @Autowired
     private MerchandizeMapper merchandizeMapper;
 
     @Override
