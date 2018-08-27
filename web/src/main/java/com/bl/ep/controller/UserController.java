@@ -22,7 +22,6 @@ public class UserController {
     private Resource resource;
 
     @PostMapping(value = "/login" ,params = {"username","password"})
-//    @RequestParam String username, @RequestParam String password
     public ResultModel login(UserParam param){
         int result = userService.signIn(param);
 

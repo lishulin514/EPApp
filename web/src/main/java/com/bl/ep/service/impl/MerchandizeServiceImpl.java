@@ -1,9 +1,11 @@
 package com.bl.ep.service.impl;
 
+import com.bl.ep.dao.MerchandizeCategoryMapper;
 import com.bl.ep.dao.MerchandizeMapper;
 import com.bl.ep.param.MerchandizeParam;
 import com.bl.ep.param.PageParam;
 import com.bl.ep.pojo.Merchandize;
+import com.bl.ep.pojo.MerchandizeCategory;
 import com.bl.ep.service.MerchandizeService;
 import com.bl.ep.utils.PageUtils;
 import com.github.pagehelper.PageHelper;
@@ -20,6 +22,9 @@ public class MerchandizeServiceImpl implements MerchandizeService {
     @Autowired
     private MerchandizeMapper merchandizeMapper;
 
+    @Autowired
+    private MerchandizeCategoryMapper merchandizeDetailMapper;
+
     @Override
     public List<Merchandize> merchandizeList(MerchandizeParam param, PageParam pageParam) {
 
@@ -31,5 +36,21 @@ public class MerchandizeServiceImpl implements MerchandizeService {
         }
         PageUtils.pageHelperOrderBy(example, pageParam);
         return merchandizeMapper.selectByExample(example);
+    }
+
+    @Override
+    public List<MerchandizeCategory> getMerchandizeCategory(Integer merchandizeId) {
+        if(merchandizeId==null)
+            return null;
+
+        MerchandizeCategory param = new MerchandizeCategory();
+        param.setMerchandizeId(merchandizeId);
+        return merchandizeDetailMapper.select(param);
+    }
+
+    @Override
+    public Merchandize getMerchandizeInfoById(Integer merchandizeId) {
+
+        return merchandizeMapper.selectByPrimaryKey(merchandizeId);
     }
 }

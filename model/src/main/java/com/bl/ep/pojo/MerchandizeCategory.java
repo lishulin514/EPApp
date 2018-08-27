@@ -6,30 +6,27 @@ import javax.persistence.Column;
 import javax.persistence.Table;
 import java.util.Date;
 
-@Table(name="m_merchandize")
-public class Merchandize {
+/**
+ * @author： 李树林
+ * @description：
+ * @date： 2018/8/27 14:41
+ */
+@Table(name="m_merchandize_category")
+public class MerchandizeCategory {
 
     private Integer id;
+    @Column(name = "merchandize_id")
+    private Integer merchandizeId;
     private String title;
     private String image;
     private String url;
-    private String model;
-    @Column(name = "not_price")
+    @Column(name = "now_price")
     private Double nowPrice;
     @Column(name = "old_price")
     private Double oldPrice;
-    private String brand;
     @Column(name = "create_time")
     @JsonFormat(pattern="yyyy-MM-dd hh:mm:ss a", locale = "zh", timezone = "GMT+8")
     private Date createTime;
-
-    public Date getCreateTime() {
-        return createTime;
-    }
-
-    public void setCreateTime(Date createTime) {
-        this.createTime = createTime;
-    }
 
     public Integer getId() {
         return id;
@@ -37,6 +34,14 @@ public class Merchandize {
 
     public void setId(Integer id) {
         this.id = id;
+    }
+
+    public Integer getMerchandizeId() {
+        return merchandizeId;
+    }
+
+    public void setMerchandizeId(Integer merchandizeId) {
+        this.merchandizeId = merchandizeId;
     }
 
     public String getTitle() {
@@ -63,14 +68,6 @@ public class Merchandize {
         this.url = url;
     }
 
-    public String getModel() {
-        return model;
-    }
-
-    public void setModel(String model) {
-        this.model = model;
-    }
-
     public Double getNowPrice() {
         return nowPrice;
     }
@@ -87,11 +84,11 @@ public class Merchandize {
         this.oldPrice = oldPrice;
     }
 
-    public String getBrand() {
-        return brand;
+    public Date getCreateTime() {
+        return createTime;
     }
 
-    public void setBrand(String brand) {
-        this.brand = brand;
+    public void setCreateTime(Date createTime) {
+        this.createTime = createTime;
     }
 }
