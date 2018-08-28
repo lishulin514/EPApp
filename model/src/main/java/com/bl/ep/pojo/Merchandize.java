@@ -14,7 +14,7 @@ public class Merchandize {
     private String image;
     private String url;
     private String model;
-    @Column(name = "not_price")
+    @Column(name = "now_price")
     private Double nowPrice;
     @Column(name = "old_price")
     private Double oldPrice;

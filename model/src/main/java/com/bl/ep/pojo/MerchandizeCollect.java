@@ -12,7 +12,7 @@ import java.util.Date;
  * @date： 2018/8/27 16:57
  */
 @Table(name="t_merchandize_collect")
-public class MerchandizeCollect implements Collect {
+public class MerchandizeCollect extends BaseCollect {
 
     private Integer id;
 

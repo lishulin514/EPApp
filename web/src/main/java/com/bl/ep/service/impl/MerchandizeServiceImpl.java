@@ -50,7 +50,11 @@ public class MerchandizeServiceImpl implements MerchandizeService {
 
     @Override
     public Merchandize getMerchandizeInfoById(Integer merchandizeId) {
+        if(merchandizeId==null)
+            return null;
 
-        return merchandizeMapper.selectByPrimaryKey(merchandizeId);
+        Merchandize param = new Merchandize();
+        param.setId(merchandizeId);
+        return merchandizeMapper.selectOne(param);
     }
 }

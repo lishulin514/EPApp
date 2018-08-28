@@ -95,45 +95,57 @@ public class UserServiceImpl implements UserService {
     public List<UserCollect> getUserCollects(CollectParam param) {
         List<UserCollect> userCollects = new ArrayList<>();
 
-//        if(param==null || param .getCollectType()==null){
-//            List<HomeCollect> homeCollects = homeCollectMapper.selectAll();
-//            ArrayCopy(userCollects, homeCollects);
-//            List<MerchandizeCollect> merchandizeCollects = merchandizeCollectMapper.selectAll();
-//            ArrayCopy(userCollects, merchandizeCollects);
-//        }else if(param.getCollectType().equals(ResultEnum.COLLECT_HOME.getKey())){
-//            List<HomeCollect> homeCollects = homeCollectMapper.selectAll();
-//            ArrayCopy(userCollects, homeCollects);
-//        }else if(param.getCollectType().equals(ResultEnum.COLLECT_MERCHANDIZE.getKey())){
-//            List<MerchandizeCollect> merchandizeCollects = merchandizeCollectMapper.selectAll();
-//            ArrayCopy(userCollects, merchandizeCollects);
-//        }
+        if(param==null || param .getCollectType()==null){
+            List<HomeCollect> homeCollects = homeCollectCustomMapper.getHomeCollect();
+            ArrayCopy(userCollects, homeCollects);
+            List<MerchandizeCollect> merchandizeCollects = merchandizeCollectCustomMapper.getMerchandizeCollect();
+            ArrayCopy(userCollects, merchandizeCollects);
+        }else if(param.getCollectType().equals(ResultEnum.COLLECT_HOME.getKey())){
+            List<HomeCollect> homeCollects = homeCollectCustomMapper.getHomeCollect();
+            ArrayCopy(userCollects, homeCollects);
+        }else if(param.getCollectType().equals(ResultEnum.COLLECT_MERCHANDIZE.getKey())){
+            List<MerchandizeCollect> merchandizeCollects = merchandizeCollectCustomMapper.getMerchandizeCollect();
+            ArrayCopy(userCollects, merchandizeCollects);
+        }
         return userCollects;
     }
 
-//    private <T extends Collect> void ArrayCopy(List<UserCollect> src, List<T> dest){
-//
-//        if(dest == null || dest.size() == 0){
-//            return;
-//        }
-//        if(dest.get(0) instanceof com.bl.ep.pojo.HomeCollect){
-//            List<HomeCollect> list = (List<HomeCollect>)dest;
-//            for (HomeCollect homeCollect : list) {
-//                UserCollect userCollect = new UserCollect();
-//                userCollect.setId(homeCollect.getId());
-//                userCollect.setUserId(homeCollect.getUserId());
-//                userCollect.setImage(homeCollect.get());
-//                userCollect.setUserId(homeCollect.getUserId());
-//                userCollect.setUserId(homeCollect.getUserId());
-//
-//            }
-//        }
-//        if(dest.get(0) instanceof com.bl.ep.pojo.MerchandizeCollect){
-//            List<MerchandizeCollect> list = (List<MerchandizeCollect>)dest;
-//            for (MerchandizeCollect merchandizeCollect : list) {
-//                src.add(new UserCollect(
-//                        merchandizeCollect.getId(), merchandizeCollect.getUserId(),merchandizeCollect.getMerchandizeCategoryId(),ResultEnum.COLLECT_MERCHANDIZE.getKey()
-//                        ,merchandizeCollect.getModifyTime(),merchandizeCollect.getCreateTime()));
-//            }
-//        }
-//    }
+    private <T extends Collect> void ArrayCopy(List<UserCollect> src, List<T> dest){
+
+        if(dest == null || dest.size() == 0){
+            return;
+        }
+        if(dest.get(0) instanceof com.bl.ep.pojo.HomeCollect){
+            List<HomeCollect> list = (List<HomeCollect>)dest;
+            for (HomeCollect homeCollect : list) {
+                UserCollect userCollect = new UserCollect();
+                userCollect.setId(homeCollect.getId());
+                userCollect.setUserId(homeCollect.getUserId());
+                userCollect.setTargetId(homeCollect.getHomeId());
+                userCollect.setTitle(homeCollect.getTitle());
+                userCollect.setImage(homeCollect.getImage());
+                userCollect.setUrl(homeCollect.getUrl());
+                userCollect.setType(ResultEnum.COLLECT_HOME.getKey());
+                userCollect.setModifyTime(homeCollect.getModifyTime());
+                userCollect.setCreateTime(homeCollect.getCreateTime());
+                src.add(userCollect);
+            }
+        }
+        if(dest.get(0) instanceof com.bl.ep.pojo.MerchandizeCollect){
+            List<MerchandizeCollect> list = (List<MerchandizeCollect>)dest;
+            for (MerchandizeCollect merchandizeCollect : list) {
+                UserCollect userCollect = new UserCollect();
+                userCollect.setId(merchandizeCollect.getId());
+                userCollect.setUserId(merchandizeCollect.getUserId());
+                userCollect.setTargetId(merchandizeCollect.getMerchandizeCategoryId());
+                userCollect.setTitle(merchandizeCollect.getTitle());
+                userCollect.setImage(merchandizeCollect.getImage());
+                userCollect.setUrl(merchandizeCollect.getUrl());
+                userCollect.setType(ResultEnum.COLLECT_MERCHANDIZE.getKey());
+                userCollect.setModifyTime(merchandizeCollect.getModifyTime());
+                userCollect.setCreateTime(merchandizeCollect.getCreateTime());
+                src.add(userCollect);
+            }
+        }
+    }
 }
