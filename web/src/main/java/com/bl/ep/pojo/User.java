@@ -7,11 +7,10 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import javax.persistence.Column;
 import javax.persistence.Id;
 import javax.persistence.Table;
-import java.io.Serializable;
-import java.util.Date;
+import java.time.LocalDate;
 
 @Table(name="t_user")
-public class User/* implements Serializable*/{
+public class User{
     @Id
     private Integer id;
 
@@ -47,7 +46,7 @@ public class User/* implements Serializable*/{
      */
     @Column(name = "create_time")
     @JsonFormat(pattern="yyyy-MM-dd hh:mm:ss a", locale = "zh", timezone = "GMT+8")
-    private Date createTime;
+    private LocalDate createTime;
 
     public Integer getId() {
         return id;
@@ -105,11 +104,11 @@ public class User/* implements Serializable*/{
         this.isDelete = isDelete;
     }
 
-    public Date getCreateTime() {
+    public LocalDate getCreateTime() {
         return createTime;
     }
 
-    public void setCreateTime(Date createTime) {
+    public void setCreateTime(LocalDate createTime) {
         this.createTime = createTime;
     }
 }

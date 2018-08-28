@@ -1,5 +1,7 @@
 package com.bl.ep.param;
 
+import org.springframework.web.bind.annotation.RequestParam;
+
 /**
  * @author： 李树林
  * @description：

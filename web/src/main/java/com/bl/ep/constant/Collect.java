@@ -1,4 +1,4 @@
-package com.bl.ep.interfaces;
+package com.bl.ep.constant;
 
 /**
  * @author： 李树林

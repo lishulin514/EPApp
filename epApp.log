@@ -1,71 +1,345 @@
-2018-08-25 16:24:50.764  INFO 13928 --- [main] com.bl.ep.EpAppApplication               : Starting EpAppApplication on DESKTOP-MGAMQ48 with PID 13928 (D:\workspace\EPApp\web\target\classes started by 李树林 in D:\workspace\EPApp)
-2018-08-25 16:24:50.777  INFO 13928 --- [main] com.bl.ep.EpAppApplication               : No active profile set, falling back to default profiles: default
-2018-08-25 16:24:51.097  INFO 13928 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7c37508a: startup date [Sat Aug 25 16:24:51 CST 2018]; root of context hierarchy
-2018-08-25 16:24:54.612  WARN 13928 --- [main] t.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.bl.ep]' package. Please check your configuration.
-2018-08-25 16:24:54.684  WARN 13928 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.bl.ep]' package. Please check your configuration.
-2018-08-25 16:24:58.110  INFO 13928 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
-2018-08-25 16:24:58.417  INFO 13928 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2018-08-25 16:24:58.421  INFO 13928 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.23
-2018-08-25 16:24:58.867  INFO 13928 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2018-08-25 16:24:58.868  INFO 13928 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 7780 ms
-2018-08-25 16:24:59.715  INFO 13928 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
-2018-08-25 16:24:59.721  INFO 13928 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'statViewServlet' to [/druid/*]
-2018-08-25 16:24:59.735  INFO 13928 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
-2018-08-25 16:24:59.737  INFO 13928 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
-2018-08-25 16:24:59.738  INFO 13928 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
-2018-08-25 16:24:59.739  INFO 13928 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
-2018-08-25 16:24:59.740  INFO 13928 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'webStatFilter' to urls: [/*]
-2018-08-25 16:25:00.284  INFO 13928 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
-2018-08-25 16:25:04.663  INFO 13928 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
-2018-08-25 16:25:07.536  INFO 13928 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7c37508a: startup date [Sat Aug 25 16:24:51 CST 2018]; root of context hierarchy
-2018-08-25 16:25:07.780  INFO 13928 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/home/index],methods=[POST]}" onto public com.bl.ep.constant.ResultModel com.bl.ep.controller.UserController.index()
-2018-08-25 16:25:07.786  INFO 13928 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/login],methods=[POST]}" onto public com.bl.ep.constant.ResultModel com.bl.ep.controller.UserController.login(java.lang.String,java.lang.String)
-2018-08-25 16:25:07.789  INFO 13928 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/tasks/test1]}" onto public java.lang.String com.bl.ep.task.DoTask.test1() throws java.lang.Exception
-2018-08-25 16:25:07.797  INFO 13928 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
-2018-08-25 16:25:07.798  INFO 13928 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
-2018-08-25 16:25:07.932  INFO 13928 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2018-08-25 16:25:07.932  INFO 13928 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/static/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2018-08-25 16:25:08.022  INFO 13928 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : Detected @ExceptionHandler methods in restExceptionHandler
-2018-08-25 16:25:08.180  INFO 13928 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2018-08-25 16:25:09.508  INFO 13928 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
-2018-08-25 16:25:09.513  INFO 13928 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'statFilter' has been autodetected for JMX exposure
-2018-08-25 16:25:09.514  INFO 13928 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
-2018-08-25 16:25:09.529  INFO 13928 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.spring.boot.autoconfigure:name=dataSource,type=DruidDataSourceWrapper]
-2018-08-25 16:25:09.531  INFO 13928 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'statFilter': registering with JMX server as MBean [com.alibaba.druid.filter.stat:name=statFilter,type=StatFilter]
-2018-08-25 16:25:09.754  INFO 13928 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
-2018-08-25 16:25:09.774  INFO 13928 --- [main] com.bl.ep.EpAppApplication               : Started EpAppApplication in 21.179 seconds (JVM running for 23.307)
-2018-08-25 16:25:15.392  INFO 13928 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
-2018-08-25 16:25:15.393  INFO 13928 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
-2018-08-25 16:25:15.466  INFO 13928 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 73 ms
-2018-08-25 16:25:16.064 DEBUG 13928 --- [http-nio-8080-exec-2] com.bl.ep.dao.HomeMapper.selectAll       : ==>  Preparing: SELECT id,title,image,url FROM t_home 
-2018-08-25 16:25:16.135 DEBUG 13928 --- [http-nio-8080-exec-2] com.bl.ep.dao.HomeMapper.selectAll       : ==> Parameters: 
-2018-08-25 16:25:16.706 DEBUG 13928 --- [http-nio-8080-exec-2] com.bl.ep.dao.HomeMapper.selectAll       : <==      Total: 0
-2018-08-25 16:26:41.096 DEBUG 13928 --- [http-nio-8080-exec-5] com.bl.ep.dao.HomeMapper.selectAll       : ==>  Preparing: SELECT id,title,image,url FROM t_home 
-2018-08-25 16:26:41.097 DEBUG 13928 --- [http-nio-8080-exec-5] com.bl.ep.dao.HomeMapper.selectAll       : ==> Parameters: 
-2018-08-25 16:26:41.149 DEBUG 13928 --- [http-nio-8080-exec-5] com.bl.ep.dao.HomeMapper.selectAll       : <==      Total: 2
-2018-08-26 22:54:11.029  INFO 5080 --- [main] com.bl.ep.EpAppApplication               : Starting EpAppApplication on DESKTOP-MGAMQ48 with PID 5080 (D:\workspace\EPApp\web\target\classes started by 李树林 in D:\workspace\EPApp)
-2018-08-26 22:54:11.041  INFO 5080 --- [main] com.bl.ep.EpAppApplication               : No active profile set, falling back to default profiles: default
-2018-08-26 22:54:11.501  INFO 5080 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6be968ce: startup date [Sun Aug 26 22:54:11 CST 2018]; root of context hierarchy
-2018-08-26 22:54:16.157  WARN 5080 --- [main] t.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.bl.ep]' package. Please check your configuration.
-2018-08-26 22:54:16.258  WARN 5080 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.bl.ep]' package. Please check your configuration.
-2018-08-26 22:54:21.490  INFO 5080 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
-2018-08-26 22:54:21.558  INFO 5080 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2018-08-26 22:54:21.564  INFO 5080 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.23
-2018-08-26 22:54:22.328  INFO 5080 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2018-08-26 22:54:22.329  INFO 5080 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 10837 ms
-2018-08-26 22:54:23.916  INFO 5080 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
-2018-08-26 22:54:23.920  INFO 5080 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'statViewServlet' to [/druid/*]
-2018-08-26 22:54:23.936  INFO 5080 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
-2018-08-26 22:54:23.942  INFO 5080 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
-2018-08-26 22:54:23.944  INFO 5080 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
-2018-08-26 22:54:23.945  INFO 5080 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
-2018-08-26 22:54:23.946  INFO 5080 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'webStatFilter' to urls: [/*]
-2018-08-26 22:54:24.204  WARN 5080 --- [main] ationConfigEmbeddedWebApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'merchandizeController': Unsatisfied dependency expressed through field 'merchandizeService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.bl.ep.service.MerchandizeService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
-2018-08-26 22:54:24.214  INFO 5080 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2018-08-26 22:54:24.338  INFO 5080 --- [main] utoConfigurationReportLoggingInitializer : 
+2018-08-28 10:27:46.018  INFO 15008 --- [main] com.bl.ep.EpAppApplication               : Starting EpAppApplication on DESKTOP-DHQNK68 with PID 15008 (D:\githubworkspace\EPApp\web\target\classes started by forest in D:\githubworkspace\EPApp)
+2018-08-28 10:27:46.028  INFO 15008 --- [main] com.bl.ep.EpAppApplication               : No active profile set, falling back to default profiles: default
+2018-08-28 10:27:46.170  INFO 15008 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@389c4eb1: startup date [Tue Aug 28 10:27:46 CST 2018]; root of context hierarchy
+2018-08-28 10:27:47.619  WARN 15008 --- [main] t.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.bl.ep]' package. Please check your configuration.
+2018-08-28 10:27:47.747  WARN 15008 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.bl.ep]' package. Please check your configuration.
+2018-08-28 10:27:49.093  INFO 15008 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2018-08-28 10:27:49.117  INFO 15008 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-08-28 10:27:49.119  INFO 15008 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.23
+2018-08-28 10:27:49.340  INFO 15008 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-08-28 10:27:49.340  INFO 15008 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3175 ms
+2018-08-28 10:27:49.753  INFO 15008 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2018-08-28 10:27:49.755  INFO 15008 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'statViewServlet' to [/druid/*]
+2018-08-28 10:27:49.762  INFO 15008 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-08-28 10:27:49.763  INFO 15008 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-08-28 10:27:49.763  INFO 15008 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-08-28 10:27:49.763  INFO 15008 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-08-28 10:27:49.764  INFO 15008 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'webStatFilter' to urls: [/*]
+2018-08-28 10:27:49.941  INFO 15008 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2018-08-28 10:27:51.014  INFO 15008 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2018-08-28 10:27:52.616  INFO 15008 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@389c4eb1: startup date [Tue Aug 28 10:27:46 CST 2018]; root of context hierarchy
+2018-08-28 10:27:52.896  INFO 15008 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/merchandize/category/list/{merchandizeId}],methods=[POST]}" onto public com.bl.ep.constant.ResultModel com.bl.ep.controller.MerchandizeController.merchandizeCategory(java.lang.Integer)
+2018-08-28 10:27:52.897  INFO 15008 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/merchandize/list],methods=[POST]}" onto public com.bl.ep.constant.ResultModel com.bl.ep.controller.MerchandizeController.merchandizeList(com.bl.ep.param.MerchandizeParam,com.bl.ep.param.PageParam)
+2018-08-28 10:27:52.898  INFO 15008 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/merchandize/info/{merchandizeId}],methods=[POST]}" onto public com.bl.ep.constant.ResultModel com.bl.ep.controller.MerchandizeController.merchandizeInfo(java.lang.Integer)
+2018-08-28 10:27:52.905  INFO 15008 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/merchandize/collect/{userId}/{categoryId}],methods=[POST]}" onto public com.bl.ep.constant.ResultModel com.bl.ep.controller.UserController.merchandizeCollect(java.lang.Integer,java.lang.Integer)
+2018-08-28 10:27:52.905  INFO 15008 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/home/collect/{userId}/{homeId}],methods=[POST]}" onto public com.bl.ep.constant.ResultModel com.bl.ep.controller.UserController.homeCollect(java.lang.Integer,java.lang.Integer)
+2018-08-28 10:27:52.906  INFO 15008 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/home/list],methods=[POST]}" onto public com.bl.ep.constant.ResultModel com.bl.ep.controller.UserController.homeList(com.bl.ep.param.HomeParam,com.bl.ep.param.PageParam)
+2018-08-28 10:27:52.906  INFO 15008 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/collect],methods=[POST]}" onto public com.bl.ep.constant.ResultModel com.bl.ep.controller.UserController.userCollect(com.bl.ep.param.CollectParam)
+2018-08-28 10:27:52.906  INFO 15008 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/login],methods=[POST],params=[username && password]}" onto public com.bl.ep.constant.ResultModel com.bl.ep.controller.UserController.login(com.bl.ep.param.UserParam)
+2018-08-28 10:27:52.907  INFO 15008 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/tasks/test1]}" onto public java.lang.String com.bl.ep.task.DoTask.test1() throws java.lang.Exception
+2018-08-28 10:27:52.910  INFO 15008 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-08-28 10:27:52.911  INFO 15008 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-08-28 10:27:52.976  INFO 15008 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-28 10:27:52.976  INFO 15008 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/static/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-28 10:27:53.006  INFO 15008 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : Detected @ExceptionHandler methods in restExceptionHandler
+2018-08-28 10:27:53.053  INFO 15008 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-28 10:27:53.725  INFO 15008 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-08-28 10:27:53.728  INFO 15008 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'statFilter' has been autodetected for JMX exposure
+2018-08-28 10:27:53.729  INFO 15008 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-08-28 10:27:53.737  INFO 15008 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.spring.boot.autoconfigure:name=dataSource,type=DruidDataSourceWrapper]
+2018-08-28 10:27:53.738  INFO 15008 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'statFilter': registering with JMX server as MBean [com.alibaba.druid.filter.stat:name=statFilter,type=StatFilter]
+2018-08-28 10:27:53.838  INFO 15008 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2018-08-28 10:27:53.845  INFO 15008 --- [main] com.bl.ep.EpAppApplication               : Started EpAppApplication in 9.317 seconds (JVM running for 17.882)
+2018-08-28 10:28:02.960  INFO 15008 --- [http-nio-8080-exec-3] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-08-28 10:28:02.960  INFO 15008 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2018-08-28 10:28:02.991  INFO 15008 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 30 ms
+2018-08-28 10:28:06.341 DEBUG 15008 --- [http-nio-8080-exec-3] com.bl.ep.dao.UserMapper.selectOne       : ==>  Preparing: SELECT id,username,password,realname,age,sex,is_delete,create_time FROM t_user WHERE username = ? AND password = ? 
+2018-08-28 10:28:06.383 DEBUG 15008 --- [http-nio-8080-exec-3] com.bl.ep.dao.UserMapper.selectOne       : ==> Parameters: lishulin(String), 123(String)
+2018-08-28 10:28:06.405 DEBUG 15008 --- [http-nio-8080-exec-3] com.bl.ep.dao.UserMapper.selectOne       : <==      Total: 1
+2018-08-28 10:28:42.521  INFO 21668 --- [main] com.bl.ep.EpAppApplication               : Starting EpAppApplication on DESKTOP-DHQNK68 with PID 21668 (D:\githubworkspace\EPApp\web\target\classes started by forest in D:\githubworkspace\EPApp)
+2018-08-28 10:28:42.529  INFO 21668 --- [main] com.bl.ep.EpAppApplication               : No active profile set, falling back to default profiles: default
+2018-08-28 10:28:42.756  INFO 21668 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3fc79729: startup date [Tue Aug 28 10:28:42 CST 2018]; root of context hierarchy
+2018-08-28 10:28:45.018  WARN 21668 --- [main] t.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.bl.ep]' package. Please check your configuration.
+2018-08-28 10:28:45.053  WARN 21668 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.bl.ep]' package. Please check your configuration.
+2018-08-28 10:28:46.274  INFO 21668 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2018-08-28 10:28:46.292  INFO 21668 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-08-28 10:28:46.294  INFO 21668 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.23
+2018-08-28 10:28:46.465  INFO 21668 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-08-28 10:28:46.465  INFO 21668 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3715 ms
+2018-08-28 10:28:46.836  INFO 21668 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2018-08-28 10:28:46.838  INFO 21668 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'statViewServlet' to [/druid/*]
+2018-08-28 10:28:46.843  INFO 21668 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-08-28 10:28:46.844  INFO 21668 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-08-28 10:28:46.844  INFO 21668 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-08-28 10:28:46.844  INFO 21668 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-08-28 10:28:46.845  INFO 21668 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'webStatFilter' to urls: [/*]
+2018-08-28 10:28:46.989  INFO 21668 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2018-08-28 10:28:48.085  INFO 21668 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2018-08-28 10:28:49.576  INFO 21668 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3fc79729: startup date [Tue Aug 28 10:28:42 CST 2018]; root of context hierarchy
+2018-08-28 10:28:49.863  INFO 21668 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/merchandize/category/list/{merchandizeId}],methods=[POST]}" onto public com.bl.ep.constant.ResultModel com.bl.ep.controller.MerchandizeController.merchandizeCategory(java.lang.Integer)
+2018-08-28 10:28:49.864  INFO 21668 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/merchandize/list],methods=[POST]}" onto public com.bl.ep.constant.ResultModel com.bl.ep.controller.MerchandizeController.merchandizeList(com.bl.ep.param.MerchandizeParam,com.bl.ep.param.PageParam)
+2018-08-28 10:28:49.865  INFO 21668 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/merchandize/info/{merchandizeId}],methods=[POST]}" onto public com.bl.ep.constant.ResultModel com.bl.ep.controller.MerchandizeController.merchandizeInfo(java.lang.Integer)
+2018-08-28 10:28:49.871  INFO 21668 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/merchandize/collect/{userId}/{categoryId}],methods=[POST]}" onto public com.bl.ep.constant.ResultModel com.bl.ep.controller.UserController.merchandizeCollect(java.lang.Integer,java.lang.Integer)
+2018-08-28 10:28:49.872  INFO 21668 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/home/list],methods=[POST]}" onto public com.bl.ep.constant.ResultModel com.bl.ep.controller.UserController.homeList(com.bl.ep.param.HomeParam,com.bl.ep.param.PageParam)
+2018-08-28 10:28:49.872  INFO 21668 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/login],methods=[POST],params=[username && password]}" onto public com.bl.ep.constant.ResultModel com.bl.ep.controller.UserController.login(com.bl.ep.param.UserParam)
+2018-08-28 10:28:49.873  INFO 21668 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/home/collect/{userId}/{homeId}],methods=[POST]}" onto public com.bl.ep.constant.ResultModel com.bl.ep.controller.UserController.homeCollect(java.lang.Integer,java.lang.Integer)
+2018-08-28 10:28:49.873  INFO 21668 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/collect],methods=[POST]}" onto public com.bl.ep.constant.ResultModel com.bl.ep.controller.UserController.userCollect(com.bl.ep.param.CollectParam)
+2018-08-28 10:28:49.874  INFO 21668 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/tasks/test1]}" onto public java.lang.String com.bl.ep.task.DoTask.test1() throws java.lang.Exception
+2018-08-28 10:28:49.877  INFO 21668 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-08-28 10:28:49.878  INFO 21668 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-08-28 10:28:49.941  INFO 21668 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-28 10:28:49.942  INFO 21668 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/static/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-28 10:28:49.975  INFO 21668 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : Detected @ExceptionHandler methods in restExceptionHandler
+2018-08-28 10:28:50.017  INFO 21668 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-28 10:28:50.754  INFO 21668 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-08-28 10:28:50.759  INFO 21668 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'statFilter' has been autodetected for JMX exposure
+2018-08-28 10:28:50.759  INFO 21668 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-08-28 10:28:50.771  INFO 21668 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.spring.boot.autoconfigure:name=dataSource,type=DruidDataSourceWrapper]
+2018-08-28 10:28:50.772  INFO 21668 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'statFilter': registering with JMX server as MBean [com.alibaba.druid.filter.stat:name=statFilter,type=StatFilter]
+2018-08-28 10:28:50.883  INFO 21668 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2018-08-28 10:28:50.890  INFO 21668 --- [main] com.bl.ep.EpAppApplication               : Started EpAppApplication in 9.672 seconds (JVM running for 11.703)
+2018-08-28 10:29:07.508  INFO 21668 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-08-28 10:29:07.509  INFO 21668 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2018-08-28 10:29:07.547  INFO 21668 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 38 ms
+2018-08-28 10:29:09.427 DEBUG 21668 --- [http-nio-8080-exec-2] com.bl.ep.dao.UserMapper.selectOne       : ==>  Preparing: SELECT id,username,password,realname,age,sex,is_delete,create_time FROM t_user WHERE username = ? AND password = ? 
+2018-08-28 10:29:09.458 DEBUG 21668 --- [http-nio-8080-exec-2] com.bl.ep.dao.UserMapper.selectOne       : ==> Parameters: lishulin(String), 123(String)
+2018-08-28 10:29:09.489 DEBUG 21668 --- [http-nio-8080-exec-2] com.bl.ep.dao.UserMapper.selectOne       : <==      Total: 1
+2018-08-28 10:29:09.495 DEBUG 21668 --- [http-nio-8080-exec-2] com.bl.ep.controller.UserController      : login
+2018-08-28 10:30:37.495  INFO 19164 --- [main] com.bl.ep.EpAppApplication               : Starting EpAppApplication on DESKTOP-DHQNK68 with PID 19164 (D:\githubworkspace\EPApp\web\target\classes started by forest in D:\githubworkspace\EPApp)
+2018-08-28 10:30:37.503  INFO 19164 --- [main] com.bl.ep.EpAppApplication               : No active profile set, falling back to default profiles: default
+2018-08-28 10:30:37.664  INFO 19164 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3fc79729: startup date [Tue Aug 28 10:30:37 CST 2018]; root of context hierarchy
+2018-08-28 10:30:39.660  WARN 19164 --- [main] t.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.bl.ep]' package. Please check your configuration.
+2018-08-28 10:30:39.696  WARN 19164 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.bl.ep]' package. Please check your configuration.
+2018-08-28 10:30:40.898  INFO 19164 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2018-08-28 10:30:40.916  INFO 19164 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-08-28 10:30:40.918  INFO 19164 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.23
+2018-08-28 10:30:41.076  INFO 19164 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-08-28 10:30:41.076  INFO 19164 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3420 ms
+2018-08-28 10:30:41.453  INFO 19164 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2018-08-28 10:30:41.454  INFO 19164 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'statViewServlet' to [/druid/*]
+2018-08-28 10:30:41.461  INFO 19164 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-08-28 10:30:41.461  INFO 19164 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-08-28 10:30:41.462  INFO 19164 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-08-28 10:30:41.462  INFO 19164 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-08-28 10:30:41.462  INFO 19164 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'webStatFilter' to urls: [/*]
+2018-08-28 10:30:41.606  INFO 19164 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2018-08-28 10:30:42.696  INFO 19164 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2018-08-28 10:30:44.178  INFO 19164 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3fc79729: startup date [Tue Aug 28 10:30:37 CST 2018]; root of context hierarchy
+2018-08-28 10:30:44.475  INFO 19164 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/merchandize/list],methods=[POST]}" onto public com.bl.ep.constant.ResultModel com.bl.ep.controller.MerchandizeController.merchandizeList(com.bl.ep.param.MerchandizeParam,com.bl.ep.param.PageParam)
+2018-08-28 10:30:44.476  INFO 19164 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/merchandize/info/{merchandizeId}],methods=[POST]}" onto public com.bl.ep.constant.ResultModel com.bl.ep.controller.MerchandizeController.merchandizeInfo(java.lang.Integer)
+2018-08-28 10:30:44.476  INFO 19164 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/merchandize/category/list/{merchandizeId}],methods=[POST]}" onto public com.bl.ep.constant.ResultModel com.bl.ep.controller.MerchandizeController.merchandizeCategory(java.lang.Integer)
+2018-08-28 10:30:44.481  INFO 19164 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/home/list],methods=[POST]}" onto public com.bl.ep.constant.ResultModel com.bl.ep.controller.UserController.homeList(com.bl.ep.param.HomeParam,com.bl.ep.param.PageParam)
+2018-08-28 10:30:44.482  INFO 19164 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/login],methods=[POST],params=[username && password]}" onto public com.bl.ep.constant.ResultModel com.bl.ep.controller.UserController.login(com.bl.ep.param.UserParam)
+2018-08-28 10:30:44.482  INFO 19164 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/merchandize/collect/{userId}/{categoryId}],methods=[POST]}" onto public com.bl.ep.constant.ResultModel com.bl.ep.controller.UserController.merchandizeCollect(java.lang.Integer,java.lang.Integer)
+2018-08-28 10:30:44.482  INFO 19164 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/home/collect/{userId}/{homeId}],methods=[POST]}" onto public com.bl.ep.constant.ResultModel com.bl.ep.controller.UserController.homeCollect(java.lang.Integer,java.lang.Integer)
+2018-08-28 10:30:44.483  INFO 19164 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/collect],methods=[POST]}" onto public com.bl.ep.constant.ResultModel com.bl.ep.controller.UserController.userCollect(com.bl.ep.param.CollectParam)
+2018-08-28 10:30:44.484  INFO 19164 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/tasks/test1]}" onto public java.lang.String com.bl.ep.task.DoTask.test1() throws java.lang.Exception
+2018-08-28 10:30:44.487  INFO 19164 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-08-28 10:30:44.487  INFO 19164 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-08-28 10:30:44.551  INFO 19164 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-28 10:30:44.552  INFO 19164 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/static/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-28 10:30:44.583  INFO 19164 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : Detected @ExceptionHandler methods in restExceptionHandler
+2018-08-28 10:30:44.628  INFO 19164 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-28 10:30:45.326  INFO 19164 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-08-28 10:30:45.329  INFO 19164 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'statFilter' has been autodetected for JMX exposure
+2018-08-28 10:30:45.329  INFO 19164 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-08-28 10:30:45.340  INFO 19164 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.spring.boot.autoconfigure:name=dataSource,type=DruidDataSourceWrapper]
+2018-08-28 10:30:45.341  INFO 19164 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'statFilter': registering with JMX server as MBean [com.alibaba.druid.filter.stat:name=statFilter,type=StatFilter]
+2018-08-28 10:30:45.435  INFO 19164 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2018-08-28 10:30:45.446  INFO 19164 --- [main] com.bl.ep.EpAppApplication               : Started EpAppApplication in 9.093 seconds (JVM running for 11.195)
+2018-08-28 10:31:16.059  INFO 19164 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-08-28 10:31:16.059  INFO 19164 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2018-08-28 10:31:16.094  INFO 19164 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 35 ms
+2018-08-28 10:31:18.879 DEBUG 19164 --- [http-nio-8080-exec-2] com.bl.ep.dao.UserMapper.selectOne       : ==>  Preparing: SELECT id,username,password,realname,age,sex,is_delete,create_time FROM t_user WHERE username = ? AND password = ? 
+2018-08-28 10:31:18.910 DEBUG 19164 --- [http-nio-8080-exec-2] com.bl.ep.dao.UserMapper.selectOne       : ==> Parameters: lishulin(String), 123(String)
+2018-08-28 10:31:18.939 DEBUG 19164 --- [http-nio-8080-exec-2] com.bl.ep.dao.UserMapper.selectOne       : <==      Total: 1
+2018-08-28 10:31:18.943 DEBUG 19164 --- [http-nio-8080-exec-2] com.bl.ep.controller.UserController      : login
+2018-08-28 10:35:19.006  INFO 22964 --- [main] com.bl.ep.EpAppApplication               : Starting EpAppApplication on DESKTOP-DHQNK68 with PID 22964 (D:\githubworkspace\EPApp\web\target\classes started by forest in D:\githubworkspace\EPApp)
+2018-08-28 10:35:19.014  INFO 22964 --- [main] com.bl.ep.EpAppApplication               : No active profile set, falling back to default profiles: default
+2018-08-28 10:35:19.251  INFO 22964 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3fc79729: startup date [Tue Aug 28 10:35:19 CST 2018]; root of context hierarchy
+2018-08-28 10:35:21.030  WARN 22964 --- [main] t.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.bl.ep]' package. Please check your configuration.
+2018-08-28 10:35:21.067  WARN 22964 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.bl.ep]' package. Please check your configuration.
+2018-08-28 10:35:22.234  INFO 22964 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2018-08-28 10:35:22.252  INFO 22964 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-08-28 10:35:22.255  INFO 22964 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.23
+2018-08-28 10:35:22.432  INFO 22964 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-08-28 10:35:22.433  INFO 22964 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3187 ms
+2018-08-28 10:35:22.789  INFO 22964 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2018-08-28 10:35:22.791  INFO 22964 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'statViewServlet' to [/druid/*]
+2018-08-28 10:35:22.797  INFO 22964 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-08-28 10:35:22.798  INFO 22964 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-08-28 10:35:22.798  INFO 22964 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-08-28 10:35:22.798  INFO 22964 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-08-28 10:35:22.799  INFO 22964 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'webStatFilter' to urls: [/*]
+2018-08-28 10:35:22.952  INFO 22964 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2018-08-28 10:35:24.174  INFO 22964 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2018-08-28 10:35:26.234  INFO 22964 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3fc79729: startup date [Tue Aug 28 10:35:19 CST 2018]; root of context hierarchy
+2018-08-28 10:35:26.353  INFO 22964 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/merchandize/category/list/{merchandizeId}],methods=[POST]}" onto public com.bl.ep.constant.ResultModel com.bl.ep.controller.MerchandizeController.merchandizeCategory(java.lang.Integer)
+2018-08-28 10:35:26.354  INFO 22964 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/merchandize/info/{merchandizeId}],methods=[POST]}" onto public com.bl.ep.constant.ResultModel com.bl.ep.controller.MerchandizeController.merchandizeInfo(java.lang.Integer)
+2018-08-28 10:35:26.355  INFO 22964 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/merchandize/list],methods=[POST]}" onto public com.bl.ep.constant.ResultModel com.bl.ep.controller.MerchandizeController.merchandizeList(com.bl.ep.param.MerchandizeParam,com.bl.ep.param.PageParam)
+2018-08-28 10:35:26.359  INFO 22964 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/merchandize/collect/{userId}/{categoryId}],methods=[POST]}" onto public com.bl.ep.constant.ResultModel com.bl.ep.controller.UserController.merchandizeCollect(java.lang.Integer,java.lang.Integer)
+2018-08-28 10:35:26.359  INFO 22964 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/home/list],methods=[POST]}" onto public com.bl.ep.constant.ResultModel com.bl.ep.controller.UserController.homeList(com.bl.ep.param.HomeParam,com.bl.ep.param.PageParam)
+2018-08-28 10:35:26.360  INFO 22964 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/login],methods=[POST],params=[username && password]}" onto public com.bl.ep.constant.ResultModel com.bl.ep.controller.UserController.login(com.bl.ep.param.UserParam)
+2018-08-28 10:35:26.360  INFO 22964 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/home/collect/{userId}/{homeId}],methods=[POST]}" onto public com.bl.ep.constant.ResultModel com.bl.ep.controller.UserController.homeCollect(java.lang.Integer,java.lang.Integer)
+2018-08-28 10:35:26.360  INFO 22964 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/collect],methods=[POST]}" onto public com.bl.ep.constant.ResultModel com.bl.ep.controller.UserController.userCollect(com.bl.ep.param.CollectParam)
+2018-08-28 10:35:26.361  INFO 22964 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/tasks/test1]}" onto public java.lang.String com.bl.ep.task.DoTask.test1() throws java.lang.Exception
+2018-08-28 10:35:26.364  INFO 22964 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-08-28 10:35:26.365  INFO 22964 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-08-28 10:35:26.436  INFO 22964 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-28 10:35:26.437  INFO 22964 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/static/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-28 10:35:26.474  INFO 22964 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : Detected @ExceptionHandler methods in restExceptionHandler
+2018-08-28 10:35:26.542  INFO 22964 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-28 10:35:27.321  INFO 22964 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-08-28 10:35:27.324  INFO 22964 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'statFilter' has been autodetected for JMX exposure
+2018-08-28 10:35:27.324  INFO 22964 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-08-28 10:35:27.335  INFO 22964 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.spring.boot.autoconfigure:name=dataSource,type=DruidDataSourceWrapper]
+2018-08-28 10:35:27.337  INFO 22964 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'statFilter': registering with JMX server as MBean [com.alibaba.druid.filter.stat:name=statFilter,type=StatFilter]
+2018-08-28 10:35:27.445  INFO 22964 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2018-08-28 10:35:27.454  INFO 22964 --- [main] com.bl.ep.EpAppApplication               : Started EpAppApplication in 9.59 seconds (JVM running for 12.457)
+2018-08-28 10:35:34.877  INFO 22964 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-08-28 10:35:34.877  INFO 22964 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2018-08-28 10:35:34.909  INFO 22964 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 32 ms
+2018-08-28 10:35:37.109 DEBUG 22964 --- [http-nio-8080-exec-1] com.bl.ep.dao.UserMapper.selectOne       : ==>  Preparing: SELECT id,username,password,realname,age,sex,is_delete,create_time FROM t_user WHERE username = ? AND password = ? 
+2018-08-28 10:35:37.142 DEBUG 22964 --- [http-nio-8080-exec-1] com.bl.ep.dao.UserMapper.selectOne       : ==> Parameters: lishulin(String), 123(String)
+2018-08-28 10:35:37.164 DEBUG 22964 --- [http-nio-8080-exec-1] com.bl.ep.dao.UserMapper.selectOne       : <==      Total: 1
+2018-08-28 10:35:37.168  INFO 22964 --- [http-nio-8080-exec-1] com.bl.ep.controller.UserController      : login username = {0};password = {1}
+2018-08-28 10:37:53.658  INFO 22672 --- [main] com.bl.ep.EpAppApplication               : Starting EpAppApplication on DESKTOP-DHQNK68 with PID 22672 (D:\githubworkspace\EPApp\web\target\classes started by forest in D:\githubworkspace\EPApp)
+2018-08-28 10:37:53.665  INFO 22672 --- [main] com.bl.ep.EpAppApplication               : No active profile set, falling back to default profiles: default
+2018-08-28 10:37:54.027  INFO 22672 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3fc79729: startup date [Tue Aug 28 10:37:54 CST 2018]; root of context hierarchy
+2018-08-28 10:37:56.692  WARN 22672 --- [main] t.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.bl.ep]' package. Please check your configuration.
+2018-08-28 10:37:56.767  WARN 22672 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.bl.ep]' package. Please check your configuration.
+2018-08-28 10:38:00.298  INFO 15488 --- [main] com.bl.ep.EpAppApplication               : Starting EpAppApplication on DESKTOP-DHQNK68 with PID 15488 (D:\githubworkspace\EPApp\web\target\classes started by forest in D:\githubworkspace\EPApp)
+2018-08-28 10:38:00.304  INFO 15488 --- [main] com.bl.ep.EpAppApplication               : No active profile set, falling back to default profiles: default
+2018-08-28 10:38:00.496  INFO 15488 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@14a50707: startup date [Tue Aug 28 10:38:00 CST 2018]; root of context hierarchy
+2018-08-28 10:38:00.638  INFO 22672 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2018-08-28 10:38:00.669  INFO 22672 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-08-28 10:38:00.671  INFO 22672 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.23
+2018-08-28 10:38:01.326  INFO 22672 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-08-28 10:38:01.327  INFO 22672 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 7310 ms
+2018-08-28 10:38:02.453  INFO 22672 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2018-08-28 10:38:02.455  INFO 22672 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'statViewServlet' to [/druid/*]
+2018-08-28 10:38:02.464  INFO 22672 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-08-28 10:38:02.466  INFO 22672 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-08-28 10:38:02.466  INFO 22672 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-08-28 10:38:02.466  INFO 22672 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-08-28 10:38:02.467  INFO 22672 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'webStatFilter' to urls: [/*]
+2018-08-28 10:38:02.856  INFO 22672 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2018-08-28 10:38:03.125  WARN 15488 --- [main] t.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.bl.ep]' package. Please check your configuration.
+2018-08-28 10:38:03.212  WARN 15488 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.bl.ep]' package. Please check your configuration.
+2018-08-28 10:38:04.752  INFO 22672 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2018-08-28 10:38:04.998  INFO 15488 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2018-08-28 10:38:05.026  INFO 15488 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-08-28 10:38:05.028  INFO 15488 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.23
+2018-08-28 10:38:05.344  INFO 15488 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-08-28 10:38:05.345  INFO 15488 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 4855 ms
+2018-08-28 10:38:05.939  INFO 15488 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2018-08-28 10:38:05.942  INFO 15488 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'statViewServlet' to [/druid/*]
+2018-08-28 10:38:05.964  INFO 15488 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-08-28 10:38:05.966  INFO 15488 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-08-28 10:38:05.967  INFO 15488 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-08-28 10:38:05.967  INFO 15488 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-08-28 10:38:05.968  INFO 15488 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'webStatFilter' to urls: [/*]
+2018-08-28 10:38:06.183  INFO 15488 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2018-08-28 10:38:07.066  INFO 22672 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3fc79729: startup date [Tue Aug 28 10:37:54 CST 2018]; root of context hierarchy
+2018-08-28 10:38:07.482  INFO 22672 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/merchandize/list],methods=[POST]}" onto public com.bl.ep.constant.ResultModel com.bl.ep.controller.MerchandizeController.merchandizeList(com.bl.ep.param.MerchandizeParam,com.bl.ep.param.PageParam)
+2018-08-28 10:38:07.484  INFO 22672 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/merchandize/info/{merchandizeId}],methods=[POST]}" onto public com.bl.ep.constant.ResultModel com.bl.ep.controller.MerchandizeController.merchandizeInfo(java.lang.Integer)
+2018-08-28 10:38:07.485  INFO 22672 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/merchandize/category/list/{merchandizeId}],methods=[POST]}" onto public com.bl.ep.constant.ResultModel com.bl.ep.controller.MerchandizeController.merchandizeCategory(java.lang.Integer)
+2018-08-28 10:38:07.491  INFO 22672 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/home/collect/{userId}/{homeId}],methods=[POST]}" onto public com.bl.ep.constant.ResultModel com.bl.ep.controller.UserController.homeCollect(java.lang.Integer,java.lang.Integer)
+2018-08-28 10:38:07.491  INFO 22672 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/home/list],methods=[POST]}" onto public com.bl.ep.constant.ResultModel com.bl.ep.controller.UserController.homeList(com.bl.ep.param.HomeParam,com.bl.ep.param.PageParam)
+2018-08-28 10:38:07.492  INFO 22672 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/collect],methods=[POST]}" onto public com.bl.ep.constant.ResultModel com.bl.ep.controller.UserController.userCollect(com.bl.ep.param.CollectParam)
+2018-08-28 10:38:07.493  INFO 22672 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/login],methods=[POST],params=[username && password]}" onto public com.bl.ep.constant.ResultModel com.bl.ep.controller.UserController.login(com.bl.ep.param.UserParam)
+2018-08-28 10:38:07.493  INFO 22672 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/merchandize/collect/{userId}/{categoryId}],methods=[POST]}" onto public com.bl.ep.constant.ResultModel com.bl.ep.controller.UserController.merchandizeCollect(java.lang.Integer,java.lang.Integer)
+2018-08-28 10:38:07.495  INFO 22672 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/tasks/test1]}" onto public java.lang.String com.bl.ep.task.DoTask.test1() throws java.lang.Exception
+2018-08-28 10:38:07.499  INFO 22672 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-08-28 10:38:07.500  INFO 22672 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-08-28 10:38:07.603  INFO 22672 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-28 10:38:07.604  INFO 22672 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/static/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-28 10:38:07.647  INFO 22672 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : Detected @ExceptionHandler methods in restExceptionHandler
+2018-08-28 10:38:07.729  INFO 22672 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-28 10:38:07.927  INFO 15488 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2018-08-28 10:38:08.801  INFO 22672 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-08-28 10:38:08.808  INFO 22672 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'statFilter' has been autodetected for JMX exposure
+2018-08-28 10:38:08.810  INFO 22672 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-08-28 10:38:08.822  INFO 22672 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.spring.boot.autoconfigure:name=dataSource,type=DruidDataSourceWrapper]
+2018-08-28 10:38:08.823  INFO 22672 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'statFilter': registering with JMX server as MBean [com.alibaba.druid.filter.stat:name=statFilter,type=StatFilter]
+2018-08-28 10:38:08.950  INFO 22672 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2018-08-28 10:38:08.959  INFO 22672 --- [main] com.bl.ep.EpAppApplication               : Started EpAppApplication in 16.519 seconds (JVM running for 19.978)
+2018-08-28 10:38:09.885  INFO 15488 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@14a50707: startup date [Tue Aug 28 10:38:00 CST 2018]; root of context hierarchy
+2018-08-28 10:38:10.174  INFO 15488 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/merchandize/category/list/{merchandizeId}],methods=[POST]}" onto public com.bl.ep.constant.ResultModel com.bl.ep.controller.MerchandizeController.merchandizeCategory(java.lang.Integer)
+2018-08-28 10:38:10.175  INFO 15488 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/merchandize/list],methods=[POST]}" onto public com.bl.ep.constant.ResultModel com.bl.ep.controller.MerchandizeController.merchandizeList(com.bl.ep.param.MerchandizeParam,com.bl.ep.param.PageParam)
+2018-08-28 10:38:10.176  INFO 15488 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/merchandize/info/{merchandizeId}],methods=[POST]}" onto public com.bl.ep.constant.ResultModel com.bl.ep.controller.MerchandizeController.merchandizeInfo(java.lang.Integer)
+2018-08-28 10:38:10.180  INFO 15488 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/merchandize/collect/{userId}/{categoryId}],methods=[POST]}" onto public com.bl.ep.constant.ResultModel com.bl.ep.controller.UserController.merchandizeCollect(java.lang.Integer,java.lang.Integer)
+2018-08-28 10:38:10.181  INFO 15488 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/login],methods=[POST],params=[username && password]}" onto public com.bl.ep.constant.ResultModel com.bl.ep.controller.UserController.login(com.bl.ep.param.UserParam)
+2018-08-28 10:38:10.181  INFO 15488 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/collect],methods=[POST]}" onto public com.bl.ep.constant.ResultModel com.bl.ep.controller.UserController.userCollect(com.bl.ep.param.CollectParam)
+2018-08-28 10:38:10.181  INFO 15488 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/home/list],methods=[POST]}" onto public com.bl.ep.constant.ResultModel com.bl.ep.controller.UserController.homeList(com.bl.ep.param.HomeParam,com.bl.ep.param.PageParam)
+2018-08-28 10:38:10.181  INFO 15488 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/home/collect/{userId}/{homeId}],methods=[POST]}" onto public com.bl.ep.constant.ResultModel com.bl.ep.controller.UserController.homeCollect(java.lang.Integer,java.lang.Integer)
+2018-08-28 10:38:10.182  INFO 15488 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/tasks/test1]}" onto public java.lang.String com.bl.ep.task.DoTask.test1() throws java.lang.Exception
+2018-08-28 10:38:10.185  INFO 15488 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-08-28 10:38:10.186  INFO 15488 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-08-28 10:38:10.256  INFO 15488 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-28 10:38:10.257  INFO 15488 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/static/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-28 10:38:10.288  INFO 15488 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : Detected @ExceptionHandler methods in restExceptionHandler
+2018-08-28 10:38:10.339  INFO 15488 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-28 10:38:11.027  INFO 15488 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-08-28 10:38:11.029  INFO 15488 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'statFilter' has been autodetected for JMX exposure
+2018-08-28 10:38:11.030  INFO 15488 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-08-28 10:38:11.039  INFO 15488 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.spring.boot.autoconfigure:name=dataSource,type=DruidDataSourceWrapper]
+2018-08-28 10:38:11.040  INFO 15488 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'statFilter': registering with JMX server as MBean [com.alibaba.druid.filter.stat:name=statFilter,type=StatFilter]
+2018-08-28 10:38:11.091 ERROR 15488 --- [main] o.a.coyote.http11.Http11NioProtocol      : Failed to start end point associated with ProtocolHandler ["http-nio-8080"]
+
+java.net.BindException: Address already in use: bind
+	at sun.nio.ch.Net.bind0(Native Method) ~[na:1.8.0_121]
+	at sun.nio.ch.Net.bind(Net.java:433) ~[na:1.8.0_121]
+	at sun.nio.ch.Net.bind(Net.java:425) ~[na:1.8.0_121]
+	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:223) ~[na:1.8.0_121]
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74) ~[na:1.8.0_121]
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:210) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.tomcat.util.net.AbstractEndpoint.start(AbstractEndpoint.java:990) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.coyote.AbstractProtocol.start(AbstractProtocol.java:635) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1022) [tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150) [tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.core.StandardService.addConnector(StandardService.java:225) [tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.addPreviouslyRemovedConnectors(TomcatEmbeddedServletContainer.java:250) [spring-boot-1.5.9.RELEASE.jar:1.5.9.RELEASE]
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.start(TomcatEmbeddedServletContainer.java:193) [spring-boot-1.5.9.RELEASE.jar:1.5.9.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.startEmbeddedServletContainer(EmbeddedWebApplicationContext.java:297) [spring-boot-1.5.9.RELEASE.jar:1.5.9.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.finishRefresh(EmbeddedWebApplicationContext.java:145) [spring-boot-1.5.9.RELEASE.jar:1.5.9.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:546) [spring-context-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122) [spring-boot-1.5.9.RELEASE.jar:1.5.9.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:693) [spring-boot-1.5.9.RELEASE.jar:1.5.9.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:360) [spring-boot-1.5.9.RELEASE.jar:1.5.9.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303) [spring-boot-1.5.9.RELEASE.jar:1.5.9.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1118) [spring-boot-1.5.9.RELEASE.jar:1.5.9.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1107) [spring-boot-1.5.9.RELEASE.jar:1.5.9.RELEASE]
+	at com.bl.ep.EpAppApplication.main(EpAppApplication.java:22) [classes/:na]
+
+2018-08-28 10:38:11.093 ERROR 15488 --- [main] o.apache.catalina.core.StandardService   : Failed to start connector [Connector[HTTP/1.1-8080]]
+
+org.apache.catalina.LifecycleException: Failed to start component [Connector[HTTP/1.1-8080]]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:167) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.core.StandardService.addConnector(StandardService.java:225) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.addPreviouslyRemovedConnectors(TomcatEmbeddedServletContainer.java:250) [spring-boot-1.5.9.RELEASE.jar:1.5.9.RELEASE]
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.start(TomcatEmbeddedServletContainer.java:193) [spring-boot-1.5.9.RELEASE.jar:1.5.9.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.startEmbeddedServletContainer(EmbeddedWebApplicationContext.java:297) [spring-boot-1.5.9.RELEASE.jar:1.5.9.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.finishRefresh(EmbeddedWebApplicationContext.java:145) [spring-boot-1.5.9.RELEASE.jar:1.5.9.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:546) [spring-context-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122) [spring-boot-1.5.9.RELEASE.jar:1.5.9.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:693) [spring-boot-1.5.9.RELEASE.jar:1.5.9.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:360) [spring-boot-1.5.9.RELEASE.jar:1.5.9.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303) [spring-boot-1.5.9.RELEASE.jar:1.5.9.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1118) [spring-boot-1.5.9.RELEASE.jar:1.5.9.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1107) [spring-boot-1.5.9.RELEASE.jar:1.5.9.RELEASE]
+	at com.bl.ep.EpAppApplication.main(EpAppApplication.java:22) [classes/:na]
+Caused by: org.apache.catalina.LifecycleException: service.getName(): "Tomcat";  Protocol handler start failed
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1031) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	... 13 common frames omitted
+Caused by: java.net.BindException: Address already in use: bind
+	at sun.nio.ch.Net.bind0(Native Method) ~[na:1.8.0_121]
+	at sun.nio.ch.Net.bind(Net.java:433) ~[na:1.8.0_121]
+	at sun.nio.ch.Net.bind(Net.java:425) ~[na:1.8.0_121]
+	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:223) ~[na:1.8.0_121]
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74) ~[na:1.8.0_121]
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:210) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.tomcat.util.net.AbstractEndpoint.start(AbstractEndpoint.java:990) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.coyote.AbstractProtocol.start(AbstractProtocol.java:635) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1022) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	... 14 common frames omitted
+
+2018-08-28 10:38:11.104  INFO 15488 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2018-08-28 10:38:11.139  INFO 15488 --- [main] utoConfigurationReportLoggingInitializer : 
 
 Error starting ApplicationContext. To display the auto-configuration report re-run your application with 'debug' enabled.
-2018-08-26 22:54:25.084 ERROR 5080 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+2018-08-28 10:38:11.152 ERROR 15488 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
 
 ***************************
 APPLICATION FAILED TO START
@@ -73,76 +347,448 @@ APPLICATION FAILED TO START
 
 Description:
 
-Field merchandizeService in com.bl.ep.controller.MerchandizeController required a bean of type 'com.bl.ep.service.MerchandizeService' that could not be found.
-
+The Tomcat connector configured to listen on port 8080 failed to start. The port may already be in use or the connector may be misconfigured.
 
 Action:
 
-Consider defining a bean of type 'com.bl.ep.service.MerchandizeService' in your configuration.
+Verify the connector's configuration, identify and stop any process that's listening on port 8080, or configure this application to listen on another port.
 
-2018-08-26 22:55:53.345  INFO 7040 --- [main] com.bl.ep.EpAppApplication               : Starting EpAppApplication on DESKTOP-MGAMQ48 with PID 7040 (D:\workspace\EPApp\web\target\classes started by 李树林 in D:\workspace\EPApp)
-2018-08-26 22:55:53.362  INFO 7040 --- [main] com.bl.ep.EpAppApplication               : No active profile set, falling back to default profiles: default
-2018-08-26 22:55:53.987  INFO 7040 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5ddeb7cb: startup date [Sun Aug 26 22:55:53 CST 2018]; root of context hierarchy
-2018-08-26 22:55:57.371  WARN 7040 --- [main] t.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.bl.ep]' package. Please check your configuration.
-2018-08-26 22:55:57.443  WARN 7040 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.bl.ep]' package. Please check your configuration.
-2018-08-26 22:56:01.654  INFO 7040 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
-2018-08-26 22:56:01.699  INFO 7040 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2018-08-26 22:56:01.702  INFO 7040 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.23
-2018-08-26 22:56:02.304  INFO 7040 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2018-08-26 22:56:02.305  INFO 7040 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 8328 ms
-2018-08-26 22:56:03.528  INFO 7040 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
-2018-08-26 22:56:03.532  INFO 7040 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'statViewServlet' to [/druid/*]
-2018-08-26 22:56:03.542  INFO 7040 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
-2018-08-26 22:56:03.544  INFO 7040 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
-2018-08-26 22:56:03.545  INFO 7040 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
-2018-08-26 22:56:03.546  INFO 7040 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
-2018-08-26 22:56:03.547  INFO 7040 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'webStatFilter' to urls: [/*]
-2018-08-26 22:56:03.912  INFO 7040 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
-2018-08-26 22:56:07.455  INFO 7040 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
-2018-08-26 22:56:10.239  INFO 7040 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5ddeb7cb: startup date [Sun Aug 26 22:55:53 CST 2018]; root of context hierarchy
-2018-08-26 22:56:10.516  INFO 7040 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/merchandize/list],methods=[POST]}" onto public com.bl.ep.constant.ResultModel com.bl.ep.controller.MerchandizeController.merchandizeList(com.bl.ep.param.MerchandizeParam,com.bl.ep.param.PageParam)
-2018-08-26 22:56:10.525  INFO 7040 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/login],methods=[POST],params=[username && password]}" onto public com.bl.ep.constant.ResultModel com.bl.ep.controller.UserController.login(com.bl.ep.param.UserParam)
-2018-08-26 22:56:10.526  INFO 7040 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/home/list],methods=[POST]}" onto public com.bl.ep.constant.ResultModel com.bl.ep.controller.UserController.homeList(com.bl.ep.param.HomeParam,com.bl.ep.param.PageParam)
-2018-08-26 22:56:10.529  INFO 7040 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/tasks/test1]}" onto public java.lang.String com.bl.ep.task.DoTask.test1() throws java.lang.Exception
-2018-08-26 22:56:10.537  INFO 7040 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
-2018-08-26 22:56:10.540  INFO 7040 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
-2018-08-26 22:56:10.780  INFO 7040 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2018-08-26 22:56:10.784  INFO 7040 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/static/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2018-08-26 22:56:10.860  INFO 7040 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : Detected @ExceptionHandler methods in restExceptionHandler
-2018-08-26 22:56:10.979  INFO 7040 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2018-08-26 22:56:13.201  INFO 7040 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
-2018-08-26 22:56:13.206  INFO 7040 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'statFilter' has been autodetected for JMX exposure
-2018-08-26 22:56:13.208  INFO 7040 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
-2018-08-26 22:56:13.222  INFO 7040 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.spring.boot.autoconfigure:name=dataSource,type=DruidDataSourceWrapper]
-2018-08-26 22:56:13.225  INFO 7040 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'statFilter': registering with JMX server as MBean [com.alibaba.druid.filter.stat:name=statFilter,type=StatFilter]
-2018-08-26 22:56:13.502  INFO 7040 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
-2018-08-26 22:56:13.522  INFO 7040 --- [main] com.bl.ep.EpAppApplication               : Started EpAppApplication in 22.28 seconds (JVM running for 25.079)
-2018-08-26 22:56:22.379  INFO 7040 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
-2018-08-26 22:56:22.380  INFO 7040 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
-2018-08-26 22:56:22.469  INFO 7040 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 89 ms
-2018-08-26 22:56:22.562  WARN 7040 --- [http-nio-8080-exec-2] o.s.web.servlet.PageNotFound             : No mapping found for HTTP request with URI [/home/index] in DispatcherServlet with name 'dispatcherServlet'
-2018-08-26 22:56:51.097  WARN 7040 --- [http-nio-8080-exec-3] o.s.web.servlet.PageNotFound             : No mapping found for HTTP request with URI [/home/index] in DispatcherServlet with name 'dispatcherServlet'
-2018-08-26 22:57:20.130 DEBUG 7040 --- [http-nio-8080-exec-4] c.b.e.d.H.selectByExample_COUNT          : ==>  Preparing: SELECT count(0) FROM t_home 
-2018-08-26 22:57:20.187 DEBUG 7040 --- [http-nio-8080-exec-4] c.b.e.d.H.selectByExample_COUNT          : ==> Parameters: 
-2018-08-26 22:57:20.297 DEBUG 7040 --- [http-nio-8080-exec-4] c.b.e.d.H.selectByExample_COUNT          : <==      Total: 1
-2018-08-26 22:57:20.300 DEBUG 7040 --- [http-nio-8080-exec-4] c.bl.ep.dao.HomeMapper.selectByExample   : ==>  Preparing: SELECT id,title,image,url,create_time FROM t_home order by create_time DESC LIMIT 999 
-2018-08-26 22:57:20.301 DEBUG 7040 --- [http-nio-8080-exec-4] c.bl.ep.dao.HomeMapper.selectByExample   : ==> Parameters: 
-2018-08-26 22:57:20.374 DEBUG 7040 --- [http-nio-8080-exec-4] c.bl.ep.dao.HomeMapper.selectByExample   : <==      Total: 2
-2018-08-26 22:58:27.411 DEBUG 7040 --- [http-nio-8080-exec-7] c.b.e.d.H.selectByExample_COUNT          : ==>  Preparing: SELECT count(0) FROM t_home 
-2018-08-26 22:58:27.412 DEBUG 7040 --- [http-nio-8080-exec-7] c.b.e.d.H.selectByExample_COUNT          : ==> Parameters: 
-2018-08-26 22:58:27.483 DEBUG 7040 --- [http-nio-8080-exec-7] c.b.e.d.H.selectByExample_COUNT          : <==      Total: 1
-2018-08-26 22:58:27.483 DEBUG 7040 --- [http-nio-8080-exec-7] c.bl.ep.dao.HomeMapper.selectByExample   : ==>  Preparing: SELECT id,title,image,url,create_time FROM t_home order by create_time DESC LIMIT 999 
-2018-08-26 22:58:27.484 DEBUG 7040 --- [http-nio-8080-exec-7] c.bl.ep.dao.HomeMapper.selectByExample   : ==> Parameters: 
-2018-08-26 22:58:27.557 DEBUG 7040 --- [http-nio-8080-exec-7] c.bl.ep.dao.HomeMapper.selectByExample   : <==      Total: 2
-2018-08-26 22:58:47.486 DEBUG 7040 --- [http-nio-8080-exec-8] c.b.e.d.H.selectByExample_COUNT          : ==>  Preparing: SELECT count(0) FROM t_home 
-2018-08-26 22:58:47.487 DEBUG 7040 --- [http-nio-8080-exec-8] c.b.e.d.H.selectByExample_COUNT          : ==> Parameters: 
-2018-08-26 22:58:47.566 DEBUG 7040 --- [http-nio-8080-exec-8] c.b.e.d.H.selectByExample_COUNT          : <==      Total: 1
-2018-08-26 22:58:47.567 DEBUG 7040 --- [http-nio-8080-exec-8] c.bl.ep.dao.HomeMapper.selectByExample   : ==>  Preparing: SELECT id,title,image,url,create_time FROM t_home order by create_time DESC LIMIT 999 
-2018-08-26 22:58:47.568 DEBUG 7040 --- [http-nio-8080-exec-8] c.bl.ep.dao.HomeMapper.selectByExample   : ==> Parameters: 
-2018-08-26 22:58:47.641 DEBUG 7040 --- [http-nio-8080-exec-8] c.bl.ep.dao.HomeMapper.selectByExample   : <==      Total: 2
-2018-08-26 22:59:22.133 DEBUG 7040 --- [http-nio-8080-exec-9] c.b.e.d.H.selectByExample_COUNT          : ==>  Preparing: SELECT count(0) FROM t_home 
-2018-08-26 22:59:22.134 DEBUG 7040 --- [http-nio-8080-exec-9] c.b.e.d.H.selectByExample_COUNT          : ==> Parameters: 
-2018-08-26 22:59:22.206 DEBUG 7040 --- [http-nio-8080-exec-9] c.b.e.d.H.selectByExample_COUNT          : <==      Total: 1
-2018-08-26 22:59:22.208 DEBUG 7040 --- [http-nio-8080-exec-9] c.bl.ep.dao.HomeMapper.selectByExample   : ==>  Preparing: SELECT id,title,image,url,create_time FROM t_home order by id LIMIT 999 
-2018-08-26 22:59:22.210 DEBUG 7040 --- [http-nio-8080-exec-9] c.bl.ep.dao.HomeMapper.selectByExample   : ==> Parameters: 
-2018-08-26 22:59:22.286 DEBUG 7040 --- [http-nio-8080-exec-9] c.bl.ep.dao.HomeMapper.selectByExample   : <==      Total: 2
+2018-08-28 10:38:11.154  INFO 15488 --- [main] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@14a50707: startup date [Tue Aug 28 10:38:00 CST 2018]; root of context hierarchy
+2018-08-28 10:38:11.155  INFO 15488 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2018-08-28 10:38:11.156  INFO 15488 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans
+2018-08-28 10:38:11.160  INFO 15488 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2018-08-28 10:38:27.896  INFO 11192 --- [main] com.bl.ep.EpAppApplication               : Starting EpAppApplication on DESKTOP-DHQNK68 with PID 11192 (D:\githubworkspace\EPApp\web\target\classes started by forest in D:\githubworkspace\EPApp)
+2018-08-28 10:38:27.919  INFO 11192 --- [main] com.bl.ep.EpAppApplication               : No active profile set, falling back to default profiles: default
+2018-08-28 10:38:28.152  INFO 11192 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3fc79729: startup date [Tue Aug 28 10:38:28 CST 2018]; root of context hierarchy
+2018-08-28 10:38:29.990  WARN 11192 --- [main] t.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.bl.ep]' package. Please check your configuration.
+2018-08-28 10:38:30.025  WARN 11192 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.bl.ep]' package. Please check your configuration.
+2018-08-28 10:38:31.237  INFO 11192 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2018-08-28 10:38:31.255  INFO 11192 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-08-28 10:38:31.257  INFO 11192 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.23
+2018-08-28 10:38:31.424  INFO 11192 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-08-28 10:38:31.424  INFO 11192 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3281 ms
+2018-08-28 10:38:31.803  INFO 11192 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2018-08-28 10:38:31.806  INFO 11192 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'statViewServlet' to [/druid/*]
+2018-08-28 10:38:31.813  INFO 11192 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-08-28 10:38:31.814  INFO 11192 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-08-28 10:38:31.815  INFO 11192 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-08-28 10:38:31.815  INFO 11192 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-08-28 10:38:31.816  INFO 11192 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'webStatFilter' to urls: [/*]
+2018-08-28 10:38:31.964  INFO 11192 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2018-08-28 10:38:33.188  INFO 11192 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2018-08-28 10:38:34.695  INFO 11192 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3fc79729: startup date [Tue Aug 28 10:38:28 CST 2018]; root of context hierarchy
+2018-08-28 10:38:34.983  INFO 11192 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/merchandize/category/list/{merchandizeId}],methods=[POST]}" onto public com.bl.ep.constant.ResultModel com.bl.ep.controller.MerchandizeController.merchandizeCategory(java.lang.Integer)
+2018-08-28 10:38:34.985  INFO 11192 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/merchandize/list],methods=[POST]}" onto public com.bl.ep.constant.ResultModel com.bl.ep.controller.MerchandizeController.merchandizeList(com.bl.ep.param.MerchandizeParam,com.bl.ep.param.PageParam)
+2018-08-28 10:38:34.985  INFO 11192 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/merchandize/info/{merchandizeId}],methods=[POST]}" onto public com.bl.ep.constant.ResultModel com.bl.ep.controller.MerchandizeController.merchandizeInfo(java.lang.Integer)
+2018-08-28 10:38:34.988  INFO 11192 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/merchandize/collect/{userId}/{categoryId}],methods=[POST]}" onto public com.bl.ep.constant.ResultModel com.bl.ep.controller.UserController.merchandizeCollect(java.lang.Integer,java.lang.Integer)
+2018-08-28 10:38:34.989  INFO 11192 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/home/collect/{userId}/{homeId}],methods=[POST]}" onto public com.bl.ep.constant.ResultModel com.bl.ep.controller.UserController.homeCollect(java.lang.Integer,java.lang.Integer)
+2018-08-28 10:38:34.990  INFO 11192 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/login],methods=[POST],params=[username && password]}" onto public com.bl.ep.constant.ResultModel com.bl.ep.controller.UserController.login(com.bl.ep.param.UserParam)
+2018-08-28 10:38:34.991  INFO 11192 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/home/list],methods=[POST]}" onto public com.bl.ep.constant.ResultModel com.bl.ep.controller.UserController.homeList(com.bl.ep.param.HomeParam,com.bl.ep.param.PageParam)
+2018-08-28 10:38:34.991  INFO 11192 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/collect],methods=[POST]}" onto public com.bl.ep.constant.ResultModel com.bl.ep.controller.UserController.userCollect(com.bl.ep.param.CollectParam)
+2018-08-28 10:38:34.992  INFO 11192 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/tasks/test1]}" onto public java.lang.String com.bl.ep.task.DoTask.test1() throws java.lang.Exception
+2018-08-28 10:38:34.997  INFO 11192 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-08-28 10:38:34.998  INFO 11192 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-08-28 10:38:35.067  INFO 11192 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-28 10:38:35.067  INFO 11192 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/static/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-28 10:38:35.096  INFO 11192 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : Detected @ExceptionHandler methods in restExceptionHandler
+2018-08-28 10:38:35.138  INFO 11192 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-28 10:38:35.848  INFO 11192 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-08-28 10:38:35.850  INFO 11192 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'statFilter' has been autodetected for JMX exposure
+2018-08-28 10:38:35.851  INFO 11192 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-08-28 10:38:35.859  INFO 11192 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.spring.boot.autoconfigure:name=dataSource,type=DruidDataSourceWrapper]
+2018-08-28 10:38:35.860  INFO 11192 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'statFilter': registering with JMX server as MBean [com.alibaba.druid.filter.stat:name=statFilter,type=StatFilter]
+2018-08-28 10:38:35.955  INFO 11192 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2018-08-28 10:38:35.963  INFO 11192 --- [main] com.bl.ep.EpAppApplication               : Started EpAppApplication in 9.486 seconds (JVM running for 11.691)
+2018-08-28 10:38:42.540  INFO 11192 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-08-28 10:38:42.540  INFO 11192 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2018-08-28 10:38:42.572  INFO 11192 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 32 ms
+2018-08-28 10:38:44.797 DEBUG 11192 --- [http-nio-8080-exec-1] com.bl.ep.dao.UserMapper.selectOne       : ==>  Preparing: SELECT id,username,password,realname,age,sex,is_delete,create_time FROM t_user WHERE username = ? AND password = ? 
+2018-08-28 10:38:44.829 DEBUG 11192 --- [http-nio-8080-exec-1] com.bl.ep.dao.UserMapper.selectOne       : ==> Parameters: lishulin(String), 123(String)
+2018-08-28 10:38:44.855 DEBUG 11192 --- [http-nio-8080-exec-1] com.bl.ep.dao.UserMapper.selectOne       : <==      Total: 1
+2018-08-28 10:38:44.857  INFO 11192 --- [http-nio-8080-exec-1] com.bl.ep.controller.UserController      : login username = $lishulin;password = $123
+2018-08-28 10:39:13.200  INFO 7084 --- [main] com.bl.ep.EpAppApplication               : Starting EpAppApplication on DESKTOP-DHQNK68 with PID 7084 (D:\githubworkspace\EPApp\web\target\classes started by forest in D:\githubworkspace\EPApp)
+2018-08-28 10:39:13.258  INFO 7084 --- [main] com.bl.ep.EpAppApplication               : No active profile set, falling back to default profiles: default
+2018-08-28 10:39:13.469  INFO 7084 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3fc79729: startup date [Tue Aug 28 10:39:13 CST 2018]; root of context hierarchy
+2018-08-28 10:39:15.456  WARN 7084 --- [main] t.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.bl.ep]' package. Please check your configuration.
+2018-08-28 10:39:15.491  WARN 7084 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.bl.ep]' package. Please check your configuration.
+2018-08-28 10:39:16.721  INFO 7084 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2018-08-28 10:39:16.739  INFO 7084 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-08-28 10:39:16.741  INFO 7084 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.23
+2018-08-28 10:39:16.903  INFO 7084 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-08-28 10:39:16.904  INFO 7084 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3443 ms
+2018-08-28 10:39:17.268  INFO 7084 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2018-08-28 10:39:17.270  INFO 7084 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'statViewServlet' to [/druid/*]
+2018-08-28 10:39:17.278  INFO 7084 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-08-28 10:39:17.279  INFO 7084 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-08-28 10:39:17.280  INFO 7084 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-08-28 10:39:17.280  INFO 7084 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-08-28 10:39:17.281  INFO 7084 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'webStatFilter' to urls: [/*]
+2018-08-28 10:39:17.423  INFO 7084 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2018-08-28 10:39:18.508  INFO 7084 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2018-08-28 10:39:20.016  INFO 7084 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3fc79729: startup date [Tue Aug 28 10:39:13 CST 2018]; root of context hierarchy
+2018-08-28 10:39:20.318  INFO 7084 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/merchandize/category/list/{merchandizeId}],methods=[POST]}" onto public com.bl.ep.constant.ResultModel com.bl.ep.controller.MerchandizeController.merchandizeCategory(java.lang.Integer)
+2018-08-28 10:39:20.319  INFO 7084 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/merchandize/list],methods=[POST]}" onto public com.bl.ep.constant.ResultModel com.bl.ep.controller.MerchandizeController.merchandizeList(com.bl.ep.param.MerchandizeParam,com.bl.ep.param.PageParam)
+2018-08-28 10:39:20.320  INFO 7084 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/merchandize/info/{merchandizeId}],methods=[POST]}" onto public com.bl.ep.constant.ResultModel com.bl.ep.controller.MerchandizeController.merchandizeInfo(java.lang.Integer)
+2018-08-28 10:39:20.325  INFO 7084 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/merchandize/collect/{userId}/{categoryId}],methods=[POST]}" onto public com.bl.ep.constant.ResultModel com.bl.ep.controller.UserController.merchandizeCollect(java.lang.Integer,java.lang.Integer)
+2018-08-28 10:39:20.326  INFO 7084 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/collect],methods=[POST]}" onto public com.bl.ep.constant.ResultModel com.bl.ep.controller.UserController.userCollect(com.bl.ep.param.CollectParam)
+2018-08-28 10:39:20.326  INFO 7084 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/home/list],methods=[POST]}" onto public com.bl.ep.constant.ResultModel com.bl.ep.controller.UserController.homeList(com.bl.ep.param.HomeParam,com.bl.ep.param.PageParam)
+2018-08-28 10:39:20.326  INFO 7084 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/login],methods=[POST],params=[username && password]}" onto public com.bl.ep.constant.ResultModel com.bl.ep.controller.UserController.login(com.bl.ep.param.UserParam)
+2018-08-28 10:39:20.327  INFO 7084 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/home/collect/{userId}/{homeId}],methods=[POST]}" onto public com.bl.ep.constant.ResultModel com.bl.ep.controller.UserController.homeCollect(java.lang.Integer,java.lang.Integer)
+2018-08-28 10:39:20.328  INFO 7084 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/tasks/test1]}" onto public java.lang.String com.bl.ep.task.DoTask.test1() throws java.lang.Exception
+2018-08-28 10:39:20.331  INFO 7084 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-08-28 10:39:20.332  INFO 7084 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-08-28 10:39:20.404  INFO 7084 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-28 10:39:20.404  INFO 7084 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/static/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-28 10:39:20.437  INFO 7084 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : Detected @ExceptionHandler methods in restExceptionHandler
+2018-08-28 10:39:20.480  INFO 7084 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-28 10:39:21.164  INFO 7084 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-08-28 10:39:21.167  INFO 7084 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'statFilter' has been autodetected for JMX exposure
+2018-08-28 10:39:21.167  INFO 7084 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-08-28 10:39:21.175  INFO 7084 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.spring.boot.autoconfigure:name=dataSource,type=DruidDataSourceWrapper]
+2018-08-28 10:39:21.176  INFO 7084 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'statFilter': registering with JMX server as MBean [com.alibaba.druid.filter.stat:name=statFilter,type=StatFilter]
+2018-08-28 10:39:21.275  INFO 7084 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2018-08-28 10:39:21.283  INFO 7084 --- [main] com.bl.ep.EpAppApplication               : Started EpAppApplication in 9.221 seconds (JVM running for 11.213)
+2018-08-28 10:39:31.115  INFO 7084 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-08-28 10:39:31.116  INFO 7084 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2018-08-28 10:39:31.150  INFO 7084 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 34 ms
+2018-08-28 10:39:33.171 DEBUG 7084 --- [http-nio-8080-exec-1] com.bl.ep.dao.UserMapper.selectOne       : ==>  Preparing: SELECT id,username,password,realname,age,sex,is_delete,create_time FROM t_user WHERE username = ? AND password = ? 
+2018-08-28 10:39:33.211 DEBUG 7084 --- [http-nio-8080-exec-1] com.bl.ep.dao.UserMapper.selectOne       : ==> Parameters: lishulin(String), 123(String)
+2018-08-28 10:39:33.236 DEBUG 7084 --- [http-nio-8080-exec-1] com.bl.ep.dao.UserMapper.selectOne       : <==      Total: 1
+2018-08-28 10:39:33.238  INFO 7084 --- [http-nio-8080-exec-1] com.bl.ep.controller.UserController      : login username = lishulin;password = 123
+2018-08-28 11:00:09.835  INFO 16300 --- [main] com.bl.ep.EpAppApplication               : Starting EpAppApplication on DESKTOP-DHQNK68 with PID 16300 (D:\githubworkspace\EPApp\web\target\classes started by forest in D:\githubworkspace\EPApp)
+2018-08-28 11:00:09.843  INFO 16300 --- [main] com.bl.ep.EpAppApplication               : No active profile set, falling back to default profiles: default
+2018-08-28 11:00:10.248  INFO 16300 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7ac296f6: startup date [Tue Aug 28 11:00:10 CST 2018]; root of context hierarchy
+2018-08-28 11:00:12.567  WARN 16300 --- [main] t.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.bl.ep]' package. Please check your configuration.
+2018-08-28 11:00:12.602  WARN 16300 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.bl.ep]' package. Please check your configuration.
+2018-08-28 11:00:13.968  INFO 16300 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2018-08-28 11:00:13.985  INFO 16300 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-08-28 11:00:13.987  INFO 16300 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.23
+2018-08-28 11:00:14.180  INFO 16300 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-08-28 11:00:14.181  INFO 16300 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3939 ms
+2018-08-28 11:00:14.584  INFO 16300 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2018-08-28 11:00:14.587  INFO 16300 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'statViewServlet' to [/druid/*]
+2018-08-28 11:00:14.593  INFO 16300 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-08-28 11:00:14.593  INFO 16300 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-08-28 11:00:14.594  INFO 16300 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-08-28 11:00:14.594  INFO 16300 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-08-28 11:00:14.594  INFO 16300 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'webStatFilter' to urls: [/*]
+2018-08-28 11:00:14.759  INFO 16300 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2018-08-28 11:00:16.228  INFO 16300 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2018-08-28 11:00:18.135  INFO 16300 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7ac296f6: startup date [Tue Aug 28 11:00:10 CST 2018]; root of context hierarchy
+2018-08-28 11:00:18.268  INFO 16300 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/merchandize/category/list/{merchandizeId}],methods=[POST]}" onto public com.bl.ep.constant.ResultModel com.bl.ep.controller.MerchandizeController.merchandizeCategory(java.lang.Integer)
+2018-08-28 11:00:18.272  INFO 16300 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/merchandize/info/{merchandizeId}],methods=[POST]}" onto public com.bl.ep.constant.ResultModel com.bl.ep.controller.MerchandizeController.merchandizeInfo(java.lang.Integer)
+2018-08-28 11:00:18.273  INFO 16300 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/merchandize/list],methods=[POST]}" onto public com.bl.ep.constant.ResultModel com.bl.ep.controller.MerchandizeController.merchandizeList(com.bl.ep.param.MerchandizeParam,com.bl.ep.param.PageParam)
+2018-08-28 11:00:18.278  INFO 16300 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/merchandize/collect/{userId}/{categoryId}],methods=[POST]}" onto public com.bl.ep.constant.ResultModel com.bl.ep.controller.UserController.merchandizeCollect(java.lang.Integer,java.lang.Integer)
+2018-08-28 11:00:18.279  INFO 16300 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/login],methods=[POST],params=[username && password]}" onto public com.bl.ep.constant.ResultModel com.bl.ep.controller.UserController.login(com.bl.ep.param.UserParam)
+2018-08-28 11:00:18.279  INFO 16300 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/home/collect/{userId}/{homeId}],methods=[POST]}" onto public com.bl.ep.constant.ResultModel com.bl.ep.controller.UserController.homeCollect(java.lang.Integer,java.lang.Integer)
+2018-08-28 11:00:18.280  INFO 16300 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/collect],methods=[POST]}" onto public com.bl.ep.constant.ResultModel com.bl.ep.controller.UserController.userCollect(com.bl.ep.param.CollectParam)
+2018-08-28 11:00:18.280  INFO 16300 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/home/list],methods=[POST]}" onto public com.bl.ep.constant.ResultModel com.bl.ep.controller.UserController.homeList(com.bl.ep.param.HomeParam,com.bl.ep.param.PageParam)
+2018-08-28 11:00:18.282  INFO 16300 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/tasks/test1]}" onto public java.lang.String com.bl.ep.task.DoTask.test1() throws java.lang.Exception
+2018-08-28 11:00:18.289  INFO 16300 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-08-28 11:00:18.290  INFO 16300 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-08-28 11:00:18.386  INFO 16300 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-28 11:00:18.387  INFO 16300 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/static/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-28 11:00:18.425  INFO 16300 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : Detected @ExceptionHandler methods in restExceptionHandler
+2018-08-28 11:00:18.472  INFO 16300 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-28 11:00:19.160  INFO 16300 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-08-28 11:00:19.163  INFO 16300 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'statFilter' has been autodetected for JMX exposure
+2018-08-28 11:00:19.163  INFO 16300 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-08-28 11:00:19.171  INFO 16300 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.spring.boot.autoconfigure:name=dataSource,type=DruidDataSourceWrapper]
+2018-08-28 11:00:19.172  INFO 16300 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'statFilter': registering with JMX server as MBean [com.alibaba.druid.filter.stat:name=statFilter,type=StatFilter]
+2018-08-28 11:00:19.278  INFO 16300 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2018-08-28 11:00:19.285  INFO 16300 --- [main] com.bl.ep.EpAppApplication               : Started EpAppApplication in 10.816 seconds (JVM running for 13.299)
+2018-08-28 11:00:55.445  INFO 16300 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-08-28 11:00:55.445  INFO 16300 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2018-08-28 11:00:55.477  INFO 16300 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 32 ms
+2018-08-28 11:00:55.523  INFO 16300 --- [http-nio-8080-exec-1] c.b.ep.controller.MerchandizeController  : merchandizeInfo merchandizeId = 1
+2018-08-28 11:00:55.592  INFO 16300 --- [http-nio-8080-exec-1] o.s.b.f.xml.XmlBeanDefinitionReader      : Loading XML bean definitions from class path resource [org/springframework/jdbc/support/sql-error-codes.xml]
+2018-08-28 11:00:55.637  INFO 16300 --- [http-nio-8080-exec-1] o.s.jdbc.support.SQLErrorCodesFactory    : SQLErrorCodes loaded: [DB2, Derby, H2, HSQL, Informix, MS-SQL, MySQL, Oracle, PostgreSQL, Sybase, Hana]
+2018-08-28 11:04:53.365  INFO 21528 --- [main] com.bl.ep.EpAppApplication               : Starting EpAppApplication on DESKTOP-DHQNK68 with PID 21528 (D:\githubworkspace\EPApp\web\target\classes started by forest in D:\githubworkspace\EPApp)
+2018-08-28 11:04:53.371  INFO 21528 --- [main] com.bl.ep.EpAppApplication               : No active profile set, falling back to default profiles: default
+2018-08-28 11:04:53.524  INFO 21528 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@389c4eb1: startup date [Tue Aug 28 11:04:53 CST 2018]; root of context hierarchy
+2018-08-28 11:04:55.495  WARN 21528 --- [main] t.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.bl.ep]' package. Please check your configuration.
+2018-08-28 11:04:55.541  WARN 21528 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.bl.ep]' package. Please check your configuration.
+2018-08-28 11:04:57.202  INFO 21528 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2018-08-28 11:04:57.225  INFO 21528 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-08-28 11:04:57.227  INFO 21528 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.23
+2018-08-28 11:04:57.408  INFO 21528 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-08-28 11:04:57.408  INFO 21528 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3890 ms
+2018-08-28 11:04:57.801  INFO 21528 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2018-08-28 11:04:57.805  INFO 21528 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'statViewServlet' to [/druid/*]
+2018-08-28 11:04:57.811  INFO 21528 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-08-28 11:04:57.813  INFO 21528 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-08-28 11:04:57.813  INFO 21528 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-08-28 11:04:57.813  INFO 21528 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-08-28 11:04:57.814  INFO 21528 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'webStatFilter' to urls: [/*]
+2018-08-28 11:04:57.999  INFO 21528 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2018-08-28 11:04:59.116  INFO 21528 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2018-08-28 11:05:00.718  INFO 21528 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@389c4eb1: startup date [Tue Aug 28 11:04:53 CST 2018]; root of context hierarchy
+2018-08-28 11:05:01.015  INFO 21528 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/merchandize/list],methods=[POST]}" onto public com.bl.ep.constant.ResultModel com.bl.ep.controller.MerchandizeController.merchandizeList(com.bl.ep.param.MerchandizeParam,com.bl.ep.param.PageParam)
+2018-08-28 11:05:01.017  INFO 21528 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/merchandize/info/{merchandizeId}],methods=[POST]}" onto public com.bl.ep.constant.ResultModel com.bl.ep.controller.MerchandizeController.merchandizeInfo(java.lang.Integer)
+2018-08-28 11:05:01.018  INFO 21528 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/merchandize/category/list/{merchandizeId}],methods=[POST]}" onto public com.bl.ep.constant.ResultModel com.bl.ep.controller.MerchandizeController.merchandizeCategory(java.lang.Integer)
+2018-08-28 11:05:01.023  INFO 21528 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/home/collect/{userId}/{homeId}],methods=[POST]}" onto public com.bl.ep.constant.ResultModel com.bl.ep.controller.UserController.homeCollect(java.lang.Integer,java.lang.Integer)
+2018-08-28 11:05:01.024  INFO 21528 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/collect],methods=[POST]}" onto public com.bl.ep.constant.ResultModel com.bl.ep.controller.UserController.userCollect(com.bl.ep.param.CollectParam)
+2018-08-28 11:05:01.025  INFO 21528 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/home/list],methods=[POST]}" onto public com.bl.ep.constant.ResultModel com.bl.ep.controller.UserController.homeList(com.bl.ep.param.HomeParam,com.bl.ep.param.PageParam)
+2018-08-28 11:05:01.025  INFO 21528 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/login],methods=[POST],params=[username && password]}" onto public com.bl.ep.constant.ResultModel com.bl.ep.controller.UserController.login(com.bl.ep.param.UserParam)
+2018-08-28 11:05:01.025  INFO 21528 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/merchandize/collect/{userId}/{categoryId}],methods=[POST]}" onto public com.bl.ep.constant.ResultModel com.bl.ep.controller.UserController.merchandizeCollect(java.lang.Integer,java.lang.Integer)
+2018-08-28 11:05:01.026  INFO 21528 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/tasks/test1]}" onto public java.lang.String com.bl.ep.task.DoTask.test1() throws java.lang.Exception
+2018-08-28 11:05:01.032  INFO 21528 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-08-28 11:05:01.032  INFO 21528 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-08-28 11:05:01.118  INFO 21528 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-28 11:05:01.119  INFO 21528 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/static/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-28 11:05:01.150  INFO 21528 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : Detected @ExceptionHandler methods in restExceptionHandler
+2018-08-28 11:05:01.195  INFO 21528 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-28 11:05:02.024  INFO 21528 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-08-28 11:05:02.026  INFO 21528 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'statFilter' has been autodetected for JMX exposure
+2018-08-28 11:05:02.026  INFO 21528 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-08-28 11:05:02.034  INFO 21528 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.spring.boot.autoconfigure:name=dataSource,type=DruidDataSourceWrapper]
+2018-08-28 11:05:02.035  INFO 21528 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'statFilter': registering with JMX server as MBean [com.alibaba.druid.filter.stat:name=statFilter,type=StatFilter]
+2018-08-28 11:05:02.137  INFO 21528 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2018-08-28 11:05:02.144  INFO 21528 --- [main] com.bl.ep.EpAppApplication               : Started EpAppApplication in 9.989 seconds (JVM running for 11.927)
+2018-08-28 11:05:05.078  INFO 21528 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-08-28 11:05:05.079  INFO 21528 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2018-08-28 11:05:05.114  INFO 21528 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 35 ms
+2018-08-28 11:05:05.165  INFO 21528 --- [http-nio-8080-exec-1] c.b.ep.controller.MerchandizeController  : merchandizeInfo merchandizeId = 1
+2018-08-28 11:06:10.425  INFO 21528 --- [http-nio-8080-exec-5] c.b.ep.controller.MerchandizeController  : merchandizeInfo merchandizeId = 1
+2018-08-28 11:06:56.953  INFO 13780 --- [main] com.bl.ep.EpAppApplication               : Starting EpAppApplication on DESKTOP-DHQNK68 with PID 13780 (D:\githubworkspace\EPApp\web\target\classes started by forest in D:\githubworkspace\EPApp)
+2018-08-28 11:06:56.965  INFO 13780 --- [main] com.bl.ep.EpAppApplication               : No active profile set, falling back to default profiles: default
+2018-08-28 11:06:57.144  INFO 13780 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3fc79729: startup date [Tue Aug 28 11:06:57 CST 2018]; root of context hierarchy
+2018-08-28 11:06:59.045  WARN 13780 --- [main] t.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.bl.ep]' package. Please check your configuration.
+2018-08-28 11:06:59.081  WARN 13780 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.bl.ep]' package. Please check your configuration.
+2018-08-28 11:07:00.338  INFO 13780 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2018-08-28 11:07:00.352  INFO 13780 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-08-28 11:07:00.354  INFO 13780 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.23
+2018-08-28 11:07:00.531  INFO 13780 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-08-28 11:07:00.532  INFO 13780 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3393 ms
+2018-08-28 11:07:00.897  INFO 13780 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2018-08-28 11:07:00.900  INFO 13780 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'statViewServlet' to [/druid/*]
+2018-08-28 11:07:00.905  INFO 13780 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-08-28 11:07:00.906  INFO 13780 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-08-28 11:07:00.907  INFO 13780 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-08-28 11:07:00.907  INFO 13780 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-08-28 11:07:00.907  INFO 13780 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'webStatFilter' to urls: [/*]
+2018-08-28 11:07:01.050  INFO 13780 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2018-08-28 11:07:02.245  INFO 13780 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2018-08-28 11:07:03.873  INFO 13780 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3fc79729: startup date [Tue Aug 28 11:06:57 CST 2018]; root of context hierarchy
+2018-08-28 11:07:03.972  INFO 13780 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/merchandize/category/list/{merchandizeId}],methods=[POST]}" onto public com.bl.ep.constant.ResultModel com.bl.ep.controller.MerchandizeController.merchandizeCategory(java.lang.Integer)
+2018-08-28 11:07:03.973  INFO 13780 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/merchandize/list],methods=[POST]}" onto public com.bl.ep.constant.ResultModel com.bl.ep.controller.MerchandizeController.merchandizeList(com.bl.ep.param.MerchandizeParam,com.bl.ep.param.PageParam)
+2018-08-28 11:07:03.974  INFO 13780 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/merchandize/info/{merchandizeId}],methods=[POST]}" onto public com.bl.ep.constant.ResultModel com.bl.ep.controller.MerchandizeController.merchandizeInfo(java.lang.Integer)
+2018-08-28 11:07:03.977  INFO 13780 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/merchandize/collect/{userId}/{categoryId}],methods=[POST]}" onto public com.bl.ep.constant.ResultModel com.bl.ep.controller.UserController.merchandizeCollect(java.lang.Integer,java.lang.Integer)
+2018-08-28 11:07:03.978  INFO 13780 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/login],methods=[POST],params=[username && password]}" onto public com.bl.ep.constant.ResultModel com.bl.ep.controller.UserController.login(com.bl.ep.param.UserParam)
+2018-08-28 11:07:03.978  INFO 13780 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/home/list],methods=[POST]}" onto public com.bl.ep.constant.ResultModel com.bl.ep.controller.UserController.homeList(com.bl.ep.param.HomeParam,com.bl.ep.param.PageParam)
+2018-08-28 11:07:03.978  INFO 13780 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/home/collect/{userId}/{homeId}],methods=[POST]}" onto public com.bl.ep.constant.ResultModel com.bl.ep.controller.UserController.homeCollect(java.lang.Integer,java.lang.Integer)
+2018-08-28 11:07:03.978  INFO 13780 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/collect],methods=[POST]}" onto public com.bl.ep.constant.ResultModel com.bl.ep.controller.UserController.userCollect(com.bl.ep.param.CollectParam)
+2018-08-28 11:07:03.979  INFO 13780 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/tasks/test1]}" onto public java.lang.String com.bl.ep.task.DoTask.test1() throws java.lang.Exception
+2018-08-28 11:07:03.983  INFO 13780 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-08-28 11:07:03.984  INFO 13780 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-08-28 11:07:04.056  INFO 13780 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-28 11:07:04.056  INFO 13780 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/static/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-28 11:07:04.091  INFO 13780 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : Detected @ExceptionHandler methods in restExceptionHandler
+2018-08-28 11:07:04.141  INFO 13780 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-28 11:07:04.853  INFO 13780 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-08-28 11:07:04.856  INFO 13780 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'statFilter' has been autodetected for JMX exposure
+2018-08-28 11:07:04.856  INFO 13780 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-08-28 11:07:04.867  INFO 13780 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.spring.boot.autoconfigure:name=dataSource,type=DruidDataSourceWrapper]
+2018-08-28 11:07:04.868  INFO 13780 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'statFilter': registering with JMX server as MBean [com.alibaba.druid.filter.stat:name=statFilter,type=StatFilter]
+2018-08-28 11:07:04.969  INFO 13780 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2018-08-28 11:07:04.976  INFO 13780 --- [main] com.bl.ep.EpAppApplication               : Started EpAppApplication in 9.417 seconds (JVM running for 11.761)
+2018-08-28 11:07:17.850  INFO 13780 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-08-28 11:07:17.850  INFO 13780 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2018-08-28 11:07:17.884  INFO 13780 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 34 ms
+2018-08-28 11:07:17.932  INFO 13780 --- [http-nio-8080-exec-2] c.b.ep.controller.MerchandizeController  : merchandizeInfo merchandizeId = 1
+2018-08-28 11:07:17.977 DEBUG 13780 --- [http-nio-8080-exec-2] c.b.e.d.M.selectByPrimaryKey             : ==>  Preparing: SELECT id,title,image,url,model,now_price,old_price,brand,create_time FROM m_merchandize WHERE id = ? AND title = ? AND image = ? AND url = ? AND model = ? AND now_price = ? AND old_price = ? AND brand = ? AND create_time = ? 
+2018-08-28 11:07:18.007 DEBUG 13780 --- [http-nio-8080-exec-2] c.b.e.d.M.selectByPrimaryKey             : ==> Parameters: 1(Integer), 1(Integer), 1(Integer), 1(Integer), 1(Integer), 1(Integer), 1(Integer), 1(Integer), 1(Integer)
+2018-08-28 11:07:18.029 DEBUG 13780 --- [http-nio-8080-exec-2] c.b.e.d.M.selectByPrimaryKey             : <==      Total: 0
+2018-08-28 11:08:17.655  INFO 15988 --- [main] com.bl.ep.EpAppApplication               : Starting EpAppApplication on DESKTOP-DHQNK68 with PID 15988 (D:\githubworkspace\EPApp\web\target\classes started by forest in D:\githubworkspace\EPApp)
+2018-08-28 11:08:17.689  INFO 15988 --- [main] com.bl.ep.EpAppApplication               : No active profile set, falling back to default profiles: default
+2018-08-28 11:08:18.039  INFO 15988 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3fc79729: startup date [Tue Aug 28 11:08:18 CST 2018]; root of context hierarchy
+2018-08-28 11:08:20.618  WARN 15988 --- [main] t.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.bl.ep]' package. Please check your configuration.
+2018-08-28 11:08:20.663  WARN 15988 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.bl.ep]' package. Please check your configuration.
+2018-08-28 11:08:21.918  INFO 15988 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2018-08-28 11:08:21.935  INFO 15988 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-08-28 11:08:21.937  INFO 15988 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.23
+2018-08-28 11:08:22.113  INFO 15988 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-08-28 11:08:22.114  INFO 15988 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 4111 ms
+2018-08-28 11:08:22.500  INFO 15988 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2018-08-28 11:08:22.502  INFO 15988 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'statViewServlet' to [/druid/*]
+2018-08-28 11:08:22.508  INFO 15988 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-08-28 11:08:22.509  INFO 15988 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-08-28 11:08:22.509  INFO 15988 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-08-28 11:08:22.509  INFO 15988 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-08-28 11:08:22.510  INFO 15988 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'webStatFilter' to urls: [/*]
+2018-08-28 11:08:22.675  INFO 15988 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2018-08-28 11:08:23.772  INFO 15988 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2018-08-28 11:08:25.469  INFO 15988 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3fc79729: startup date [Tue Aug 28 11:08:18 CST 2018]; root of context hierarchy
+2018-08-28 11:08:25.569  INFO 15988 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/merchandize/category/list/{merchandizeId}],methods=[POST]}" onto public com.bl.ep.constant.ResultModel com.bl.ep.controller.MerchandizeController.merchandizeCategory(java.lang.Integer)
+2018-08-28 11:08:25.570  INFO 15988 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/merchandize/list],methods=[POST]}" onto public com.bl.ep.constant.ResultModel com.bl.ep.controller.MerchandizeController.merchandizeList(com.bl.ep.param.MerchandizeParam,com.bl.ep.param.PageParam)
+2018-08-28 11:08:25.571  INFO 15988 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/merchandize/info/{merchandizeId}],methods=[POST]}" onto public com.bl.ep.constant.ResultModel com.bl.ep.controller.MerchandizeController.merchandizeInfo(java.lang.Integer)
+2018-08-28 11:08:25.574  INFO 15988 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/merchandize/collect/{userId}/{categoryId}],methods=[POST]}" onto public com.bl.ep.constant.ResultModel com.bl.ep.controller.UserController.merchandizeCollect(java.lang.Integer,java.lang.Integer)
+2018-08-28 11:08:25.575  INFO 15988 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/login],methods=[POST],params=[username && password]}" onto public com.bl.ep.constant.ResultModel com.bl.ep.controller.UserController.login(com.bl.ep.param.UserParam)
+2018-08-28 11:08:25.575  INFO 15988 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/collect],methods=[POST]}" onto public com.bl.ep.constant.ResultModel com.bl.ep.controller.UserController.userCollect(com.bl.ep.param.CollectParam)
+2018-08-28 11:08:25.576  INFO 15988 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/home/collect/{userId}/{homeId}],methods=[POST]}" onto public com.bl.ep.constant.ResultModel com.bl.ep.controller.UserController.homeCollect(java.lang.Integer,java.lang.Integer)
+2018-08-28 11:08:25.576  INFO 15988 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/home/list],methods=[POST]}" onto public com.bl.ep.constant.ResultModel com.bl.ep.controller.UserController.homeList(com.bl.ep.param.HomeParam,com.bl.ep.param.PageParam)
+2018-08-28 11:08:25.577  INFO 15988 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/tasks/test1]}" onto public java.lang.String com.bl.ep.task.DoTask.test1() throws java.lang.Exception
+2018-08-28 11:08:25.580  INFO 15988 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-08-28 11:08:25.580  INFO 15988 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-08-28 11:08:25.649  INFO 15988 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-28 11:08:25.650  INFO 15988 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/static/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-28 11:08:25.684  INFO 15988 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : Detected @ExceptionHandler methods in restExceptionHandler
+2018-08-28 11:08:25.741  INFO 15988 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-28 11:08:26.411  INFO 15988 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-08-28 11:08:26.414  INFO 15988 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'statFilter' has been autodetected for JMX exposure
+2018-08-28 11:08:26.414  INFO 15988 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-08-28 11:08:26.422  INFO 15988 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.spring.boot.autoconfigure:name=dataSource,type=DruidDataSourceWrapper]
+2018-08-28 11:08:26.423  INFO 15988 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'statFilter': registering with JMX server as MBean [com.alibaba.druid.filter.stat:name=statFilter,type=StatFilter]
+2018-08-28 11:08:26.526  INFO 15988 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2018-08-28 11:08:26.533  INFO 15988 --- [main] com.bl.ep.EpAppApplication               : Started EpAppApplication in 10.303 seconds (JVM running for 12.474)
+2018-08-28 11:08:40.800  INFO 15988 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-08-28 11:08:40.801  INFO 15988 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2018-08-28 11:08:40.836  INFO 15988 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 35 ms
+2018-08-28 11:08:40.880  INFO 15988 --- [http-nio-8080-exec-1] c.b.ep.controller.MerchandizeController  : merchandizeInfo merchandizeId = 1
+2018-08-28 11:08:40.921 DEBUG 15988 --- [http-nio-8080-exec-1] c.b.e.d.M.selectByPrimaryKey             : ==>  Preparing: SELECT id,title,image,url,model,now_price,old_price,brand,create_time FROM m_merchandize WHERE id = ? AND title = ? AND image = ? AND url = ? AND model = ? AND now_price = ? AND old_price = ? AND brand = ? AND create_time = ? 
+2018-08-28 11:08:40.948 DEBUG 15988 --- [http-nio-8080-exec-1] c.b.e.d.M.selectByPrimaryKey             : ==> Parameters: 1(Integer), 1(Integer), 1(Integer), 1(Integer), 1(Integer), 1(Integer), 1(Integer), 1(Integer), 1(Integer)
+2018-08-28 11:08:40.967 DEBUG 15988 --- [http-nio-8080-exec-1] c.b.e.d.M.selectByPrimaryKey             : <==      Total: 0
+2018-08-28 11:11:46.297  INFO 17204 --- [main] com.bl.ep.EpAppApplication               : Starting EpAppApplication on DESKTOP-DHQNK68 with PID 17204 (D:\githubworkspace\EPApp\web\target\classes started by forest in D:\githubworkspace\EPApp)
+2018-08-28 11:11:46.307  INFO 17204 --- [main] com.bl.ep.EpAppApplication               : No active profile set, falling back to default profiles: default
+2018-08-28 11:11:46.597  INFO 17204 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7fd7a283: startup date [Tue Aug 28 11:11:46 CST 2018]; root of context hierarchy
+2018-08-28 11:11:48.870  WARN 17204 --- [main] t.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.bl.ep]' package. Please check your configuration.
+2018-08-28 11:11:48.904  WARN 17204 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.bl.ep]' package. Please check your configuration.
+2018-08-28 11:11:50.111  INFO 17204 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2018-08-28 11:11:50.128  INFO 17204 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-08-28 11:11:50.130  INFO 17204 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.23
+2018-08-28 11:11:50.335  INFO 17204 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-08-28 11:11:50.336  INFO 17204 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3745 ms
+2018-08-28 11:11:50.700  INFO 17204 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2018-08-28 11:11:50.702  INFO 17204 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'statViewServlet' to [/druid/*]
+2018-08-28 11:11:50.707  INFO 17204 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-08-28 11:11:50.709  INFO 17204 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-08-28 11:11:50.710  INFO 17204 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-08-28 11:11:50.711  INFO 17204 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-08-28 11:11:50.711  INFO 17204 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'webStatFilter' to urls: [/*]
+2018-08-28 11:11:50.868  INFO 17204 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2018-08-28 11:11:51.975  INFO 17204 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2018-08-28 11:11:53.533  INFO 17204 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7fd7a283: startup date [Tue Aug 28 11:11:46 CST 2018]; root of context hierarchy
+2018-08-28 11:11:53.833  INFO 17204 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/merchandize/list],methods=[POST]}" onto public com.bl.ep.constant.ResultModel com.bl.ep.controller.MerchandizeController.merchandizeList(com.bl.ep.param.MerchandizeParam,com.bl.ep.param.PageParam)
+2018-08-28 11:11:53.835  INFO 17204 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/merchandize/info/{merchandizeId}],methods=[POST]}" onto public com.bl.ep.constant.ResultModel com.bl.ep.controller.MerchandizeController.merchandizeInfo(java.lang.Integer)
+2018-08-28 11:11:53.836  INFO 17204 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/merchandize/category/list/{merchandizeId}],methods=[POST]}" onto public com.bl.ep.constant.ResultModel com.bl.ep.controller.MerchandizeController.merchandizeCategory(java.lang.Integer)
+2018-08-28 11:11:53.840  INFO 17204 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/home/list],methods=[POST]}" onto public com.bl.ep.constant.ResultModel com.bl.ep.controller.UserController.homeList(com.bl.ep.param.HomeParam,com.bl.ep.param.PageParam)
+2018-08-28 11:11:53.841  INFO 17204 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/login],methods=[POST],params=[username && password]}" onto public com.bl.ep.constant.ResultModel com.bl.ep.controller.UserController.login(com.bl.ep.param.UserParam)
+2018-08-28 11:11:53.841  INFO 17204 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/home/collect/{userId}/{homeId}],methods=[POST]}" onto public com.bl.ep.constant.ResultModel com.bl.ep.controller.UserController.homeCollect(java.lang.Integer,java.lang.Integer)
+2018-08-28 11:11:53.841  INFO 17204 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/collect],methods=[POST]}" onto public com.bl.ep.constant.ResultModel com.bl.ep.controller.UserController.userCollect(com.bl.ep.param.CollectParam)
+2018-08-28 11:11:53.841  INFO 17204 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/merchandize/collect/{userId}/{categoryId}],methods=[POST]}" onto public com.bl.ep.constant.ResultModel com.bl.ep.controller.UserController.merchandizeCollect(java.lang.Integer,java.lang.Integer)
+2018-08-28 11:11:53.842  INFO 17204 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/tasks/test1]}" onto public java.lang.String com.bl.ep.task.DoTask.test1() throws java.lang.Exception
+2018-08-28 11:11:53.846  INFO 17204 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-08-28 11:11:53.846  INFO 17204 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-08-28 11:11:53.918  INFO 17204 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-28 11:11:53.919  INFO 17204 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/static/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-28 11:11:53.953  INFO 17204 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : Detected @ExceptionHandler methods in restExceptionHandler
+2018-08-28 11:11:54.005  INFO 17204 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-28 11:11:54.706  INFO 17204 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-08-28 11:11:54.709  INFO 17204 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'statFilter' has been autodetected for JMX exposure
+2018-08-28 11:11:54.710  INFO 17204 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-08-28 11:11:54.718  INFO 17204 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.spring.boot.autoconfigure:name=dataSource,type=DruidDataSourceWrapper]
+2018-08-28 11:11:54.719  INFO 17204 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'statFilter': registering with JMX server as MBean [com.alibaba.druid.filter.stat:name=statFilter,type=StatFilter]
+2018-08-28 11:11:54.841  INFO 17204 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2018-08-28 11:11:54.849  INFO 17204 --- [main] com.bl.ep.EpAppApplication               : Started EpAppApplication in 9.946 seconds (JVM running for 12.224)
+2018-08-28 11:11:58.159  INFO 17204 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-08-28 11:11:58.159  INFO 17204 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2018-08-28 11:11:58.190  INFO 17204 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 30 ms
+2018-08-28 11:11:58.235  INFO 17204 --- [http-nio-8080-exec-2] c.b.ep.controller.MerchandizeController  : merchandizeInfo merchandizeId = 1
+2018-08-28 11:12:03.902 DEBUG 17204 --- [http-nio-8080-exec-2] c.bl.ep.dao.MerchandizeMapper.selectOne  : ==>  Preparing: SELECT id,title,image,url,model,now_price,old_price,brand,create_time FROM m_merchandize WHERE id = ? 
+2018-08-28 11:12:03.930 DEBUG 17204 --- [http-nio-8080-exec-2] c.bl.ep.dao.MerchandizeMapper.selectOne  : ==> Parameters: 1(Integer)
+2018-08-28 11:12:03.958 DEBUG 17204 --- [http-nio-8080-exec-2] c.bl.ep.dao.MerchandizeMapper.selectOne  : <==      Total: 1
+2018-08-28 11:17:11.480  INFO 17204 --- [http-nio-8080-exec-5] com.bl.ep.controller.UserController      : userCollect param = {}
+2018-08-28 11:17:11.487 DEBUG 17204 --- [http-nio-8080-exec-5] c.b.e.d.H.getHomeCollect                 : ==>  Preparing: SELECT collect.*, home.title, home.image, home.url FROM t_home_collect collect INNER JOIN t_home home ON collect.home_id = home.id 
+2018-08-28 11:17:11.488 DEBUG 17204 --- [http-nio-8080-exec-5] c.b.e.d.H.getHomeCollect                 : ==> Parameters: 
+2018-08-28 11:17:11.492 DEBUG 17204 --- [http-nio-8080-exec-5] c.b.e.d.H.getHomeCollect                 : <==      Total: 1
+2018-08-28 11:17:11.495 DEBUG 17204 --- [http-nio-8080-exec-5] c.b.e.d.M.getMerchandizeCollect          : ==>  Preparing: SELECT collect.*, category.title, category.image, category.url FROM t_merchandize_collect collect INNER JOIN m_merchandize_category category ON collect.merchandize_category_id = category.id 
+2018-08-28 11:17:11.495 DEBUG 17204 --- [http-nio-8080-exec-5] c.b.e.d.M.getMerchandizeCollect          : ==> Parameters: 
+2018-08-28 11:17:11.499 DEBUG 17204 --- [http-nio-8080-exec-5] c.b.e.d.M.getMerchandizeCollect          : <==      Total: 2
+2018-08-28 11:41:55.194  INFO 24736 --- [main] com.bl.ep.EpAppApplication               : Starting EpAppApplication on DESKTOP-DHQNK68 with PID 24736 (D:\githubworkspace\EPApp\web\target\classes started by forest in D:\githubworkspace\EPApp)
+2018-08-28 11:41:55.200  INFO 24736 --- [main] com.bl.ep.EpAppApplication               : No active profile set, falling back to default profiles: default
+2018-08-28 11:41:55.399  INFO 24736 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@21507a04: startup date [Tue Aug 28 11:41:55 CST 2018]; root of context hierarchy
+2018-08-28 11:41:57.071  WARN 24736 --- [main] t.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.bl.ep]' package. Please check your configuration.
+2018-08-28 11:41:57.108  WARN 24736 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.bl.ep]' package. Please check your configuration.
+2018-08-28 11:41:58.242  INFO 24736 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8083 (http)
+2018-08-28 11:41:58.259  INFO 24736 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-08-28 11:41:58.261  INFO 24736 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.23
+2018-08-28 11:41:58.547  INFO 24736 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-08-28 11:41:58.548  INFO 24736 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3154 ms
+2018-08-28 11:41:58.868  INFO 24736 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2018-08-28 11:41:58.870  INFO 24736 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'statViewServlet' to [/druid/*]
+2018-08-28 11:41:58.874  INFO 24736 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-08-28 11:41:58.875  INFO 24736 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-08-28 11:41:58.876  INFO 24736 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-08-28 11:41:58.876  INFO 24736 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-08-28 11:41:58.877  INFO 24736 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'webStatFilter' to urls: [/*]
+2018-08-28 11:41:59.013  INFO 24736 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2018-08-28 11:42:00.039  INFO 24736 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2018-08-28 11:42:01.667  INFO 24736 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@21507a04: startup date [Tue Aug 28 11:41:55 CST 2018]; root of context hierarchy
+2018-08-28 11:42:01.828  INFO 24736 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/merchandize/category/list/{merchandizeId}],methods=[POST]}" onto public com.bl.ep.constant.ResultModel com.bl.ep.controller.MerchandizeController.merchandizeCategory(java.lang.Integer)
+2018-08-28 11:42:01.830  INFO 24736 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/merchandize/info/{merchandizeId}],methods=[POST]}" onto public com.bl.ep.constant.ResultModel com.bl.ep.controller.MerchandizeController.merchandizeInfo(java.lang.Integer)
+2018-08-28 11:42:01.830  INFO 24736 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/merchandize/list],methods=[POST]}" onto public com.bl.ep.constant.ResultModel com.bl.ep.controller.MerchandizeController.merchandizeList(com.bl.ep.param.MerchandizeParam,com.bl.ep.param.PageParam)
+2018-08-28 11:42:01.835  INFO 24736 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/collect],methods=[POST]}" onto public com.bl.ep.constant.ResultModel com.bl.ep.controller.UserController.userCollect(com.bl.ep.param.CollectParam)
+2018-08-28 11:42:01.836  INFO 24736 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/home/collect/{userId}/{homeId}],methods=[POST]}" onto public com.bl.ep.constant.ResultModel com.bl.ep.controller.UserController.homeCollect(java.lang.Integer,java.lang.Integer)
+2018-08-28 11:42:01.837  INFO 24736 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/merchandize/collect/{userId}/{categoryId}],methods=[POST]}" onto public com.bl.ep.constant.ResultModel com.bl.ep.controller.UserController.merchandizeCollect(java.lang.Integer,java.lang.Integer)
+2018-08-28 11:42:01.837  INFO 24736 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/home/list],methods=[POST]}" onto public com.bl.ep.constant.ResultModel com.bl.ep.controller.UserController.homeList(com.bl.ep.param.HomeParam,com.bl.ep.param.PageParam)
+2018-08-28 11:42:01.838  INFO 24736 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/login],methods=[POST],params=[username && password]}" onto public com.bl.ep.constant.ResultModel com.bl.ep.controller.UserController.login(com.bl.ep.param.UserParam)
+2018-08-28 11:42:01.840  INFO 24736 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/tasks/test1]}" onto public java.lang.String com.bl.ep.task.DoTask.test1() throws java.lang.Exception
+2018-08-28 11:42:01.843  INFO 24736 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-08-28 11:42:01.844  INFO 24736 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-08-28 11:42:01.930  INFO 24736 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-28 11:42:01.931  INFO 24736 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/static/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-28 11:42:01.976  INFO 24736 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : Detected @ExceptionHandler methods in restExceptionHandler
+2018-08-28 11:42:02.371  INFO 24736 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-28 11:42:03.147  INFO 24736 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-08-28 11:42:03.149  INFO 24736 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'statFilter' has been autodetected for JMX exposure
+2018-08-28 11:42:03.150  INFO 24736 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-08-28 11:42:03.156  INFO 24736 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.spring.boot.autoconfigure:name=dataSource,type=DruidDataSourceWrapper]
+2018-08-28 11:42:03.157  INFO 24736 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'statFilter': registering with JMX server as MBean [com.alibaba.druid.filter.stat:name=statFilter,type=StatFilter]
+2018-08-28 11:42:03.255  INFO 24736 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8083 (http)
+2018-08-28 11:42:03.262  INFO 24736 --- [main] com.bl.ep.EpAppApplication               : Started EpAppApplication in 9.004 seconds (JVM running for 11.349)
+2018-08-28 18:57:02.027  INFO 17096 --- [main] com.bl.ep.EpAppApplication               : Starting EpAppApplication on DESKTOP-DHQNK68 with PID 17096 (D:\githubworkspace\EPApp\web\target\classes started by forest in D:\githubworkspace\EPApp)
+2018-08-28 18:57:02.039  INFO 17096 --- [main] com.bl.ep.EpAppApplication               : No active profile set, falling back to default profiles: default
+2018-08-28 18:57:02.282  INFO 17096 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@21507a04: startup date [Tue Aug 28 18:57:02 CST 2018]; root of context hierarchy
+2018-08-28 18:57:04.283  WARN 17096 --- [main] t.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.bl.ep]' package. Please check your configuration.
+2018-08-28 18:57:04.337  WARN 17096 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.bl.ep]' package. Please check your configuration.
+2018-08-28 18:57:06.106  INFO 17096 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8083 (http)
+2018-08-28 18:57:06.126  INFO 17096 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-08-28 18:57:06.128  INFO 17096 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.23
+2018-08-28 18:57:06.322  INFO 17096 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-08-28 18:57:06.322  INFO 17096 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 4044 ms
+2018-08-28 18:57:06.665  INFO 17096 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2018-08-28 18:57:06.667  INFO 17096 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'statViewServlet' to [/druid/*]
+2018-08-28 18:57:06.671  INFO 17096 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-08-28 18:57:06.672  INFO 17096 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-08-28 18:57:06.672  INFO 17096 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-08-28 18:57:06.672  INFO 17096 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-08-28 18:57:06.673  INFO 17096 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'webStatFilter' to urls: [/*]
+2018-08-28 18:57:06.876  INFO 17096 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2018-08-28 18:57:08.117  INFO 17096 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2018-08-28 18:57:09.592  INFO 17096 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@21507a04: startup date [Tue Aug 28 18:57:02 CST 2018]; root of context hierarchy
+2018-08-28 18:57:09.676  INFO 17096 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/merchandize/category/list/{merchandizeId}],methods=[POST]}" onto public com.bl.ep.constant.ResultModel com.bl.ep.controller.MerchandizeController.merchandizeCategory(java.lang.Integer)
+2018-08-28 18:57:09.678  INFO 17096 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/merchandize/info/{merchandizeId}],methods=[POST]}" onto public com.bl.ep.constant.ResultModel com.bl.ep.controller.MerchandizeController.merchandizeInfo(java.lang.Integer)
+2018-08-28 18:57:09.680  INFO 17096 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/merchandize/list],methods=[POST]}" onto public com.bl.ep.constant.ResultModel com.bl.ep.controller.MerchandizeController.merchandizeList(com.bl.ep.param.MerchandizeParam,com.bl.ep.param.PageParam)
+2018-08-28 18:57:09.685  INFO 17096 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/merchandize/collect/{userId}/{categoryId}],methods=[POST]}" onto public com.bl.ep.constant.ResultModel com.bl.ep.controller.UserController.merchandizeCollect(java.lang.Integer,java.lang.Integer)
+2018-08-28 18:57:09.686  INFO 17096 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/home/list],methods=[POST]}" onto public com.bl.ep.constant.ResultModel com.bl.ep.controller.UserController.homeList(com.bl.ep.param.HomeParam,com.bl.ep.param.PageParam)
+2018-08-28 18:57:09.687  INFO 17096 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/login],methods=[POST],params=[username && password]}" onto public com.bl.ep.constant.ResultModel com.bl.ep.controller.UserController.login(com.bl.ep.param.UserParam)
+2018-08-28 18:57:09.687  INFO 17096 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/collect],methods=[POST]}" onto public com.bl.ep.constant.ResultModel com.bl.ep.controller.UserController.userCollect(java.lang.Integer)
+2018-08-28 18:57:09.688  INFO 17096 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/home/collect/{userId}/{homeId}],methods=[POST]}" onto public com.bl.ep.constant.ResultModel com.bl.ep.controller.UserController.homeCollect(java.lang.Integer,java.lang.Integer)
+2018-08-28 18:57:09.689  INFO 17096 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/tasks/test1]}" onto public java.lang.String com.bl.ep.task.DoTask.test1() throws java.lang.Exception
+2018-08-28 18:57:09.693  INFO 17096 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-08-28 18:57:09.694  INFO 17096 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-08-28 18:57:09.747  INFO 17096 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-28 18:57:09.747  INFO 17096 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/static/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-28 18:57:09.769  INFO 17096 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : Detected @ExceptionHandler methods in restExceptionHandler
+2018-08-28 18:57:09.810  INFO 17096 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-08-28 18:57:10.519  INFO 17096 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-08-28 18:57:10.522  INFO 17096 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'statFilter' has been autodetected for JMX exposure
+2018-08-28 18:57:10.524  INFO 17096 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-08-28 18:57:10.534  INFO 17096 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.spring.boot.autoconfigure:name=dataSource,type=DruidDataSourceWrapper]
+2018-08-28 18:57:10.535  INFO 17096 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'statFilter': registering with JMX server as MBean [com.alibaba.druid.filter.stat:name=statFilter,type=StatFilter]
+2018-08-28 18:57:10.650  INFO 17096 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8083 (http)
+2018-08-28 18:57:10.657  INFO 17096 --- [main] com.bl.ep.EpAppApplication               : Started EpAppApplication in 9.732 seconds (JVM running for 12.68)
+2018-08-28 18:58:03.216  INFO 17096 --- [http-nio-8083-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-08-28 18:58:03.217  INFO 17096 --- [http-nio-8083-exec-2] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2018-08-28 18:58:03.242  INFO 17096 --- [http-nio-8083-exec-2] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 25 ms
+2018-08-28 18:58:03.469  INFO 17096 --- [http-nio-8083-exec-2] com.bl.ep.controller.UserController      : login UserParam = {"password":"123","username":"lishulin"}

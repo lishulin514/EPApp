@@ -1,6 +1,6 @@
 package com.bl.ep.pojo;
 
-import com.bl.ep.interfaces.Collect;
+import com.bl.ep.constant.Collect;
 
 /**
  * @author： 李树林

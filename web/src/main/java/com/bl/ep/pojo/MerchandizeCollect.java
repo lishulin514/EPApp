@@ -1,7 +1,5 @@
 package com.bl.ep.pojo;
 
-import com.bl.ep.interfaces.Collect;
-
 import javax.persistence.Column;
 import javax.persistence.Table;
 import java.util.Date;

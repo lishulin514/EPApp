@@ -1,27 +1,32 @@
-package com.bl.ep.model;
+package com.bl.ep.pojo;
 
-import com.bl.ep.interfaces.Collect;
-import com.bl.ep.pojo.BaseCollect;
-
+import javax.persistence.Column;
+import javax.persistence.Table;
 import java.util.Date;
 
 /**
  * @author： 李树林
  * @description：
- * @date： 2018/8/27 18:37
+ * @date： 2018/8/27 17:10
  */
-public class UserCollect extends BaseCollect {
+@Table(name="t_home_collect")
+public class HomeCollect extends BaseCollect{
 
     private Integer id;
 
+    @Column(name = "user_id")
     private Integer userId;
 
-    private Integer targetId;
+    @Column(name = "home_id")
+    private Integer homeId;
 
-    private Integer type;
+    @Column(name = "is_delete")
+    private Byte isDelete;
 
+    @Column(name = "modify_time")
     private Date modifyTime;
 
+    @Column(name = "create_time")
     private Date createTime;
 
     public Integer getId() {
@@ -40,20 +45,20 @@ public class UserCollect extends BaseCollect {
         this.userId = userId;
     }
 
-    public Integer getTargetId() {
-        return targetId;
+    public Integer getHomeId() {
+        return homeId;
     }
 
-    public void setTargetId(Integer targetId) {
-        this.targetId = targetId;
+    public void setHomeId(Integer homeId) {
+        this.homeId = homeId;
     }
 
-    public Integer getType() {
-        return type;
+    public Byte getIsDelete() {
+        return isDelete;
     }
 
-    public void setType(Integer type) {
-        this.type = type;
+    public void setIsDelete(Byte isDelete) {
+        this.isDelete = isDelete;
     }
 
     public Date getModifyTime() {

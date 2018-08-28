@@ -4,21 +4,16 @@ import com.alibaba.fastjson.JSON;
 import com.bl.ep.constant.Resource;
 import com.bl.ep.constant.ResultModel;
 import com.bl.ep.model.UserCollect;
-import com.bl.ep.param.CollectParam;
 import com.bl.ep.param.HomeParam;
 import com.bl.ep.param.PageParam;
 import com.bl.ep.param.UserParam;
 import com.bl.ep.pojo.Home;
 import com.bl.ep.service.UserService;
-import com.bl.ep.utils.DateUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
-import java.util.Date;
 import java.util.List;
 
 @RestController
@@ -88,14 +83,14 @@ public class UserController {
 
     /**
      * 获取收藏内容
-     * @param param collectType： 1=新闻 、2=商品 、默认=所有
+     * @param collectType 1=新闻 、2=商品 、默认=所有
      * @return 收藏信息列表
      */
     @PostMapping(value = "/user/collect")
-    public ResultModel userCollect(CollectParam param){
-        logger.info("userCollect param = {}",
-                JSON.toJSONString(param));
-        List<UserCollect> collects = userService.getUserCollects(param);
+    public ResultModel userCollect(
+            @RequestParam(value="collectType" ,required =false ) Integer collectType){
+        logger.info("userCollect param = {}", collectType);
+        List<UserCollect> collects = userService.getUserCollects(collectType);
         return ResultModel.response(collects);
     }
 }

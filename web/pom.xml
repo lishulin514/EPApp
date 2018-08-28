@@ -11,15 +11,7 @@
 
     <artifactId>web</artifactId>
     <!-- 将 packaging 值（默认： jar）调整成war -->
-    <packaging>war</packaging>
-    <dependencies>
-        <dependency>
-            <groupId>com.bl.ep</groupId>
-            <artifactId>persistence</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
-        </dependency>
-    </dependencies>
-
+    <packaging>jar</packaging>
     <build>
         <plugins>
             <plugin>
