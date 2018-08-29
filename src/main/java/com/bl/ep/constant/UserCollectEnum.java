@@ -1,14 +1,18 @@
 package com.bl.ep.constant;
 
-public enum ResultEnum {
-    ERROR_404(404,"地址未找到"),
-    ERROR_405(405,"请求类型不支持"),
-    ERROR_500(500,"服务器异常");
+/**
+ * @author： 李树林
+ * @description：
+ * @date： 2018/8/29 17:30
+ */
+public enum UserCollectEnum {
+    COLLECT_HOME(1,"首页收藏"),
+    COLLECT_MERCHANDIZE(2,"商品收藏");
 
     private int key;
     private String msg;
 
-    private ResultEnum(int key, String msg){
+    private UserCollectEnum(int key, String msg){
         this.key = key;
         this.msg = msg;
     }

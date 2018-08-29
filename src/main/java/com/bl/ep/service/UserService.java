@@ -1,9 +1,8 @@
 package com.bl.ep.service;
 
-import com.alibaba.fastjson.JSON;
 import com.bl.ep.constant.Collect;
 import com.bl.ep.constant.Resource;
-import com.bl.ep.constant.ResultEnum;
+import com.bl.ep.constant.UserCollectEnum;
 import com.bl.ep.dao.*;
 import com.bl.ep.model.UserCollect;
 import com.bl.ep.model.UserModel;
@@ -104,10 +103,10 @@ public class UserService {
             ArrayCopy(userCollects, homeCollects);
             List<MerchandizeCollect> merchandizeCollects = merchandizeCollectCustomMapper.getMerchandizeCollect();
             ArrayCopy(userCollects, merchandizeCollects);
-        }else if(collectType.equals(ResultEnum.COLLECT_HOME.getKey())){
+        }else if(collectType.equals(UserCollectEnum.COLLECT_HOME.getKey())){
             List<HomeCollect> homeCollects = homeCollectCustomMapper.getHomeCollect();
             ArrayCopy(userCollects, homeCollects);
-        }else if(collectType.equals(ResultEnum.COLLECT_MERCHANDIZE.getKey())){
+        }else if(collectType.equals(UserCollectEnum.COLLECT_MERCHANDIZE.getKey())){
             List<MerchandizeCollect> merchandizeCollects = merchandizeCollectCustomMapper.getMerchandizeCollect();
             ArrayCopy(userCollects, merchandizeCollects);
         }
@@ -129,7 +128,7 @@ public class UserService {
                 userCollect.setTitle(homeCollect.getTitle());
                 userCollect.setImage(homeCollect.getImage());
                 userCollect.setUrl(homeCollect.getUrl());
-                userCollect.setType(ResultEnum.COLLECT_HOME.getKey());
+                userCollect.setType(UserCollectEnum.COLLECT_HOME.getKey());
                 userCollect.setModifyTime(homeCollect.getModifyTime());
                 userCollect.setCreateTime(homeCollect.getCreateTime());
                 src.add(userCollect);
@@ -145,7 +144,7 @@ public class UserService {
                 userCollect.setTitle(merchandizeCollect.getTitle());
                 userCollect.setImage(merchandizeCollect.getImage());
                 userCollect.setUrl(merchandizeCollect.getUrl());
-                userCollect.setType(ResultEnum.COLLECT_MERCHANDIZE.getKey());
+                userCollect.setType(UserCollectEnum.COLLECT_MERCHANDIZE.getKey());
                 userCollect.setModifyTime(merchandizeCollect.getModifyTime());
                 userCollect.setCreateTime(merchandizeCollect.getCreateTime());
                 src.add(userCollect);
