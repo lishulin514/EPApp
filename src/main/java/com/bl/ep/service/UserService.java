@@ -1,9 +1,12 @@
 package com.bl.ep.service;
 
+import com.alibaba.fastjson.JSON;
 import com.bl.ep.constant.Collect;
+import com.bl.ep.constant.Resource;
 import com.bl.ep.constant.ResultEnum;
 import com.bl.ep.dao.*;
 import com.bl.ep.model.UserCollect;
+import com.bl.ep.model.UserModel;
 import com.bl.ep.param.HomeParam;
 import com.bl.ep.param.PageParam;
 import com.bl.ep.param.UserParam;
@@ -14,6 +17,7 @@ import com.bl.ep.pojo.User;
 import com.bl.ep.utils.PageUtils;
 import com.github.pagehelper.PageHelper;
 import org.apache.commons.lang3.StringUtils;
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
@@ -40,6 +44,8 @@ public class UserService {
     private MerchandizeCollectMapper merchandizeCollectMapper;
     @Autowired
     private MerchandizeCollectCustomMapper merchandizeCollectCustomMapper;
+    @Autowired
+    private Resource resource;
 
 
     @Transactional(propagation = Propagation.SUPPORTS)
@@ -49,12 +55,17 @@ public class UserService {
         return userDao.selectOne(user);
     }
 
-    public int signIn(UserParam param) {
+    public UserModel signIn(UserParam param) {
         User user = userDao.selectOne(param);
         if(user.getPassword().equals(param.getPassword())){
-            return 1;
+            UserModel userModel = new UserModel();
+            BeanUtils.copyProperties(user, userModel);
+            userModel.setHost(resource.getHost());
+            userModel.setPort(resource.getPort());
+            userModel.setImagePath(resource.getImagePath());
+            return userModel;
         }
-        return 2;
+        return null;
     }
 
     public List<Home>   homeList(HomeParam param, PageParam pageParam) {

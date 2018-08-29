@@ -4,6 +4,7 @@ import com.alibaba.fastjson.JSON;
 import com.bl.ep.constant.Resource;
 import com.bl.ep.constant.ResultModel;
 import com.bl.ep.model.UserCollect;
+import com.bl.ep.model.UserModel;
 import com.bl.ep.param.HomeParam;
 import com.bl.ep.param.PageParam;
 import com.bl.ep.param.UserParam;
@@ -34,9 +35,10 @@ public class UserController {
      */
     @PostMapping(value = "/login", params = {"username","password"})
     public ResultModel login(UserParam param){
-        int result = userService.signIn(param);
+        UserModel userModel = userService.signIn(param);
         logger.info("login UserParam = {}",JSON.toJSONString(param));
-        return ResultModel.response(result);
+
+        return ResultModel.response(userModel);
     }
 
     /**
