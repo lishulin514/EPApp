@@ -9,6 +9,9 @@ public enum UserEnum {
     COLLECT_HOME(1,"首页收藏"),
     COLLECT_MERCHANDIZE(2,"商品收藏"),
 
+    USER_EXIST(0,"用户已存在"),
+    SIGN_UP_SUCCESS(1,"注册成功"),
+
     UPDATE_PASSWORD_SUCCESS(1, "修改成功"),
     UPDATE_PASSWORD_FAILED(2, "账号或密码错误");
 

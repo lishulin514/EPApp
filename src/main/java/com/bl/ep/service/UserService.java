@@ -164,4 +164,15 @@ public class UserService {
         }
         return UserEnum.UPDATE_PASSWORD_FAILED.getKey();
     }
+
+    public int signUp(UserParam userParam) {
+        User selectParam = new User();
+        selectParam.setUsername(userParam.getUsername());
+        User user = userDao.selectOne(selectParam);
+        if(user==null){
+            userDao.insert(userParam);
+            return UserEnum.SIGN_UP_SUCCESS.getKey();
+        }
+        return UserEnum.USER_EXIST.getKey();
+    }
 }

@@ -9,6 +9,7 @@ import com.bl.ep.param.HomeParam;
 import com.bl.ep.param.PageParam;
 import com.bl.ep.param.UserParam;
 import com.bl.ep.pojo.Home;
+import com.bl.ep.pojo.User;
 import com.bl.ep.service.UserService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -34,11 +35,24 @@ public class UserController {
      * @return 1成功  2失败
      */
     @PostMapping(value = "/login", params = {"username","password"})
-    public ResultModel login(UserParam param){
+    public ResultModel signIn(UserParam param){
         UserModel userModel = userService.signIn(param);
         logger.info("login UserParam = {}",JSON.toJSONString(param));
 
         return ResultModel.response(userModel);
+    }
+    @PostMapping(value = "/signUp", params = {"username","password"})
+    public ResultModel signUp(UserParam param){
+
+        int result = userService.signUp(param);
+
+        return ResultModel.response(result);
+    }
+    @PostMapping(value = "/user/info", params = {"username"})
+    public ResultModel getUserByName(UserParam param){
+
+        User user = userService.getUserByUsername(param);
+        return ResultModel.response(user);
     }
 
     /**
