@@ -95,4 +95,13 @@ public class UserController {
         List<UserCollect> collects = userService.getUserCollects(collectType);
         return ResultModel.response(collects);
     }
+
+    @PostMapping(value = "/update/password", params = {"username","password","newPassword"})
+    public ResultModel updatePassword(UserParam userParam){
+        logger.info("updatePassword param = {}", JSON.toJSONString(userParam));
+
+        int isUpdate = userService.updatePassword(userParam);
+
+        return ResultModel.response(isUpdate);
+    }
 }

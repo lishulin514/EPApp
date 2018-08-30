@@ -2,7 +2,7 @@ package com.bl.ep.service;
 
 import com.bl.ep.constant.Collect;
 import com.bl.ep.constant.Resource;
-import com.bl.ep.constant.UserCollectEnum;
+import com.bl.ep.constant.UserEnum;
 import com.bl.ep.dao.*;
 import com.bl.ep.model.UserCollect;
 import com.bl.ep.model.UserModel;
@@ -103,10 +103,10 @@ public class UserService {
             ArrayCopy(userCollects, homeCollects);
             List<MerchandizeCollect> merchandizeCollects = merchandizeCollectCustomMapper.getMerchandizeCollect();
             ArrayCopy(userCollects, merchandizeCollects);
-        }else if(collectType.equals(UserCollectEnum.COLLECT_HOME.getKey())){
+        }else if(collectType.equals(UserEnum.COLLECT_HOME.getKey())){
             List<HomeCollect> homeCollects = homeCollectCustomMapper.getHomeCollect();
             ArrayCopy(userCollects, homeCollects);
-        }else if(collectType.equals(UserCollectEnum.COLLECT_MERCHANDIZE.getKey())){
+        }else if(collectType.equals(UserEnum.COLLECT_MERCHANDIZE.getKey())){
             List<MerchandizeCollect> merchandizeCollects = merchandizeCollectCustomMapper.getMerchandizeCollect();
             ArrayCopy(userCollects, merchandizeCollects);
         }
@@ -114,7 +114,6 @@ public class UserService {
     }
 
     private <T extends Collect> void ArrayCopy(List<UserCollect> src, List<T> dest){
-
         if(dest == null || dest.size() == 0){
             return;
         }
@@ -128,7 +127,7 @@ public class UserService {
                 userCollect.setTitle(homeCollect.getTitle());
                 userCollect.setImage(homeCollect.getImage());
                 userCollect.setUrl(homeCollect.getUrl());
-                userCollect.setType(UserCollectEnum.COLLECT_HOME.getKey());
+                userCollect.setType(UserEnum.COLLECT_HOME.getKey());
                 userCollect.setModifyTime(homeCollect.getModifyTime());
                 userCollect.setCreateTime(homeCollect.getCreateTime());
                 src.add(userCollect);
@@ -144,11 +143,25 @@ public class UserService {
                 userCollect.setTitle(merchandizeCollect.getTitle());
                 userCollect.setImage(merchandizeCollect.getImage());
                 userCollect.setUrl(merchandizeCollect.getUrl());
-                userCollect.setType(UserCollectEnum.COLLECT_MERCHANDIZE.getKey());
+                userCollect.setType(UserEnum.COLLECT_MERCHANDIZE.getKey());
                 userCollect.setModifyTime(merchandizeCollect.getModifyTime());
                 userCollect.setCreateTime(merchandizeCollect.getCreateTime());
                 src.add(userCollect);
             }
         }
+    }
+
+    public int updatePassword(UserParam userParam) {
+        User selectParam = new User();
+        selectParam.setUsername(userParam.getUsername());
+        User user = userDao.selectOne(selectParam);
+        if(user.getPassword().equals(userParam.getPassword())){
+            User updateUser = new User();
+            updateUser.setId(user.getId());
+            updateUser.setPassword(userParam.getNewPassword());
+            userDao.updateByPrimaryKeySelective(updateUser);
+            return UserEnum.UPDATE_PASSWORD_SUCCESS.getKey();
+        }
+        return UserEnum.UPDATE_PASSWORD_FAILED.getKey();
     }
 }

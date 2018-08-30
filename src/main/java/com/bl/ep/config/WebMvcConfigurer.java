@@ -21,17 +21,6 @@ import java.time.format.DateTimeFormatter;
 @Configuration
 public class WebMvcConfigurer extends WebMvcConfigurerAdapter {
 
-	@Bean(name = "mapperObject")
-	public ObjectMapper getObjectMapper() {
-		ObjectMapper om = new ObjectMapper();
-		JavaTimeModule javaTimeModule = new JavaTimeModule();
-		javaTimeModule.addSerializer(LocalDateTime.class, new LocalDateTimeSerializer(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss")));
-		javaTimeModule.addSerializer(LocalDate.class, new LocalDateSerializer(DateTimeFormatter.ofPattern("yyyy-MM-dd")));
-		javaTimeModule.addSerializer(LocalTime.class, new LocalTimeSerializer(DateTimeFormatter.ofPattern("HH:mm:ss")));
-		om.registerModule(javaTimeModule);
-		return om;
-	}
-
 	/**
 	 * 在请求处理之前进行调用（Controller方法调用之前）
 	 * @param registry
