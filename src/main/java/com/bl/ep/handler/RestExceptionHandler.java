@@ -7,6 +7,9 @@ import org.springframework.web.HttpRequestMethodNotSupportedException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
+/**
+ * 拦截异常 使接口返回指定错误信息
+ */
 @RestControllerAdvice
 public class RestExceptionHandler {
 

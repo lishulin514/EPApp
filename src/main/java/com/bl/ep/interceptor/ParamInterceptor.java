@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServletResponse;
 
 /**
  * @author： 李树林
- * @description：
+ * @description：对传入参数进行拦截判断合法性
  * @date： 2018/8/27 17:32
  */
 public class ParamInterceptor implements HandlerInterceptor {

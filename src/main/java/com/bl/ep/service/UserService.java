@@ -47,6 +47,11 @@ public class UserService {
     private Resource resource;
 
 
+    /**
+     * 根据用户名获取用户信息
+     * @param param 用户名
+     * @return 用户信息
+     */
     @Transactional(propagation = Propagation.SUPPORTS)
     public User getUserByUsername(UserParam param) {
         User user = new User();
@@ -54,6 +59,11 @@ public class UserService {
         return userDao.selectOne(user);
     }
 
+    /**
+     * 判断对应用户的密码是否正确
+     * @param param 用户名、密码
+     * @return 用户信息
+     */
     public UserModel signIn(UserParam param) {
         User user = userDao.selectOne(param);
         if(user.getPassword().equals(param.getPassword())){
@@ -67,6 +77,12 @@ public class UserService {
         return null;
     }
 
+    /**
+     * 根据分页条件获取新闻列表
+     * @param param 首页查询条件
+     * @param pageParam 分页条件
+     * @return 首页列表
+     */
     public List<Home>   homeList(HomeParam param, PageParam pageParam) {
         PageHelper.startPage(pageParam.getPage(), pageParam.getRows());
         Example example = new Example(Home.class);
@@ -78,6 +94,11 @@ public class UserService {
         return homeDao.selectByExample(example);
     }
 
+    /**
+     * 收藏商品
+     * @param userId 用户id
+     * @param categoryId 商品种类Id
+     */
     public void addMerchandizeCollect(Integer userId, Integer categoryId) {
         MerchandizeCollect collect = new MerchandizeCollect();
         collect.setUserId(userId);
@@ -86,6 +107,12 @@ public class UserService {
         collect.setCreateTime(new Date());
         merchandizeCollectMapper.insertSelective(collect);
     }
+
+    /**
+     * 收藏新闻
+     * @param userId 用户Id
+     * @param homeId 新闻Id
+     */
     public void addHomeCollect(Integer userId, Integer homeId) {
         HomeCollect collect = new HomeCollect();
         collect.setUserId(userId);
@@ -95,6 +122,11 @@ public class UserService {
         homeCollectMapper.insertSelective(collect);
     }
 
+    /**
+     * 根据类型获取收藏集合
+     * @param collectType 类型
+     * @return 收藏集合
+     */
     public List<UserCollect> getUserCollects(Integer collectType) {
         List<UserCollect> userCollects = new ArrayList<>();
 
@@ -113,6 +145,12 @@ public class UserService {
         return userCollects;
     }
 
+    /**
+     *  讲一个集合中的信息复制到另一个集合
+     * @param src  目标
+     * @param dest 源头
+     * @param <T> 信息集合类型
+     */
     private <T extends Collect> void ArrayCopy(List<UserCollect> src, List<T> dest){
         if(dest == null || dest.size() == 0){
             return;
@@ -151,6 +189,11 @@ public class UserService {
         }
     }
 
+    /**
+     * 修改密码
+     * @param userParam 用户名、原密码、新密码
+     * @return 1、成功 2失败
+     */
     public int updatePassword(UserParam userParam) {
         User selectParam = new User();
         selectParam.setUsername(userParam.getUsername());
@@ -165,6 +208,11 @@ public class UserService {
         return UserEnum.UPDATE_PASSWORD_FAILED.getKey();
     }
 
+    /**
+     * 注册
+     * @param userParam 注册用户信息
+     * @return 0、该用户已注册 1、注册成功
+     */
     public int signUp(UserParam userParam) {
         User selectParam = new User();
         selectParam.setUsername(userParam.getUsername());
