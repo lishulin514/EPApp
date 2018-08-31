@@ -41,6 +41,12 @@ public class UserController {
 
         return ResultModel.response(userModel);
     }
+
+    /**
+     * 注册
+     * @param param （用户名称 密码）必填、（姓名、年龄、性别）选填
+     * @return 0该用户已注册 1注册成功
+     */
     @PostMapping(value = "/signUp", params = {"username","password"})
     public ResultModel signUp(UserParam param){
 
@@ -48,6 +54,12 @@ public class UserController {
 
         return ResultModel.response(result);
     }
+
+    /**
+     * 根据用户名查询用户
+     * @param param 用户名
+     * @return 获取到的用户信息
+     */
     @PostMapping(value = "/user/info", params = {"username"})
     public ResultModel getUserByName(UserParam param){
 
@@ -110,6 +122,11 @@ public class UserController {
         return ResultModel.response(collects);
     }
 
+    /**
+     * 修改密码
+     * @param userParam 用户名、原密码、新密码必填
+     * @return
+     */
     @PostMapping(value = "/update/password", params = {"username","password","newPassword"})
     public ResultModel updatePassword(UserParam userParam){
         logger.info("updatePassword param = {}", JSON.toJSONString(userParam));

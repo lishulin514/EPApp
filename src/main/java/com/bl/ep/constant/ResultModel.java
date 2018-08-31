@@ -9,6 +9,8 @@ import com.fasterxml.jackson.annotation.JsonInclude;
  *  501bean验证错误，不管多少个错误都以map形式返回
  *  502：拦截器拦截到用户token出错
  *  555：异常抛出信息
+ *
+ * @param <T> 返回数据类型
  */
 public class ResultModel<T>{
 
