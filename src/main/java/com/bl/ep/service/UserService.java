@@ -23,6 +23,7 @@ import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 import tk.mybatis.mapper.entity.Example;
 
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -66,7 +67,7 @@ public class UserService {
      */
     public UserModel signIn(UserParam param) {
         User user = userDao.selectOne(param);
-        if(user.getPassword().equals(param.getPassword())){
+        if(param != null && param.getPassword() !=null && user.getPassword().equals(param.getPassword())){
             UserModel userModel = new UserModel();
             BeanUtils.copyProperties(user, userModel);
             userModel.setHost(resource.getHost());
@@ -218,6 +219,7 @@ public class UserService {
         selectParam.setUsername(userParam.getUsername());
         User user = userDao.selectOne(selectParam);
         if(user==null){
+            userParam.setCreateTime(LocalDateTime.now());
             userDao.insert(userParam);
             return UserEnum.SIGN_UP_SUCCESS.getKey();
         }

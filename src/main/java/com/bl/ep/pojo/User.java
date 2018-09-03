@@ -38,6 +38,7 @@ public class User{
     private Integer age;
     /**
      * 在没有数据的时候不返回
+     * 0男 1女
      */
     @JsonInclude(JsonInclude.Include.NON_NULL)
     private Integer sex;

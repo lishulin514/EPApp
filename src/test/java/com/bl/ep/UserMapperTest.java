@@ -1,6 +1,5 @@
 package com.bl.ep;
 
-import com.bl.ep.dao.UserMapper;
 import com.bl.ep.model.UserModel;
 import com.bl.ep.param.UserParam;
 import com.bl.ep.pojo.User;
@@ -10,8 +9,6 @@ import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
-
-import java.util.List;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest(classes = EpAppApplication.class, webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
