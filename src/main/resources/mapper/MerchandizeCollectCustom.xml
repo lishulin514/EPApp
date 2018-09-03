@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bl.ep.dao.MerchandizeCollectCustomMapper">
+    <resultMap id="MerchandizeCollectCustomResultMap" type="com.bl.ep.pojo.MerchandizeCollect">
+        <id property="id" column="id" jdbcType="INTEGER"/>
+        <result property="userId" column="user_id" jdbcType="INTEGER"/>
+        <result property="merchandizeCategoryId" column="merchandize_category_id" jdbcType="INTEGER"/>
+        <result property="title" column="title" jdbcType="VARCHAR"/>
+        <result property="image" column="image" jdbcType="VARCHAR"/>
+        <result property="url" column="url" jdbcType="VARCHAR"/>
+        <result property="isDelete" column="is_delete" jdbcType="TINYINT"/>
+        <result property="modifTime" column="modify_time" jdbcType="TIMESTAMP"/>
+        <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <select id="getMerchandizeCollect" resultMap="MerchandizeCollectCustomResultMap">
+        SELECT collect.*, category.title, category.image, category.url
+	      FROM t_merchandize_collect collect INNER JOIN m_merchandize_category category ON collect.merchandize_category_id = category.id
+    </select>
+</mapper>
