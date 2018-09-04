@@ -8,7 +8,7 @@ import javax.persistence.Table;
 import java.util.Date;
 
 
-@Table(name="t_home")
+@Table(name="h_home")
 public class Home {
 
     @Id

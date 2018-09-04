@@ -53,7 +53,7 @@ public class UserController {
      * @return 0该用户已注册 1注册成功
      */
     @ResponseBody
-    @PutMapping(value = "/signUp", params = {"username","password"})
+    @PostMapping(value = "/signUp", params = {"username","password"})
     public ResultModel signUp(UserParam param){
 
         int result = userService.signUp(param);
@@ -95,7 +95,7 @@ public class UserController {
      * @return
      */
     @ResponseBody
-    @PutMapping(value = "/update/password", params = {"username","password","newPassword"})
+    @PostMapping(value = "/update/password", params = {"username","password","newPassword"})
     public ResultModel updatePassword(UserParam userParam){
         logger.info("updatePassword param = {}", JSON.toJSONString(userParam));
 

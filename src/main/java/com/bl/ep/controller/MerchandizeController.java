@@ -74,7 +74,7 @@ public class MerchandizeController {
      * @return true （收藏成功）
      */
     @ResponseBody
-    @PutMapping(value = "/collect/{userId}/{categoryId}")
+    @PostMapping(value = "/collect/{userId}/{categoryId}")
     public ResultModel merchandizeCollect(@PathVariable("userId") Integer userId, @PathVariable("categoryId") Integer categoryId){
         merchandizeService.addMerchandizeCollect(userId, categoryId);
         logger.info("merchandizeCollect userId = {};categoryId = {}",

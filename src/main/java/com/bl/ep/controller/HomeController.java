@@ -65,7 +65,7 @@ public class HomeController {
      * @return true （收藏成功）
      */
     @ResponseBody
-    @PutMapping(value = "/home/collect/{userId}/{homeId}")
+    @PostMapping(value = "/home/collect/{userId}/{homeId}")
     public ResultModel homeCollect(@PathVariable("userId") Integer userId, @PathVariable("homeId") Integer homeId){
         logger.info("homeCollect userId = {};homeId = {}",
                 userId, homeId);
