@@ -17,6 +17,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.List;
@@ -94,11 +95,12 @@ public class UserController {
      * @return 新闻列表
      */
     @GetMapping("/home/index/{id}")
-    public String homeIndex(@PathVariable Integer id, HttpServletRequest request){
-        Home home = userService.getHomeIndex(id);
+    public ModelAndView homeIndex(@PathVariable Integer id, HttpServletRequest request){
         logger.info("home/index id = {}",id);
+        Home home = userService.getHomeIndex(id);
+        logger.info("home/index home = {}",JSON.toJSONString(home));
         request.setAttribute("home", home);
-        return "home";
+        return new ModelAndView("home");
     }
 
     /**

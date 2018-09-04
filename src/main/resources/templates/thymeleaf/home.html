@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 <html  xmlns:th="http://www.thymeleaf.org">
-<head lang="en">
-    <meta charset="UTF-8" />
-    <title>Title</title>
-    <!--<script th:src="@{/js/test.js}"></script>-->
+<head>
+<meta lang="en" charset="UTF-8" />
+<title>Title</title>
 </head>
 <body>
 <div>
@@ -12,7 +11,7 @@
     作者：<input th:value="${home.writer}"/>
     <br/>
     创建日期：<input th:value="${#dates.format(home.createTime,'yyyy-MM-dd hh:mm:ss')}"/>
-    <br/>
+    <br/>-
 </div>
 </body>
 </html>
