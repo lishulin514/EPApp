@@ -3,22 +3,31 @@ package com.bl.ep.pojo;
 import com.fasterxml.jackson.annotation.JsonFormat;
 
 import javax.persistence.Column;
+import javax.persistence.Id;
 import javax.persistence.Table;
 import java.util.Date;
+
 
 @Table(name="t_home")
 public class Home {
 
+    @Id
     private Integer id;
 
     private String title;
 
-    private String image;
+    @Column(name = "title_image")
+    private String titleImage;
 
-    private String url;
+    private String writer;
+
+    private String context;
+
+    @Column(name = "context_image")
+    private String contextImage;
 
     @Column(name = "create_time")
-    @JsonFormat(pattern="yyyy-MM-dd hh:mm:ss a", locale = "zh", timezone = "GMT+8")
+    @JsonFormat(pattern="yyyy-MM-dd hh:mm:ss", locale = "zh", timezone = "GMT+8")
     private Date createTime;
 
     public Integer getId() {
@@ -37,20 +46,36 @@ public class Home {
         this.title = title;
     }
 
-    public String getImage() {
-        return image;
+    public String getTitleImage() {
+        return titleImage;
     }
 
-    public void setImage(String image) {
-        this.image = image;
+    public void setTitleImage(String titleImage) {
+        this.titleImage = titleImage;
     }
 
-    public String getUrl() {
-        return url;
+    public String getWriter() {
+        return writer;
     }
 
-    public void setUrl(String url) {
-        this.url = url;
+    public void setWriter(String writer) {
+        this.writer = writer;
+    }
+
+    public String getContext() {
+        return context;
+    }
+
+    public void setContext(String context) {
+        this.context = context;
+    }
+
+    public String getContextImage() {
+        return contextImage;
+    }
+
+    public void setContextImage(String contextImage) {
+        this.contextImage = contextImage;
     }
 
     public Date getCreateTime() {

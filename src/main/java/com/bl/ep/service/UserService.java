@@ -225,4 +225,9 @@ public class UserService {
         }
         return UserEnum.USER_EXIST.getKey();
     }
+
+    public Home getHomeIndex(Integer id) {
+
+        return homeDao.selectByPrimaryKey(id);
+    }
 }
