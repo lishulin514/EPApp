@@ -35,13 +35,7 @@ public class UserService {
     @Autowired
     private UserMapper userDao;
     @Autowired
-    private HomeMapper homeDao;
-    @Autowired
-    private HomeCollectMapper homeCollectMapper;
-    @Autowired
     private HomeCollectCustomMapper homeCollectCustomMapper;
-    @Autowired
-    private MerchandizeCollectMapper merchandizeCollectMapper;
     @Autowired
     private MerchandizeCollectCustomMapper merchandizeCollectCustomMapper;
     @Autowired
@@ -76,51 +70,6 @@ public class UserService {
             return userModel;
         }
         return null;
-    }
-
-    /**
-     * 根据分页条件获取新闻列表
-     * @param param 首页查询条件
-     * @param pageParam 分页条件
-     * @return 首页列表
-     */
-    public List<Home>   homeList(HomeParam param, PageParam pageParam) {
-        PageHelper.startPage(pageParam.getPage(), pageParam.getRows());
-        Example example = new Example(Home.class);
-        Example.Criteria criteria = example.createCriteria();
-        if(!StringUtils.isEmpty(param.getTitle())){
-            criteria.andLike("title","%"+param.getTitle()+"%");
-        }
-        PageUtils.pageHelperOrderBy(example, pageParam);
-        return homeDao.selectByExample(example);
-    }
-
-    /**
-     * 收藏商品
-     * @param userId 用户id
-     * @param categoryId 商品种类Id
-     */
-    public void addMerchandizeCollect(Integer userId, Integer categoryId) {
-        MerchandizeCollect collect = new MerchandizeCollect();
-        collect.setUserId(userId);
-        collect.setMerchandizeCategoryId(categoryId);
-        collect.setIsDelete((byte)0);
-        collect.setCreateTime(new Date());
-        merchandizeCollectMapper.insertSelective(collect);
-    }
-
-    /**
-     * 收藏新闻
-     * @param userId 用户Id
-     * @param homeId 新闻Id
-     */
-    public void addHomeCollect(Integer userId, Integer homeId) {
-        HomeCollect collect = new HomeCollect();
-        collect.setUserId(userId);
-        collect.setHomeId(homeId);
-        collect.setIsDelete((byte)0);
-        collect.setCreateTime(new Date());
-        homeCollectMapper.insertSelective(collect);
     }
 
     /**
@@ -226,8 +175,4 @@ public class UserService {
         return UserEnum.USER_EXIST.getKey();
     }
 
-    public Home getHomeIndex(Integer id) {
-
-        return homeDao.selectByPrimaryKey(id);
-    }
 }

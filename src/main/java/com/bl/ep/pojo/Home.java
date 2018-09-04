@@ -21,10 +21,10 @@ public class Home {
 
     private String writer;
 
-    private String context;
+    private String content;
 
-    @Column(name = "context_image")
-    private String contextImage;
+    @Column(name = "content_image")
+    private String contentImage;
 
     @Column(name = "create_time")
     @JsonFormat(pattern="yyyy-MM-dd hh:mm:ss", locale = "zh", timezone = "GMT+8")
@@ -62,20 +62,20 @@ public class Home {
         this.writer = writer;
     }
 
-    public String getContext() {
-        return context;
+    public String getContent() {
+        return content;
     }
 
-    public void setContext(String context) {
-        this.context = context;
+    public void setContent(String content) {
+        this.content = content;
     }
 
-    public String getContextImage() {
-        return contextImage;
+    public String getContentImage() {
+        return contentImage;
     }
 
-    public void setContextImage(String contextImage) {
-        this.contextImage = contextImage;
+    public void setContentImage(String contentImage) {
+        this.contentImage = contentImage;
     }
 
     public Date getCreateTime() {

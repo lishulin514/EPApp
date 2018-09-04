@@ -1,11 +1,13 @@
 package com.bl.ep.service;
 
 import com.bl.ep.dao.MerchandizeCategoryMapper;
+import com.bl.ep.dao.MerchandizeCollectMapper;
 import com.bl.ep.dao.MerchandizeMapper;
 import com.bl.ep.param.MerchandizeParam;
 import com.bl.ep.param.PageParam;
 import com.bl.ep.pojo.Merchandize;
 import com.bl.ep.pojo.MerchandizeCategory;
+import com.bl.ep.pojo.MerchandizeCollect;
 import com.bl.ep.utils.PageUtils;
 import com.github.pagehelper.PageHelper;
 import org.apache.commons.lang3.StringUtils;
@@ -13,6 +15,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import tk.mybatis.mapper.entity.Example;
 
+import java.util.Date;
 import java.util.List;
 
 @Service
@@ -20,6 +23,9 @@ public class MerchandizeService{
 
     @Autowired
     private MerchandizeMapper merchandizeMapper;
+
+    @Autowired
+    private MerchandizeCollectMapper merchandizeCollectMapper;
 
     @Autowired
     private MerchandizeCategoryMapper merchandizeDetailMapper;
@@ -73,10 +79,21 @@ public class MerchandizeService{
         //如何没有传入商品id 返回空
         if(merchandizeId==null)
             return null;
-        //设置查询条件
-        Merchandize param = new Merchandize();
-        param.setId(merchandizeId);
         //根据查询条件查询数据
-        return merchandizeMapper.selectOne(param);
+        return merchandizeMapper.selectByPrimaryKey(merchandizeId);
+    }
+
+    /**
+     * 收藏商品
+     * @param userId 用户id
+     * @param categoryId 商品种类Id
+     */
+    public void addMerchandizeCollect(Integer userId, Integer categoryId) {
+        MerchandizeCollect collect = new MerchandizeCollect();
+        collect.setUserId(userId);
+        collect.setMerchandizeCategoryId(categoryId);
+        collect.setIsDelete((byte)0);
+        collect.setCreateTime(new Date());
+        merchandizeCollectMapper.insertSelective(collect);
     }
 }

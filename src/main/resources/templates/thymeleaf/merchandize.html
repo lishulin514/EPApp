@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html  xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta lang="en" charset="UTF-8" />
+<title>Title</title>
+</head>
+<body>
+<div>
+    标题：<input th:value="${merchandize.title}"/>
+    <br/>
+    作者：<input th:value="${merchandize.writer}"/>
+    <br/>
+    创建日期：<input th:value="${#dates.format(merchandize.createTime,'yyyy-MM-dd hh:mm:ss')}"/>
+    <br/>
+</div>
+</body>
+</html>

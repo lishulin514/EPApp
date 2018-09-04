@@ -3,33 +3,38 @@ package com.bl.ep.pojo;
 import com.fasterxml.jackson.annotation.JsonFormat;
 
 import javax.persistence.Column;
+import javax.persistence.Id;
 import javax.persistence.Table;
 import java.util.Date;
 
 @Table(name="m_merchandize")
 public class Merchandize {
 
+    @Id
     private Integer id;
+
     private String title;
-    private String image;
-    private String url;
-    private String model;
-    @Column(name = "now_price")
-    private Double nowPrice;
-    @Column(name = "old_price")
-    private Double oldPrice;
-    private String brand;
+
+    @Column(name = "title_image")
+    private String titleImage;
+
+    private String writer;
+
+    @Column(name = "contact_name")
+    private String contactName;
+
+    private String telephone;
+
+    private String address;
+
+    private String content;
+
+    @Column(name = "content_image")
+    private String contentImage;
+
     @Column(name = "create_time")
-    @JsonFormat(pattern="yyyy-MM-dd hh:mm:ss a", locale = "zh", timezone = "GMT+8")
+    @JsonFormat(pattern="yyyy-MM-dd hh:mm:ss", locale = "zh", timezone = "GMT+8")
     private Date createTime;
-
-    public Date getCreateTime() {
-        return createTime;
-    }
-
-    public void setCreateTime(Date createTime) {
-        this.createTime = createTime;
-    }
 
     public Integer getId() {
         return id;
@@ -47,51 +52,67 @@ public class Merchandize {
         this.title = title;
     }
 
-    public String getImage() {
-        return image;
+    public String getTitleImage() {
+        return titleImage;
     }
 
-    public void setImage(String image) {
-        this.image = image;
+    public void setTitleImage(String titleImage) {
+        this.titleImage = titleImage;
     }
 
-    public String getUrl() {
-        return url;
+    public String getWriter() {
+        return writer;
     }
 
-    public void setUrl(String url) {
-        this.url = url;
+    public void setWriter(String writer) {
+        this.writer = writer;
     }
 
-    public String getModel() {
-        return model;
+    public String getContactName() {
+        return contactName;
     }
 
-    public void setModel(String model) {
-        this.model = model;
+    public void setContactName(String contactName) {
+        this.contactName = contactName;
     }
 
-    public Double getNowPrice() {
-        return nowPrice;
+    public String getTelephone() {
+        return telephone;
     }
 
-    public void setNowPrice(Double nowPrice) {
-        this.nowPrice = nowPrice;
+    public void setTelephone(String telephone) {
+        this.telephone = telephone;
     }
 
-    public Double getOldPrice() {
-        return oldPrice;
+    public String getAddress() {
+        return address;
     }
 
-    public void setOldPrice(Double oldPrice) {
-        this.oldPrice = oldPrice;
+    public void setAddress(String address) {
+        this.address = address;
     }
 
-    public String getBrand() {
-        return brand;
+    public String getContent() {
+        return content;
     }
 
-    public void setBrand(String brand) {
-        this.brand = brand;
+    public void setContent(String content) {
+        this.content = content;
+    }
+
+    public String getContentImage() {
+        return contentImage;
+    }
+
+    public void setContentImage(String contentImage) {
+        this.contentImage = contentImage;
+    }
+
+    public Date getCreateTime() {
+        return createTime;
+    }
+
+    public void setCreateTime(Date createTime) {
+        this.createTime = createTime;
     }
 }
