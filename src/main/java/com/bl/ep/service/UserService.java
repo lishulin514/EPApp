@@ -219,7 +219,7 @@ public class UserService {
         selectParam.setUsername(userParam.getUsername());
         User user = userDao.selectOne(selectParam);
         if(user==null){
-            userParam.setCreateTime(LocalDateTime.now());
+            userParam.setCreateTime(new Date());
             userDao.insert(userParam);
             return UserEnum.SIGN_UP_SUCCESS.getKey();
         }

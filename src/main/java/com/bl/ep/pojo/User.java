@@ -1,19 +1,14 @@
 package com.bl.ep.pojo;
 
-import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude;
-import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
-import com.fasterxml.jackson.databind.annotation.JsonSerialize;
-import com.fasterxml.jackson.datatype.jsr310.ser.LocalDateTimeSerializer;
-import javafx.util.converter.LocalDateTimeStringConverter;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.Column;
 import javax.persistence.Id;
 import javax.persistence.Table;
-import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.util.Date;
 
 @Table(name="t_user")
 public class User{
@@ -55,7 +50,7 @@ public class User{
     @Column(name = "create_time")
     @DateTimeFormat(pattern="yyyy-MM-dd hh:mm:ss")
 //    @JsonFormat(pattern="yyyy-MM-dd hh:mm:ss", locale = "zh", timezone = "GMT+8")
-    private LocalDateTime createTime;
+    private Date createTime;
 
     public Integer getId() {
         return id;
@@ -113,11 +108,11 @@ public class User{
         this.isDelete = isDelete;
     }
 
-    public LocalDateTime getCreateTime() {
+    public Date getCreateTime() {
         return createTime;
     }
 
-    public void setCreateTime(LocalDateTime createTime) {
+    public void setCreateTime(Date createTime) {
         this.createTime = createTime;
     }
 }
