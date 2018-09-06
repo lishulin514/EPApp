@@ -1,17 +1,75 @@
 <!DOCTYPE html>
 <html  xmlns:th="http://www.thymeleaf.org">
-<head>
-<meta lang="en" charset="UTF-8" />
-<title>Title</title>
+<head lang="en">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <link rel="stylesheet" th:href="@{/static/bootstrap/css/bootstrap.min.css}"/>
+    <title>环保页面1</title>
+
+    <style>
+        body{
+            background-color: #f8f8f8;
+            position: relative;
+        }
+        .wrapper{
+            width: 90%;
+            margin: 0 auto;
+            background-color: #fff;
+        }
+        .header{
+            height: 50px;
+        }
+        .navbar{
+            border-bottom: 2px solid #31b0d5;
+        }
+        .container-fluid{
+            margin: 10px auto;
+        }
+        .glyphicon{
+            color:#81c7db;
+            font-size: 30px;
+            margin-top: 10px;
+        }
+        .author{
+            color: #959595;
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+        .author a{
+            color:#31b0d5;
+        }
+        img{
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        .text-justify{
+            font-size: 19px;
+            line-height: 30px;
+        }
+
+    </style>
 </head>
 <body>
-<div>
-    标题：<input th:value="${home.title}"/>
-    <br/>
-    作者：<input th:value="${home.writer}"/>
-    <br/>
-    创建日期：<input th:value="${#dates.format(home.createTime,'yyyy-MM-dd hh:mm:ss')}"/>
-    <br/>-
+<div class="wrapper">
+    <div class="header">
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand" style="padding:0 0 0 15px;" href="#"><span class="glyphicon glyphicon-tint">环保</span></a>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div class="container-fluid">
+        <h2 class="page-header text-center"  th:text="${home.title}">我在爱尔兰，看着世界的阳光</h2>
+        <div class="author text-center">
+            <span>作者：</span><a href="#"  th:text="${home.writer}">小白 </a><span> • </span><span th:text="${#dates.format(home.createTime,'yyyy-MM-dd')}">2018年9月5日</span>
+        </div>
+        <img th:src="${home.contentImage}" alt=""/>
+        <p class="text-justify" th:text="${home.content}">爱尔兰，是一个西欧的议会共和制国家，西临大西洋，东靠爱尔兰海，与英国隔海相望，是北美通向欧洲的通道爱尔兰自然环境保持得相当好，素有“翡翠岛国”之称，全国绿树成荫，河流纵横。草地遍布，所以又有“绿岛”和“绿宝石”之称。</p>
+    </div>
 </div>
+<script>
+</script>
 </body>
 </html>

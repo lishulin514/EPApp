@@ -1,12 +1,14 @@
 package com.bl.ep.controller;
 
 import com.alibaba.fastjson.JSON;
+import com.bl.ep.config.Resource;
 import com.bl.ep.constant.ResultModel;
 import com.bl.ep.param.MerchandizeParam;
 import com.bl.ep.param.PageParam;
 import com.bl.ep.pojo.Merchandize;
 import com.bl.ep.pojo.MerchandizeCategory;
 import com.bl.ep.service.MerchandizeService;
+import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,6 +27,9 @@ public class MerchandizeController {
 
     @Autowired
     private MerchandizeService merchandizeService;
+
+    @Autowired
+    private Resource resource;
 
     /**
      * 环保物流列表
@@ -49,6 +54,10 @@ public class MerchandizeController {
     public ModelAndView merchandizeInfo(@PathVariable Integer merchandizeId, HttpServletRequest request){
         logger.info("merchandizeInfo merchandizeId = {}", merchandizeId);
         Merchandize merchandize = merchandizeService.getMerchandizeInfoById(merchandizeId);
+        if(!StringUtils.isEmpty(merchandize.getContentImage())){
+            String path = /*resource.getHost()+":"+resource.getPort()+*/"/"+resource.getImagePath()+"/"+merchandize.getContentImage();
+            merchandize.setContentImage(path);
+        }
         request.setAttribute("merchandize", merchandize);
         return new ModelAndView("merchandize");
     }

@@ -1,11 +1,13 @@
 package com.bl.ep.controller;
 
 import com.alibaba.fastjson.JSON;
+import com.bl.ep.config.Resource;
 import com.bl.ep.constant.ResultModel;
 import com.bl.ep.param.HomeParam;
 import com.bl.ep.param.PageParam;
 import com.bl.ep.pojo.Home;
 import com.bl.ep.service.HomeService;
+import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,6 +31,9 @@ public class HomeController {
 
     @Autowired
     private HomeService homeService;
+
+    @Autowired
+    private Resource resource;
     /**
      * 获取环保英知列表
      * @param homeParam 输入查询框查询条件 （查询"环保" 检索出所有title带环保字段的）
@@ -54,6 +59,10 @@ public class HomeController {
         logger.info("home/index id = {}",id);
         Home home = homeService.getHomeIndex(id);
         logger.info("home/index home = {}",JSON.toJSONString(home));
+        if(!StringUtils.isEmpty(home.getContentImage())){
+            String path = /*resource.getHost()+":"+resource.getPort()+*/"/"+resource.getImagePath()+"/"+home.getContentImage();
+            home.setContentImage(path);
+        }
         request.setAttribute("home", home);
         return new ModelAndView("home");
     }

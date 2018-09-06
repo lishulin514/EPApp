@@ -1,25 +1,19 @@
 package com.bl.ep.controller;
 
 import com.alibaba.fastjson.JSON;
-import com.bl.ep.constant.Resource;
+import com.bl.ep.config.Resource;
 import com.bl.ep.constant.ResultModel;
 import com.bl.ep.model.UserCollect;
 import com.bl.ep.model.UserModel;
-import com.bl.ep.param.HomeParam;
-import com.bl.ep.param.PageParam;
 import com.bl.ep.param.UserParam;
-import com.bl.ep.pojo.Home;
 import com.bl.ep.pojo.User;
 import com.bl.ep.service.UserService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.servlet.ModelAndView;
 
-import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 
 @Controller

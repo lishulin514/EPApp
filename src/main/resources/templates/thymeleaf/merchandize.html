@@ -1,17 +1,109 @@
 <!DOCTYPE html>
 <html  xmlns:th="http://www.thymeleaf.org">
-<head>
-<meta lang="en" charset="UTF-8" />
-<title>Title</title>
+<head lang="en">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <link rel="stylesheet" th:href="@{/static/bootstrap/css/bootstrap.min.css}"/>
+    <title>环保页面2</title>
+
+    <style>
+        html{
+            position: relative;
+            min-height: 100%;
+        }
+        body{
+            background-color: #f8f8f8;
+        }
+        .wrapper{
+            width: 90%;
+            margin: 0 auto;
+            background-color: #fff;
+            padding-bottom: 100px;
+        }
+        .header{
+            height: 50px;
+        }
+        .navbar{
+            border-bottom: 2px solid #31b0d5;
+        }
+        .container-fluid{
+            width: 100%;
+            margin: 10px auto;
+            min-height: 100px;
+        }
+        .glyphicon{
+            color:#81c7db;
+            font-size: 30px;
+            margin-top: 10px;
+        }
+        .author{
+            color: #959595;
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+        .author a{
+            color:#31b0d5;
+        }
+        img{
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        .text-justify{
+            font-size: 19px;
+            line-height: 30px;
+        }
+        .footer{
+            width: 90%;
+            background-color:lightgrey;
+            position: absolute;
+            height: 100px;
+            margin-top: 100px;
+            bottom: 0;
+            padding: 10px;
+        }
+        .icon{
+            font-size: 16px;
+            margin: 0;
+            padding: 0;
+        }
+        .line{
+            margin: 0 0 5px 0;
+            padding: 0;
+            border-bottom: 2px solid #31b0d5;
+            width: 100%;
+        }
+
+    </style>
 </head>
 <body>
-<div>
-    标题：<input th:value="${merchandize.title}"/>
-    <br/>
-    作者：<input th:value="${merchandize.writer}"/>
-    <br/>
-    创建日期：<input th:value="${#dates.format(merchandize.createTime,'yyyy-MM-dd hh:mm:ss')}"/>
-    <br/>
+<div class="wrapper">
+    <div class="header">
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand" style="padding:0 0 0 15px;" href="#"><span class="glyphicon glyphicon-tint">环保</span></a>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div class="container-fluid">
+        <h2 class="page-header text-center" th:text="merchandize.title">作者的标题</h2>
+        <div class="author text-center">
+            <span>作者：</span><a href="#" th:text="${merchandize.writer}">神秘 </a><span> • </span><span th:text="${#dates.format(merchandize.createTime,'yyyy-MM-dd')}"></span>
+        </div>
+        <!--th:if="${#strings.isEmpty(merchandize.contentImage)}"-->
+        <img th:src="${merchandize.contentImage}" alt=""/>
+               <p class="text-justify" th:text="${merchandize.content}">作者好什么啊！什么都没有留下</p>
+    </div>
+    <div class="footer">
+        <h4 class="title">联系我们</h4>
+        <div class="line"></div>
+        <span class="glyphicon glyphicon-earphone icon"></span><span th:text="${merchandize.telephone}"></span><br/>
+        <span class="glyphicon glyphicon-map-marker icon"></span><address style="display: inline-block" th:text="${merchandize.address}"></address>
+    </div>
 </div>
+<script>
+
+</script>
 </body>
 </html>

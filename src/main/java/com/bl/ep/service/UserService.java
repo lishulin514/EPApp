@@ -1,29 +1,21 @@
 package com.bl.ep.service;
 
 import com.bl.ep.constant.Collect;
-import com.bl.ep.constant.Resource;
+import com.bl.ep.config.Resource;
 import com.bl.ep.constant.UserEnum;
 import com.bl.ep.dao.*;
 import com.bl.ep.model.UserCollect;
 import com.bl.ep.model.UserModel;
-import com.bl.ep.param.HomeParam;
-import com.bl.ep.param.PageParam;
 import com.bl.ep.param.UserParam;
-import com.bl.ep.pojo.Home;
 import com.bl.ep.pojo.HomeCollect;
 import com.bl.ep.pojo.MerchandizeCollect;
 import com.bl.ep.pojo.User;
-import com.bl.ep.utils.PageUtils;
-import com.github.pagehelper.PageHelper;
-import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
-import tk.mybatis.mapper.entity.Example;
 
-import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
