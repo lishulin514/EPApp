@@ -87,7 +87,7 @@
         </nav>
     </div>
     <div class="container-fluid">
-        <h2 class="page-header text-center" th:text="merchandize.title">作者的标题</h2>
+        <h2 class="page-header text-center" th:text="${merchandize.title}">作者的标题</h2>
         <div class="author text-center">
             <span>作者：</span><a href="#" th:text="${merchandize.writer}">神秘 </a><span> • </span><span th:text="${#dates.format(merchandize.createTime,'yyyy-MM-dd')}"></span>
         </div>
