@@ -1,6 +1,6 @@
 package com.bl.ep.service;
 
-import com.bl.ep.constant.Collect;
+import com.bl.ep.molds.Collect;
 import com.bl.ep.config.Resource;
 import com.bl.ep.constant.UserEnum;
 import com.bl.ep.dao.*;
@@ -167,4 +167,8 @@ public class UserService {
         return UserEnum.USER_EXIST.getKey();
     }
 
+    public User getUserById(Integer userId) {
+
+        return userDao.selectByPrimaryKey(userId);
+    }
 }

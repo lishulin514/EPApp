@@ -1,5 +1,6 @@
 package com.bl.ep.param;
 
+import com.bl.ep.molds.Param;
 import com.bl.ep.pojo.Request;
 
 /**
@@ -7,5 +8,6 @@ import com.bl.ep.pojo.Request;
  * @description：
  * @date： 2018/9/4 14:37
  */
-public class RequestParam extends Request {
+public class ReqParam extends Request implements Param{
+
 }

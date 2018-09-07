@@ -8,6 +8,7 @@ import com.bl.ep.param.PageParam;
 import com.bl.ep.pojo.Merchandize;
 import com.bl.ep.pojo.MerchandizeCategory;
 import com.bl.ep.pojo.MerchandizeCollect;
+import com.bl.ep.pojo.Request;
 import com.bl.ep.utils.PageUtils;
 import com.github.pagehelper.PageHelper;
 import org.apache.commons.lang3.StringUtils;
@@ -38,18 +39,13 @@ public class MerchandizeService{
      */
     public List<Merchandize> merchandizeList(MerchandizeParam param, PageParam pageParam) {
 
+
         //设置分页开始和分页条数
-        PageHelper.startPage(pageParam.getPage(), pageParam.getRows());
-
-
-        Example example = new Example(Merchandize.class);
-        Example.Criteria criteria = example.createCriteria();
+        Example example = PageUtils.getExample(pageParam, Merchandize.class);
         //设置查询条件
         if(!StringUtils.isEmpty(param.getTitle())){
-            criteria.andLike("title","%"+param.getTitle()+"%");
+            example.createCriteria().andLike("title","%"+param.getTitle()+"%");
         }
-        //设置排序条件
-        PageUtils.pageHelperOrderBy(example, pageParam);
         //根据条件获取数据集合
         return merchandizeMapper.selectByExample(example);
     }

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bl.ep.dao.AnswerMapper">
+    <resultMap id="answerResultMap" type="com.bl.ep.pojo.Answer">
+        <id property="id" column="id" jdbcType="INTEGER"/>
+        <result property="writerId" column="writer_id" jdbcType="INTEGER"/>
+        <result property="writer" column="writer" jdbcType="VARCHAR"/>
+        <result property="content" column="content" jdbcType="VARCHAR"/>
+        <result property="parentId" column="parent_id" jdbcType="INTEGER"/>
+        <result property="requestId" column="request_id" jdbcType="INTEGER"/>
+        <result property="createTime" column="carete_time" jdbcType="TIMESTAMP"/>
+    </resultMap>
+</mapper>

@@ -7,6 +7,7 @@ import com.bl.ep.param.HomeParam;
 import com.bl.ep.param.PageParam;
 import com.bl.ep.pojo.Home;
 import com.bl.ep.pojo.HomeCollect;
+import com.bl.ep.pojo.Request;
 import com.bl.ep.utils.PageUtils;
 import com.github.pagehelper.PageHelper;
 import org.apache.commons.lang3.StringUtils;
@@ -37,13 +38,11 @@ public class HomeService {
      * @return 首页列表
      */
     public List<Home> homeList(HomeParam param, PageParam pageParam) {
-        PageHelper.startPage(pageParam.getPage(), pageParam.getRows());
-        Example example = new Example(Home.class);
-        Example.Criteria criteria = example.createCriteria();
+        //设置分页开始和分页条数
+        Example example = PageUtils.getExample(pageParam, Home.class);
         if(!StringUtils.isEmpty(param.getTitle())){
-            criteria.andLike("title","%"+param.getTitle()+"%");
+            example.createCriteria().andLike("title","%"+param.getTitle()+"%");
         }
-        PageUtils.pageHelperOrderBy(example, pageParam);
         return homeDao.selectByExample(example);
     }
 

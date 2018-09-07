@@ -9,27 +9,25 @@ import java.util.Date;
 /**
  * @author： 李树林
  * @description：
- * @date： 2018/9/4 14:35
+ * @date： 2018/9/7 9:12
  */
-@Table(name="r_request")
-public class Request {
+@Table(name="r_answer")
+public class Answer {
 
     private Integer id;
 
-    private String title;
-
-    @Column(name = "title_image")
-    private String titleImage;
-
-    @Column(name = "writer_id")
+    @Column(name = "writer_Id")
     private Integer writerId;
 
     private String writer;
 
     private String content;
 
-    @Column(name = "content_image")
-    private String contentImage;
+    @Column(name = "parent_id")
+    private Integer parentId;
+
+    @Column(name = "request_id")
+    private Integer requestId;
 
     @Column(name = "create_time")
     @JsonFormat(pattern="yyyy-MM-dd hh:mm:ss", locale = "zh", timezone = "GMT+8")
@@ -41,22 +39,6 @@ public class Request {
 
     public void setId(Integer id) {
         this.id = id;
-    }
-
-    public String getTitle() {
-        return title;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
-    public String getTitleImage() {
-        return titleImage;
-    }
-
-    public void setTitleImage(String titleImage) {
-        this.titleImage = titleImage;
     }
 
     public Integer getWriterId() {
@@ -83,12 +65,20 @@ public class Request {
         this.content = content;
     }
 
-    public String getContentImage() {
-        return contentImage;
+    public Integer getParentId() {
+        return parentId;
     }
 
-    public void setContentImage(String contentImage) {
-        this.contentImage = contentImage;
+    public void setParentId(Integer parentId) {
+        this.parentId = parentId;
+    }
+
+    public Integer getRequestId() {
+        return requestId;
+    }
+
+    public void setRequestId(Integer requestId) {
+        this.requestId = requestId;
     }
 
     public Date getCreateTime() {

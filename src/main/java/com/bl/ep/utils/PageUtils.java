@@ -1,6 +1,9 @@
 package com.bl.ep.utils;
 
+import com.bl.ep.molds.Param;
 import com.bl.ep.param.PageParam;
+import com.bl.ep.pojo.Home;
+import com.github.pagehelper.PageHelper;
 import org.apache.commons.lang3.StringUtils;
 import tk.mybatis.mapper.entity.Example;
 
@@ -23,5 +26,12 @@ public class PageUtils {
         }else{
             Example.OrderBy orderBy = example.orderBy("createTime").desc();
         }
+    }
+
+    public static <T> Example getExample(PageParam pageParam, Class<T> tClass){
+        PageHelper.startPage(pageParam.getPage(), pageParam.getRows());
+        Example example = new Example(tClass);
+        pageHelperOrderBy(example, pageParam);
+        return example;
     }
 }
