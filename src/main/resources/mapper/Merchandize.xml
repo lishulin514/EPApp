@@ -4,12 +4,13 @@
     <resultMap id="merchandizeResultMap" type="com.bl.ep.pojo.Merchandize">
         <id property="id" column="id" jdbcType="INTEGER"/>
         <result property="title" column="title" jdbcType="VARCHAR"/>
-        <result property="image" column="image" jdbcType="VARCHAR"/>
-        <result property="url" column="url" jdbcType="VARCHAR"/>
-        <result property="model" column="model" jdbcType="VARCHAR"/>
-        <result property="nowPrice" column="now_price" jdbcType="DOUBLE"/>
-        <result property="oldPrice" column="old_price" jdbcType="DOUBLE"/>
-        <result property="brand" column="brand" jdbcType="VARCHAR"/>
+        <result property="titleImage" column="title_image" jdbcType="VARCHAR"/>
+        <result property="writer" column="writer" jdbcType="VARCHAR"/>
+        <result property="contactName" column="contact_name" jdbcType="VARCHAR"/>
+        <result property="telephone" column="telephone" jdbcType="VARCHAR"/>
+        <result property="address" column="address" jdbcType="VARCHAR"/>
+        <result property="content" column="content" jdbcType="VARCHAR"/>
+        <result property="contentImage" column="content_image" jdbcType="VARCHAR"/>
         <result property="createTime" column="carete_time" jdbcType="TIMESTAMP"/>
     </resultMap>
 </mapper>

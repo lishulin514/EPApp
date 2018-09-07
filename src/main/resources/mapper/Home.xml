@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.bl.ep.dao.UserMapper">
+<mapper namespace="com.bl.ep.dao.HomeMapper">
     <resultMap id="homeResultMap" type="com.bl.ep.pojo.Home">
         <id property="id" column="id" jdbcType="INTEGER"/>
         <result property="title" column="title" jdbcType="VARCHAR"/>
-        <result property="image" column="image" jdbcType="VARCHAR"/>
-        <result property="url" column="url" jdbcType="VARCHAR"/>
+        <result property="titleImage" column="title_image" jdbcType="VARCHAR"/>
+        <result property="writer" column="writer" jdbcType="VARCHAR"/>
+        <result property="content" column="content" jdbcType="VARCHAR"/>
+        <result property="contentImage" column="content_image" jdbcType="VARCHAR"/>
         <result property="createTime" column="carete_time" jdbcType="TIMESTAMP"/>
     </resultMap>
 </mapper>
