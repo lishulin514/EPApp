@@ -11,7 +11,6 @@ public class BaseCollect implements Collect {
 
 
     private String image;
-    private String url;
     private String title;
 
     public String getImage() {
@@ -20,14 +19,6 @@ public class BaseCollect implements Collect {
 
     public void setImage(String image) {
         this.image = image;
-    }
-
-    public String getUrl() {
-        return url;
-    }
-
-    public void setUrl(String url) {
-        this.url = url;
     }
 
     public String getTitle() {

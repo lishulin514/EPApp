@@ -106,7 +106,6 @@ public class UserService {
                 userCollect.setTargetId(homeCollect.getHomeId());
                 userCollect.setTitle(homeCollect.getTitle());
                 userCollect.setImage(homeCollect.getImage());
-                userCollect.setUrl(homeCollect.getUrl());
                 userCollect.setType(UserEnum.COLLECT_HOME.getKey());
                 userCollect.setModifyTime(homeCollect.getModifyTime());
                 userCollect.setCreateTime(homeCollect.getCreateTime());
@@ -122,7 +121,6 @@ public class UserService {
                 userCollect.setTargetId(merchandizeCollect.getMerchandizeCategoryId());
                 userCollect.setTitle(merchandizeCollect.getTitle());
                 userCollect.setImage(merchandizeCollect.getImage());
-                userCollect.setUrl(merchandizeCollect.getUrl());
                 userCollect.setType(UserEnum.COLLECT_MERCHANDIZE.getKey());
                 userCollect.setModifyTime(merchandizeCollect.getModifyTime());
                 userCollect.setCreateTime(merchandizeCollect.getCreateTime());
