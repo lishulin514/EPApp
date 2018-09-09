@@ -5,10 +5,7 @@ import com.bl.ep.dao.MerchandizeCollectMapper;
 import com.bl.ep.dao.MerchandizeMapper;
 import com.bl.ep.param.MerchandizeParam;
 import com.bl.ep.param.PageParam;
-import com.bl.ep.pojo.Merchandize;
-import com.bl.ep.pojo.MerchandizeCategory;
-import com.bl.ep.pojo.MerchandizeCollect;
-import com.bl.ep.pojo.Request;
+import com.bl.ep.pojo.*;
 import com.bl.ep.utils.PageUtils;
 import com.github.pagehelper.PageHelper;
 import org.apache.commons.lang3.StringUtils;
@@ -82,14 +79,25 @@ public class MerchandizeService{
     /**
      * 收藏商品
      * @param userId 用户id
-     * @param categoryId 商品种类Id
+     * @param merchandize 商品id
      */
-    public void addMerchandizeCollect(Integer userId, Integer categoryId) {
+    public void addMerchandizeCollect(Integer userId, Integer merchandize) {
         MerchandizeCollect collect = new MerchandizeCollect();
         collect.setUserId(userId);
-        collect.setMerchandizeCategoryId(categoryId);
+        collect.setMerchandizeCategoryId(merchandize);
         collect.setIsDelete((byte)0);
         collect.setCreateTime(new Date());
         merchandizeCollectMapper.insertSelective(collect);
+    }
+
+    public void createMerchandize(User user, Merchandize merchandize) {
+        if(StringUtils.isEmpty(merchandize.getWriter())){
+            merchandize.setWriter(user.getUsername());
+        }
+        if(StringUtils.isEmpty(merchandize.getContactName())){
+            merchandize.setContactName(user.getUsername());
+        }
+        merchandize.setCreateTime(new Date());
+        merchandizeMapper.insert(merchandize);
     }
 }

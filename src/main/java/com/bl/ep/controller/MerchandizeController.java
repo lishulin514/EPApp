@@ -7,7 +7,9 @@ import com.bl.ep.param.MerchandizeParam;
 import com.bl.ep.param.PageParam;
 import com.bl.ep.pojo.Merchandize;
 import com.bl.ep.pojo.MerchandizeCategory;
+import com.bl.ep.pojo.User;
 import com.bl.ep.service.MerchandizeService;
+import com.bl.ep.service.UserService;
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -27,6 +29,9 @@ public class MerchandizeController {
 
     @Autowired
     private MerchandizeService merchandizeService;
+
+    @Autowired
+    private UserService userService;
 
     @Autowired
     private Resource resource;
@@ -76,18 +81,27 @@ public class MerchandizeController {
     }
 
 
+    @ResponseBody
+    @PostMapping(value = "/create", params = {"userId", "title", "telephone", "content"})
+    public ResultModel createMerchandize (Integer userId, Merchandize merchandize){
+        logger.info("createMerchandize merchandize = {}", merchandize);
+        User user = userService.getUserById(userId);
+        merchandizeService.createMerchandize(user, merchandize);
+        return ResultModel.response(true);
+    }
+
     /**
      * 添加收藏（商品）
      * @param userId 用户id
-     * @param categoryId 收藏的商品种类id
+     * @param merchandize 收藏的商品种类id
      * @return true （收藏成功）
      */
     @ResponseBody
-    @PostMapping(value = "/collect/{userId}/{categoryId}")
-    public ResultModel merchandizeCollect(@PathVariable("userId") Integer userId, @PathVariable("categoryId") Integer categoryId){
-        merchandizeService.addMerchandizeCollect(userId, categoryId);
-        logger.info("merchandizeCollect userId = {};categoryId = {}",
-                userId, categoryId);
+    @PostMapping(value = "/collect/{userId}/{merchandize}")
+    public ResultModel merchandizeCollect(@PathVariable("userId") Integer userId, @PathVariable("merchandize") Integer merchandize){
+        merchandizeService.addMerchandizeCollect(userId, merchandize);
+        logger.info("merchandizeCollect userId = {};merchandize = {}",
+                userId, merchandize);
         return ResultModel.response(true);
     }
 }
