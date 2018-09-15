@@ -53,7 +53,7 @@ public class UserService {
      */
     public UserModel signIn(UserParam param) {
         User user = userDao.selectOne(param);
-        if(param != null && param.getPassword() !=null && user.getPassword().equals(param.getPassword())){
+        if(param != null && user !=null && user.getPassword().equals(param.getPassword())){
             UserModel userModel = new UserModel();
             BeanUtils.copyProperties(user, userModel);
             userModel.setHost(resource.getHost());

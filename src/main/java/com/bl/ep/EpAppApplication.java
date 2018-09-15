@@ -9,7 +9,7 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 import tk.mybatis.spring.annotation.MapperScan;
 
 @SpringBootApplication
-@MapperScan("com.bl.ep.dao")
+//@MapperScan("com.bl.ep.dao")
 //@ComponentScan(basePackages = {"com.bl.ep","org.n3r"})
 //开启定时任务
 @EnableScheduling
